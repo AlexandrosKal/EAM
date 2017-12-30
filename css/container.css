@@ -1,0 +1,9 @@
+.col-cont {
+    display: table; /* Make the container element behave like a table */
+    width: 100%; /* Set full-width to expand the whole page */
+}
+
+.col- {
+  display: table-cell;
+  padding: 16px;
+}

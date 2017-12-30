@@ -1,0 +1,70 @@
+	.navbar-default {
+		background-color: gray;
+		border-color: #E7E7E7;
+	}
+
+	.navbar-default .navbar-header > a {
+		color : white;
+	}
+
+	.navbar-default .navbar-nav > li > a {
+		color: white;
+	}
+
+	.navbar-default .navbar-nav > li > a:hover,
+	.navbar-default .navbar-nav > li > a:focus
+	{
+		background-color : lightblue;
+	}
+
+	.navbar-default .navbar-nav > .active > a
+	{
+		background-color: lightsalmon;
+		color: white;
+	}
+
+	.navbar-default .navbar-nav > .active > a:hover,
+	.navbar-default .navbar-nav > .active > a:focus
+	{
+		background-color: lightblue;
+	}
+
+	img.expand{
+		width: 101.5em;
+	}
+
+	.img_logo
+	{
+		background-color:white;
+	}
+
+	.bckgrnd
+	{
+		background-color: beige;
+	}
+
+	.padding
+	{
+		padding-left:2em;
+	}
+
+	p.st
+	{
+		padding-left:2em;
+		text-align: left;
+		text-decoration:none;
+		font-tyle: normal;
+		font-size:14px;
+	}
+
+	.container .jumbotron
+	{
+		padding-left: 0px;
+	}
+
+	.form_style {
+    width:800px;
+    margin:15px ;
+    float:right;
+    top:-40px;
+}
