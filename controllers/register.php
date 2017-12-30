@@ -25,13 +25,11 @@
             }
         }
         require 'views/header.php';
-        require 'views/user/form_errors.php';
         require 'views/user/register_form.php';
         require 'views/footer.php';
     }
     else {
         require 'views/header.php';
-        require 'views/user/form_errors.php';
         require 'views/user/register_form.php';
         require 'views/footer.php';
     }
