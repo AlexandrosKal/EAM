@@ -1,11 +1,6 @@
-RewriteEngine on
+RedirectMatch 403 ^/EAM/models/?$
+RedirectMatch 403 ^/EAM/models/.*$
 
-RewriteRule ^([a-z]+)/([a-z]+)/?$ index.php?resource=$1&method=$2 [L,QSA]
-RewriteRule ^([a-z]+)/?$ index.php?resource=$1 [L,QSA]
-
-<Files "run">
-    Order Allow,Deny
-    Deny from all
-</Files>
-
-RedirectMatch 404 /\.git
+ErrorDocument 403 /EAM/views/403.php
+ErrorDocument 404 /EAM/views/404.php
+ErrorDocument 500 /EAM/views/500.php
