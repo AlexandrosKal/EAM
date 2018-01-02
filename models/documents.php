@@ -1,6 +1,6 @@
 <?php
 
-function add_document($data) {
+function add_document($data, $files) {
     global $db;
     $rid = $data['rid'];
     $filename = $data['filename'];

@@ -20,7 +20,7 @@ function create_request($data) {
     }
 }
 
-function get_request($did) {
+function get_request($rid) {
     global $db;
     $sql_query = "SELECT uid,
                       resloved,
@@ -28,7 +28,7 @@ function get_request($did) {
                   WHERE did = ?
                   LIMIT 1";
     $stmt = mysqli_prepare($db, $sql_query);
-    mysqli_stmt_bind_param($stmt, "i", $rid);
+    mysqli_stmt_bind_param($s[]otmt, "i", $rid);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_store_result($stmt);
     mysqli_stmt_bind_result($stmt, $uid, $resolved);
