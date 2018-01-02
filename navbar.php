@@ -1,13 +1,13 @@
 <div class="img_logo">
-  <a href="../index.php">
-    <img src="../images/ika_logo.gif" alt="IKA logo" class="expand"/>
+  <a href="index.php">
+    <img src="images/ika_logo.gif" alt="IKA logo" class="expand"/>
   </a>
 </div>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="../index.php">Ίδρυμα Κοινωνικής Ασφάλισης</a>
+      <a class="navbar-brand" href="index.php"> <b style="color:lightblue">Ί</b>δρυμα <b style="color:lightblue">Κ</b>οινωνικής <b style="color:lightblue">Α</b>σφάλισης</a>
     </div>
 
     <ul class="nav navbar-nav navbar-left">
@@ -22,7 +22,7 @@
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <li> <a href="#"><b>Υπηρεσίες</b></a> </li>
+      <li> <a href="services.php"><b>Υπηρεσίες</b></a> </li>
       <li> <a href="#"><b>Ανακοινώσεις</b></a> </li>
       <li> <a href="#"><b>Συχνές Ερωτήσεις</b></a> </li>
       <li> <a href="contact_us.php"><b>Επικοινωνία</b></a> </li>

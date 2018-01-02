@@ -7,18 +7,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<!-- NavBar css -->
-		<link rel="stylesheet" type="text/css" href="../css/navbar.css">
-		<link rel="stylesheet" type="text/css" href="../css/header.css">
-		<link rel="stylesheet" type="text/css" href="../css/navtabs.css">
+		<link rel="stylesheet" type="text/css" href="css/navbar.css">
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+		<link rel="stylesheet" type="text/css" href="css/navtabs.css">
+		<link rel="stylesheet" type="text/css" href="css/well.css">
+		<link rel="stylesheet" type="text/css" href="css/error_text.css">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/validateContact.js"></script>
+		<script type="text/javascript" src="scripts/onlyNumbers.js"></script>
 	</head>
 
 	<body class="bckgrnd">
 		<!--- include to navbar-->
 		<?php		require 'navbar.php' ;?>
 		<!--- set to path-->
-		<h5> <a href="../index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="contact_us.php"> <b> Επικοινωνία </b> </a> </h5>
+		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="contact_us.php"> <b> Επικοινωνία </b> </a> </h5>
 
 		<ul class="nav nav-tabs padding nav-justified" style="width:100%;padding-right:20em;padding-left:20em">
 		  <li class="active tab_header"><a data-toggle="tab" href="#Grafeia"> <b>Υποκαταστήματά</b></a></li>
@@ -41,7 +46,7 @@
 
 			<div id="Epikoinwnia" class="tab-pane fade">
 				<div class="well well-sm">
-					<form class="form-horizontal" method="post">
+					<form class="form-horizontal" method="post" name"contactForm" onsubmit="return validateContact()">
 						<fieldset>
 							<legend class="text-center header">Επικοινωνήστε μαζί μας!</legend>
 
@@ -75,7 +80,7 @@
 									 <div class="input-group-addon">
 										 @
 									 </div>
-									 <input id="email" name="email" type="email" placeholder="Ηλεκτρονική Διεύθυνση E-mail" class="form-control">
+									 <input id="email" name="email" type="text" placeholder="Ηλεκτρονική Διεύθυνση E-mail" class="form-control">
 									</div>
 								</div>
 							</div>
@@ -87,7 +92,7 @@
 									 <div class="input-group-addon">
 											<span class="glyphicon glyphicon-earphone"></span>
 									 </div>
-									 <input id="phone" name="phone" type="number" placeholder="Τηλέφωνο" class="form-control">
+									 <input id="phone" name="phone" type="text" placeholder="Τηλέφωνο (Προαιρετικό)" maxlength="10" class="form-control" onkeypress="return onlyNumbers(event)">
 									</div>
 								</div>
 							</div>
@@ -111,6 +116,9 @@
 							</div>
 						</fieldset>
 					</form>
+
+					<div id="displayOnError"> </div>
+
 				</div>
 			</div>
 		</div>
