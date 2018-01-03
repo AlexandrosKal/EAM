@@ -1,62 +1,56 @@
-	.navbar-default {
-		background-color: gray;
-		border-color: #E7E7E7;
-	}
+.navbar-default {
+	background-color: gray;
+	border-color: #E7E7E7;
+}
 
-	.navbar-default .navbar-header > a {
-		color : white;
-	}
+.navbar-default .navbar-header > a {
+	color : white;
+}
 
-	.navbar-default .navbar-nav > li > a {
-		color: white;
-	}
+.navbar-default .navbar-nav > li > a {
+	color: white;
+}
 
-	.navbar-default .navbar-nav > li > a:hover,
-	.navbar-default .navbar-nav > li > a:focus
-	{
-		background-color : lightblue;
-	}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus
+{
+	background-color : lightblue;
+}
 
-	.navbar-default .navbar-nav > .active > a
-	{
-		background-color: lightsalmon;
-		color: white;
-	}
+.navbar-default .navbar-nav > .active > a
+{
+	background-color: lightsalmon;
+	color: white;
+}
 
-	.navbar-default .navbar-nav > .active > a:hover,
-	.navbar-default .navbar-nav > .active > a:focus
-	{
-		background-color: lightblue;
-	}
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus
+{
+	background-color: lightblue;
+}
 
-	img.expand{
-		width: 101.5em;
-	}
+.img_container
+{
+	background:aliceblue;
+	 padding-bottom: 5px;
+	 padding-top: 5px;
+}
 
-	.img_logo
-	{
-		background-color:white;
-	}
+img.img_logo
+{
+ width:250px;
+ height:100px;
 
-	.bckgrnd
-	{
-		background-color: beige;
-		font-family: "Arial", Helvetica, sans-serif;
-	}
+}
 
-	.padding
-	{
-		padding-left:2em;
-	}
+.form_style {
+  width:800px;
+  margin:15px ;
+  float:right;
+  top:-40px;
+}
 
-	.container .jumbotron
-	{
-		padding-left: 0px;
-	}
-
-	.form_style {
-    width:800px;
-    margin:15px ;
-    float:right;
-    top:-40px;
+b.tone
+{
+  color:lightblue;
 }
