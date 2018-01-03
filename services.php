@@ -8,84 +8,81 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<!-- NavBar css -->
 		<link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="css/well.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
+		<link rel="stylesheet" type="text/css" href="css/services.css">
+		<link rel="stylesheet" type="text/css" href="css/layout.css">
+		<link rel="stylesheet" type="text/css" href="css/full_width.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-      .imagetiles{
-        position: relative;
-        display: block;
-        margin: 0 auto;
-        width:  350px;
-        height: 300px;
-        background-position: 50% 50%;
-        background-repeat:   no-repeat;
-        background-size:     cover;
-        padding:0px;
-      }
-   </style>
 	</head>
 
-	<body class="bckgrnd">
+	<body class="background-color">
 		<!--- include to navbar-->
 		<?php		require 'navbar.php' ;?>
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="services.php"> <b> Υπηρεσίες </b> </a> </h5>
-    <h2 style="padding-left:1em"> <b> <u> Υπηρεσίες </b> </u> </h2>
-    <div class="container">
-			<div class="well">
+    <h2 class="page-header"> Υπηρεσίες </h2>
+    <div class="container well">
 	      <div class="row">
 
-	        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-	          <div class="thumbnail" style="width:360px;height:350px">
-	            <a href="insuranced.php">
-	              <legend class="text-center header">Ασφαλισμένοι</legend>
-	              <img src="images/asfalismenoi.png" alt="asfalismenoi" class="imagetiles img-rounded img-responsive"/>
-	            </a>
-	          </div>
-	        </div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<div class="container_im">
+							<a href="insuranced.php">
+								<img src="images/asfalismenoi.png" alt="asfalismenoi" class="img-responsive image thumbnail full-width">
+								<div class="middle">
+									<h1 class="text-center text">Ασφαλισμένοι</h1>
+								</div>
+							</a>
+						</div>
+					</div>
 
-	        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-	          <div class="thumbnail" style="width:360px;height:350px">
-	            <a href="seniors.php">
-	              <legend class="text-center header">Συνταξιούχοι</legend>
-	              <img src="images/suntaksiouxoi.jpg" alt="suntaksiouxoi" class="imagetiles img-rounded img-responsive" border="5"/>
-	            </a>
-	          </div>
-	        </div>
 
-	        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-46">
-	          <div class="thumbnail" style="width:360px;height:350px">
-	            <a href="amea.php">
-	              <legend class="text-center header">ΑμΕΑ</legend>
-	              <img src="images/amea.png" alt="amea" class="imagetiles img-rounded img-responsive">
-	            </a>
-	          </div>
-	        </div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<div class="container_im">
+							<a href="seniors.php">
+								<img src="images/suntaksiouxoi.jpg" alt="suntaksiouxoi" class="img-responsive image thumbnail full-width">
+								<div class="middle">
+									<h1 class="text-center text">Συνταξιούχοι</h1>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<div class="container_im">
+							<a href="amea.php">
+								<img src="images/amea.png" alt="amea" class="img-responsive image thumbnail full-width">
+								<div class="middle">
+									<h1 class="text-center text">ΑμΕΑ</h1>
+								</div>
+							</a>
+						</div>
+					</div>
+
 	      </div>
 
 	      <div class="row">
-					<span class="col-md-1 col-md-offset-1 text-center"></span>
-	        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-	          <div class="thumbnail" style="width:360px;height:350px">
+	        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="container_im">
 	            <a href="employers.php">
-	              <legend class="text-center header">Εργοδότες</legend>
-	              <img src="images/ergodotes.png" alt="ergodotes" class="imagetiles img-rounded img-responsive">
+								<img src="images/ergodotes.png" alt="ergodotes" class="img-responsive image thumbnail full-width">
+								<div class="middle">
+									<h1 class="text-center text">Εργοδότες</h1>
+								</div>
 	            </a>
 	          </div>
 	        </div>
 
-	        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-	          <div class="thumbnail" style="width:360px;height:350px">
+	        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="container_im">
 	            <a href="debtors.php">
-	              <legend class="text-center header">Οφειλέτες</legend>
-	              <img src="images/ofeiletes.png" alt="ofeiletes" class="imagetiles img-rounded img-responsive">
+								<img src="images/ofeiletes.png" alt="ofeiletes" class="img-responsive image thumbnail full-width">
+								<div class="middle">
+									<h1 class="text-center text">Οφειλέτες</h1>
+								</div>
 	            </a>
 	          </div>
 	        </div>
-	      </div>
 			</div>
 		</div>
 

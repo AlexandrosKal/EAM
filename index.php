@@ -12,13 +12,13 @@
 		<link rel="stylesheet" type="text/css" href="css/button.css">
 		<link rel="stylesheet" type="text/css" href="css/container.css">
 		<link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/well.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 
-	<body class="bckgrnd">
+	<body class="background-color">
 		<!--- include to navbar-->
 		<?php		require 'navbar.php' ;?>
 		<!--- set to path-->
@@ -29,7 +29,7 @@
 				<div class="col-sm8 col-md-8 col-lg-8">
 					<div class="well text-left">
 					 <div class="page-header">
-						<legend class="text-center header"> Λίγα λόγια για εμας</legend>
+						<h1 class="text-center header"> Λίγα λόγια για εμας</h1>
 					 </div>
 
 						<p class="st"> Το Ίδρυμα Κοινωνικών Ασφαλίσεων - Ενιαίο Ταμείο Ασφάλισης Μισθωτών υπήρξε κρατικός φορέας κύριας ασφάλισης στην
@@ -50,7 +50,7 @@
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="well text-center">
 						<div class="page-header">
-						 <legend class="text-center header">Χρήσιμοι Σύνδεσμοι</legend>
+						 <h1 class="text-center header">Χρήσιμοι Σύνδεσμοι</h1>
 						</div>
 
 						<a href="#" class="btn btn-primary button_style" role="button">Υπολογισμός Σύνταξης</a>

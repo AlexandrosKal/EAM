@@ -1,13 +1,13 @@
-<div class="img_logo">
+<div class="img_container">
   <a href="index.php">
-    <img src="images/ika_logo.gif" alt="IKA logo" class="expand"/>
+    <img src="images/ika_logo_.png" alt="IKA logo" class="img_logo"/>
   </a>
 </div>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.php"> <b style="color:lightblue">Ί</b>δρυμα <b style="color:lightblue">Κ</b>οινωνικής <b style="color:lightblue">Α</b>σφάλισης</a>
+      <a class="navbar-brand" href="index.php"> <b class="tone">Ί</b>δρυμα <b class="tone">Κ</b>οινωνικής <b class="tone">Α</b>σφάλισης</a>
     </div>
 
     <ul class="nav navbar-nav navbar-left">
