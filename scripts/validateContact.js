@@ -5,9 +5,6 @@ function validateContact()
 
 /*briskoume ti lista me ta errors*/
   var input = document.getElementById("fname").value;
-  document.getElementById("fname").focus();
-    document.getElementById("lname").focus();
-      document.getElementById("email").focus();
   if(input=="")
   {
     error_flag = true;

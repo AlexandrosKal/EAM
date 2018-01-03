@@ -5,10 +5,10 @@ function validateLogIn()
 
   /*briskoume ti lista me ta errors*/
   var input = document.getElementById("email_l").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
-    errorList.push("Παρακαλώ συμπληρώστε το πεδίο e-mail.")
+    errorList.push("Παρακαλώ συμsfddsfdfsπληρώστε το πεδίο e-mail.")
   }
   else
   {
@@ -20,14 +20,14 @@ function validateLogIn()
   }
 
   input = document.getElementById("password_l").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο κωδικού πρόσβασης.")
   }
 
   /*ektupwsi tis listas*/
-  if(error_flag == true)
+  if(error_flag === true)
   {
     document.getElementById("displayOnError_l").innerHTML="";
     for(var i=0; i < errorList.length; i++)

@@ -1,11 +1,6 @@
-function onlyNumbers(eve)
+function onlyNumbers(event)
 {
-  if (eve.charCode >= 48 && eve.charCode <= 57)
-  {
-      return true;
-  }
-  else
-  {
-      return false
-  }
+  var charCode = (event.which) ? event.which : event.keyCode;
+
+  return (charCode >= 48 && charCode <= 57) || charCode == 8 || charCode == 46;
 }
