@@ -12,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/navtabs.css">
     <link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
+		<link rel="stylesheet" type="text/css" href="css/faq.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -33,12 +34,8 @@
 		</div>
 
 		<div class="container-fluid">
-
 			 <div class="col-md-8 col-md-offset-2">
-
 				<div class="well text">
-
-
 					<div class="panel-group" id="accordion">
 
         					<div class="panel panel-default">
