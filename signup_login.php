@@ -16,10 +16,12 @@
 		<link rel="stylesheet" type="text/css" href="css/error_text.css">
 		<link rel="stylesheet" type="text/css" href="css/signup_login.css">
 		<link rel="stylesheet" type="text/css" href="css/footnote.css">
+		<link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+		<script src="scripts/backToTopButton.js"></script>
 		<script src="scripts/validateLogIn.js"></script>
 		<script src="scripts/validateSignUp.js"></script>
 		<script src="scripts/onlyNumbers.js"></script>
@@ -28,6 +30,8 @@
 	<body class="background-color">
 		<!--- include to navbar-->
 		<?php	require 'navbar.php' ;?>
+		<!-- include to koubi gia epistrofi stin korufi-->
+		<?php require 'backToTopButton.php' ;?>
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b></a> > <a href="signup_login.php"> <b> Είσοδος/Εγγραφή </b></a> </h5>
 

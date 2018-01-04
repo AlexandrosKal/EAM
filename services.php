@@ -11,14 +11,19 @@
 		<link rel="stylesheet" type="text/css" href="css/services.css">
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/full_width.css">
+		<link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<script src="scripts/backToTopButton.js"></script>
 	</head>
 
 	<body class="background-color">
 		<!--- include to navbar-->
 		<?php		require 'navbar.php' ;?>
+		<!-- include to koubi gia epistrofi stin korufi-->
+		<?php require 'backToTopButton.php' ;?>
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="services.php"> <b> Υπηρεσίες </b> </a> </h5>
     <h2 class="page-header"> Υπηρεσίες </h2>
