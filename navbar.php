@@ -24,7 +24,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li> <a href="services.php"><b>Υπηρεσίες</b></a> </li>
       <li> <a href="#"><b>Ανακοινώσεις</b></a> </li>
-      <li> <a href="#"><b>Συχνές Ερωτήσεις</b></a> </li>
+      <li> <a href="faq.php"><b>Συχνές Ερωτήσεις</b></a> </li>
       <li> <a href="contact_us.php"><b>Επικοινωνία</b></a> </li>
       <li class="active">
           <a href="signup_login.php">

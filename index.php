@@ -63,7 +63,7 @@
 			</div>
 
 			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
-				<a href="#" class="btn btn-primary button_style" role="button">Πιστοποιητικά/Δικαιολογητικά</a>
+				<a href="certificates.php" class="btn btn-primary button_style" role="button">Πιστοποιητικά/Δικαιολογητικά</a>
 			</div>
 		</div>
 
