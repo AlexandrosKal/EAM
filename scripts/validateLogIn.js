@@ -8,14 +8,14 @@ function validateLogIn()
   if(input==="")
   {
     error_flag = true;
-    errorList.push("Παρακαλώ συμsfddsfdfsπληρώστε το πεδίο e-mail.")
+    errorList.push("Παρακαλώ συμπληρώστε το πεδίο e-mail.");
   }
   else
   {
     if (!/^[\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})]+$/.test(input))
     {
       error_flag = true;
-      errorList.push("Το e-mail που εισάγετε δεν ειναι έγκυρο.")
+      errorList.push("Το e-mail που εισάγατε δεν ειναι έγκυρο.");
     }
   }
 
@@ -23,7 +23,7 @@ function validateLogIn()
   if(input==="")
   {
     error_flag = true;
-    errorList.push("Παρακαλώ συμπληρώστε το πεδίο κωδικού πρόσβασης.")
+    errorList.push("Παρακαλώ συμπληρώστε το πεδίο κωδικού πρόσβασης.");
   }
 
   /*ektupwsi tis listas*/
@@ -33,7 +33,7 @@ function validateLogIn()
     for(var i=0; i < errorList.length; i++)
     {
         document.getElementById("displayOnError_l").innerHTML += "<span class='col-md-1 col-md-offset-1 text-center'></span>";
-        document.getElementById("displayOnError_l").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span>" + errorList[i] + "</li>";
+        document.getElementById("displayOnError_l").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span> &nbsp;" + errorList[i] + "</li>";
     }
 
     return false;

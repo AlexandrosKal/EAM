@@ -5,7 +5,7 @@ function validateContact()
 
 /*briskoume ti lista me ta errors*/
   var input = document.getElementById("fname").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο ονόματος.")
@@ -20,7 +20,7 @@ function validateContact()
   }
 
   input = document.getElementById("lname").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο επιθέτου.")
@@ -35,7 +35,7 @@ function validateContact()
   }
 
   input = document.getElementById("email").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο e-mail.")
@@ -50,20 +50,20 @@ function validateContact()
   }
 
   input = document.getElementById("message").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο μηνύματος.")
   }
 
   /*ektupwsi tis listas*/
-  if(error_flag == true)
+  if(error_flag === true)
   {
     document.getElementById("displayOnError").innerHTML="";
     for(var i=0; i < errorList.length; i++)
     {
         document.getElementById("displayOnError").innerHTML += "<span class='col-md-1 col-md-offset-1 text-center'></span>";
-        document.getElementById("displayOnError").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span>" + errorList[i] + "</li>";
+        document.getElementById("displayOnError").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span> &nbsp;" + errorList[i] + "</li>";
     }
 
     return false;
