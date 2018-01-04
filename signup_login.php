@@ -177,7 +177,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-list"></span>
                      </div>
-                     <input id="afm" name="afm" type="text" placeholder="Αριθμός Φορολογικού Μητρώου" class="form-control" maxlength="9" >
+                     <input id="afm" name="afm" type="text" placeholder="Αριθμός Φορολογικού Μητρώου" class="form-control" maxlength="9" onkeydown="return onlyNumbers(event);">
                     </div>
                   </div>
                 </div>
@@ -189,7 +189,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-th-list"></span>
                      </div>
-                     <input id="amka" name="amka" type="text" placeholder="Αριθμός Μητρώου Κοινωνικής Ασφάλισης" class="form-control" maxlength="11" >
+                     <input id="amka" name="amka" type="text" placeholder="Αριθμός Μητρώου Κοινωνικής Ασφάλισης" class="form-control" maxlength="11" onkeydown="return onlyNumbers(event);">
                     </div>
                   </div>
                 </div>
@@ -234,7 +234,7 @@
 										 <div class="input-group-addon">
 											 <span class="glyphicon glyphicon-home"></span>
 										 </div>
-										 <input id="streetNum" name="streetNum" type="text" placeholder="Αριθμός Οδού" class="form-control" maxlength="4">
+										 <input id="streetNum" name="streetNum" type="text" placeholder="Αριθμός Οδού" class="form-control" maxlength="4" onkeydown="return onlyNumbers(event);">
 										</div>
 									</div>
 							</div>
@@ -255,7 +255,7 @@
 										 <div class="input-group-addon">
 											 <span class="glyphicon glyphicon-envelope"></span>
 										 </div>
-										 <input id="postal" name="postal" type="text" placeholder="Ταχυδρομικός Κώδικας" class="form-control" maxlength="5" >
+										 <input id="postal" name="postal" type="text" placeholder="Ταχυδρομικός Κώδικας" class="form-control" maxlength="5" onkeydown="return onlyNumbers(event);">
 										</div>
 									</div>
 							</div>
