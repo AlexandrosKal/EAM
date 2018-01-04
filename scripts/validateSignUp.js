@@ -203,7 +203,8 @@ function validateSignUp()
     document.getElementById("displayOnError").innerHTML="";
     for(var i=0; i < errorList.length; i++)
     {
-        document.getElementById("displayOnError").innerHTML += "<li class='errtext'> <span class='glyphicon glyphicon-alert'></span>" + errorList[i] + "</li>";
+        document.getElementById("displayOnError").innerHTML += "<span class='col-md-1 col-md-offset-1 text-center'></span>";
+        document.getElementById("displayOnError").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span>" + errorList[i] + "</li>";
     }
 
     return false;

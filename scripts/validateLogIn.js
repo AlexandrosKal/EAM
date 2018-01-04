@@ -32,7 +32,8 @@ function validateLogIn()
     document.getElementById("displayOnError_l").innerHTML="";
     for(var i=0; i < errorList.length; i++)
     {
-        document.getElementById("displayOnError_l").innerHTML += "<li class='errtext'> <span class='glyphicon glyphicon-alert'></span>" + errorList[i] + "</li>";
+        document.getElementById("displayOnError_l").innerHTML += "<span class='col-md-1 col-md-offset-1 text-center'></span>";
+        document.getElementById("displayOnError_l").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span>" + errorList[i] + "</li>";
     }
 
     return false;
