@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="el">
 	<head>
-		<title>Υπηρεσίες Ασφαλισμένων</title>
+		<title>Προφιλ Χρήστη</title>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +21,7 @@
 		<?php		require 'navbar.php' ;?>
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="services.php"> <b> Υπηρεσίες </b> </a> > <a href="insuranced.php"> <b> Ασφαλισμένοι </b> </a></h5>
-    <h2 class="page-header"> <b> <u> Ασφαλισμένοι </b> </u> </h2>
+    <h2 class="page-header"> <b> Ασφαλισμένοι </b> </h2>
 
     <p class="st">
       Οι ασφαλισμένοι αποτελόυν την κύρια κατηγορία του Ιδρύματος Κοινωνικής Ασφάλισης. Η κατηγορία αυτή στελεχώνεται, κυρίως από εργαζόμενους.
