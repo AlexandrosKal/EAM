@@ -55,7 +55,7 @@
 			</div>
 
 			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
-				<a href="#" class="btn btn-primary button_style col" role="button">Υπολογισμός Σύνταξης</a>
+				<a href="pension_calculator.php" class="btn btn-primary button_style col" role="button">Υπολογισμός Σύνταξης</a>
 			</div>
 
 			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">

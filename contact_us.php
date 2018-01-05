@@ -14,6 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="css/error_text.css">
 		<link rel="stylesheet" type="text/css" href="css/contact_us.css">
 		<link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
+		<link rel="stylesheet" type="text/css" href="css/form.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -63,11 +64,12 @@
 							<div class="form-group" id="fNameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="fname">Όνομα</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="fname" name="name" type="text" placeholder="Όνομα" class="form-control" onblur="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
+									 <input id="fname" name="name" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onblur="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
 									</div>
 
 									<div id="displayOnErrorFName"> </div>
@@ -77,11 +79,12 @@
 							<div class="form-group" id="lNameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="lname">Επίθετο</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="lname" name="name" type="text" placeholder="Επίθετο" class="form-control" onblur="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
+									 <input id="lname" name="name" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onblur="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
 									</div>
 
 									<div id="displayOnErrorLName"> </div>
@@ -92,11 +95,12 @@
 							<div class="form-group" id="emailForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="email">Ηλεκτρονική Διεύθυνση E-mail</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 @
 									 </div>
-									 <input id="email" name="email" type="text" placeholder="Ηλεκτρονική Διεύθυνση E-mail" class="form-control" onblur="validateEmail('emailForm', 'email', 'displayOnErrorEmail');">
+									 <input id="email" name="email" type="text" placeholder="πχ user@example.com" class="form-control" onblur="validateEmail('emailForm', 'email', 'displayOnErrorEmail');">
 									</div>
 
 									<div id="displayOnErrorEmail"> </div>
@@ -107,11 +111,12 @@
 							<div class="form-group" id="phoneForm">
 								<span class="col-md-1 col-md-offset-1 text-center"> </span>
 								<div class="col-md-8">
+									<label class="form-label" for="phone">Τηλέφωνο (Προαιρετικό)</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 											<span class="glyphicon glyphicon-earphone"></span>
 									 </div>
-									 <input id="phone" name="phone" type="text" placeholder="Τηλέφωνο (Προαιρετικό)" maxlength="10" class="form-control" onkeypress="return onlyNumbers(event);" onblur="validateNumber('phoneForm', 'phone', 'displayOnErrorPhone', 10);">
+									 <input id="phone" name="phone" type="text" placeholder="πχ 6989088366, 2104613688" maxlength="10" class="form-control" onkeypress="return onlyNumbers(event);" onblur="validateNumber('phoneForm', 'phone', 'displayOnErrorPhone', 10);">
 									</div>
 
 									<div id="displayOnErrorPhone"> </div>
@@ -122,6 +127,7 @@
 							<div class="form-group">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="message">Μήνυμα</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 											<span class="glyphicon glyphicon-pencil"></span>

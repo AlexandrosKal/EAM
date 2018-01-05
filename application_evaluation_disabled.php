@@ -18,6 +18,7 @@
 		<link rel="stylesheet" type="text/css" href="css/footnote.css">
 		<link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
     <link rel="stylesheet" type="text/css" href="css/well.css">
+		<link rel="stylesheet" type="text/css" href="css/form.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -37,10 +38,10 @@
       >
       <a href="amea.php"> <b> ΑμΕΑ </b></a>
       >
-      <a href="application_pension_disabled.php"> <b> Αίτηση Συνταξιοδότησης Αναπηρίας </b></a>
+      <a href="application_evaluation_disabled.php"> <b> Αίτηση Aξιολόγησης Αναπηρίας </b></a>
     </h5>
 
-    <h2 class="page-header"> Αίτηση Συνταξιοδότησης Αναπηρίας</h2>
+    <h2 class="page-header"> Αίτηση Αξιολόγησης Αναπηρίας</h2>
 
     <div class="well">
       <h3 class="text-center header"> Παρακαλώ ανεβάστε τα κατάλληλα δικαιολογητικά σε μορφή αρχείων .pdf.</h1>
@@ -51,11 +52,12 @@
             <div class="form-group">
               <span class="col-md-1 col-md-offset-1 text-center"></span>
               <div class="col-md-8">
+								<label class="form-label" for="dikaiologitiko1">Αίτηση Aξιολόγησης Αναπηρίας</label>
                 <div class="input-group">
                  <div class="input-group-addon">
                    <span class="	glyphicon glyphicon-folder-open"></span>
                  </div>
-                 <input id="dikaiologitiko1" name="dikaiologitiko1" type="file" placeholder="Πόσες πούτσες έχετε φάει" class="form-control" accept="application/pdf">
+                 <input id="dikaiologitiko1" name="dikaiologitiko1" type="file" class="form-control" accept="application/pdf">
                 </div>
               </div>
             </div>
@@ -63,11 +65,38 @@
             <div class="form-group">
               <span class="col-md-1 col-md-offset-1 text-center"></span>
               <div class="col-md-8">
+								<label class="form-label" for="dikaiologitiko2">Φωτοτυπία Ταυτότητας</label>
                 <div class="input-group">
                  <div class="input-group-addon">
                    <span class="	glyphicon glyphicon-folder-open"></span>
                  </div>
-                 <input id="dikaiologitiko2" name="dikaiologitiko2" type="file" placeholder="Πόσες πούτσες έχετε φάει" class="form-control" accept="application/pdf">
+                 <input id="dikaiologitiko2" name="dikaiologitiko2" type="file" class="form-control" accept="application/pdf">
+                </div>
+              </div>
+            </div>
+
+						<div class="form-group">
+              <span class="col-md-1 col-md-offset-1 text-center"></span>
+              <div class="col-md-8">
+								<label class="form-label" for="dikaiologitiko3">Φωτοτυπία Βιβλιαρίου Υγίειας</label>
+                <div class="input-group">
+                 <div class="input-group-addon">
+                   <span class="	glyphicon glyphicon-folder-open"></span>
+                 </div>
+                 <input id="dikaiologitiko3" name="dikaiologitiko3" type="file" class="form-control" accept="application/pdf">
+                </div>
+              </div>
+            </div>
+
+						<div class="form-group">
+              <span class="col-md-1 col-md-offset-1 text-center"></span>
+              <div class="col-md-8">
+								<label class="form-label" for="dikaiologitiko3">Πιστοποιητικό Ασθένειας</label>
+                <div class="input-group">
+                 <div class="input-group-addon">
+                   <span class="	glyphicon glyphicon-folder-open"></span>
+                 </div>
+                 <input id="dikaiologitiko3" name="dikaiologitiko3" type="file" class="form-control" accept="application/pdf">
                 </div>
               </div>
             </div>

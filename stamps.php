@@ -13,6 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="css/profile.css">
 		<link rel="stylesheet" type="text/css" href="css/error_text.css">
 		<link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
+		<link rel="stylesheet" type="text/css" href="css/form.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -81,18 +82,19 @@
 					<form class="form-horizontal" method="post" name="stampsForm" onsubmit="return validateStamps();">
 						<fieldset>
 
-							<p class="text-center footnote"> Παρακαλώ συπληρώστε όλα τα πεδία της φόρμας με ελληνικούς ή λατινικούς χαρακτήρες. Μπορείτε να παραλείψετε τους τόνους.
+							<p class="text-left footnote"> Παρακαλώ συπληρώστε όλα τα πεδία της φόρμας με ελληνικούς ή λατινικούς χαρακτήρες. Μπορείτε να παραλείψετε τους τόνους.
 								Αναγκαία η χρήση διαλυτικών όπου χρειάζεται.
 							</p>
 
 							<div class="form-group" id="fnameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="fname">Όνομα</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="fname" name="fname" type="text" placeholder="Όνομα" class="form-control" onblur="validateFName('fnameForm', 'fname', 'displayOnErrorFname')">
+									 <input id="fname" name="fname" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onblur="validateFName('fnameForm', 'fname', 'displayOnErrorFname')">
 									</div>
 
 									<div id="displayOnErrorFname"> </div>
@@ -103,11 +105,12 @@
 							<div class="form-group" id="lnameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="lname">Επίθετο</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="lname" name="lname" type="text" placeholder="Επίθετο" class="form-control" onblur="validateLName('lnameForm', 'lname', 'displayOnErrorLname')">
+									 <input id="lname" name="lname" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onblur="validateLName('lnameForm', 'lname', 'displayOnErrorLname')">
 									</div>
 
 									<div id="displayOnErrorLname"> </div>
@@ -118,11 +121,12 @@
 							<div class="form-group" id="amkaForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="amka">Αριθμός Μητρώου Κοινωνικής Ασφάλισης</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-th-list"></span>
 									 </div>
-									 <input id="amka" name="amka" type="text" placeholder="Αριθμός Μητρώου Κοινωνικής Ασφάλισης" class="form-control" maxlength="11" onkeydown="return onlyNumbers(event);" onblur="validateNumber('amkaForm', 'amka', 'displayOnErrorAmka', 11)">
+									 <input id="amka" name="amka" type="text" placeholder="πχ 19129612345" class="form-control" maxlength="11" onkeydown="return onlyNumbers(event);" onblur="validateNumber('amkaForm', 'amka', 'displayOnErrorAmka', 11)">
 									</div>
 
 									<div id="displayOnErrorAmka"> </div>
@@ -133,11 +137,12 @@
 							<div class="form-group" id="adtForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="adt">Αριθμός Δελτίου Ταυτότητας</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-th-list"></span>
 									 </div>
-									 <input id="adt" name="adt" type="text" placeholder="Αριθμός Δελτίου Ταυτότητας" class="form-control" maxlength="8" onblur="validateAdt('adtForm', 'adt', 'displayOnErrorAdt')">
+									 <input id="adt" name="adt" type="text" placeholder="πχ AH542412" class="form-control" maxlength="8" onblur="validateAdt('adtForm', 'adt', 'displayOnErrorAdt')">
 									</div>
 
 									<div id="displayOnErrorAdt"> </div>
@@ -148,11 +153,12 @@
 							<div class="form-group" id="bdayForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="bday">Ημερομηνία Γέννησης</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-calendar"></span>
 									 </div>
-									 <input id="bday" name="bday" type="text" placeholder="Ημερομηνία Γέννησης - HH/MM/EEEE" maxlength="10 "class="form-control" onblur="validateBday('bdayForm', 'bday', 'displayOnErrorBday')">
+									 <input id="bday" name="bday" type="text" placeholder="πχ 19/12/96" maxlength="10 "class="form-control" onblur="validateBday('bdayForm', 'bday', 'displayOnErrorBday')">
 									</div>
 
 									<div id="displayOnErrorBday"> </div>
@@ -163,7 +169,7 @@
 							<div class="form-group">
 								<span class="col-md-2 col-md-offset-2 text-center"></span>
 								<div class="col-md-6">
-									<button type="submit" class="btn btn-primary btn-md margin-buttons"><span class="glyphicon glyphicon-log-in"></span> Εγγραφή </button>
+									<button type="submit" class="btn btn-primary btn-md margin-buttons"><span class="glyphicon glyphicon-log-in"></span> Υποβολή </button>
 									<button type="reset" class="btn btn-danger btn-md margin-buttons"><span class="glyphicon glyphicon-remove"></span> Εκκαθάριση Πεδίων </button>
 								</div>
 							</div>
