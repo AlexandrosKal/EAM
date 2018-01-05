@@ -5,7 +5,7 @@ function validateSignUp()
 
   /*briskoume ti lista me ta errors*/
   var input = document.getElementById("fname").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο ονόματος.");
@@ -26,7 +26,7 @@ function validateSignUp()
   }
 
   input = document.getElementById("lname").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο επιθέτου.");
@@ -41,28 +41,28 @@ function validateSignUp()
   }
 
   input = document.getElementById("email").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο e-mail.");
   }
 
   input = document.getElementById("reemail").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο επαλήθευσης e-mail.");
   }
 
   var password = document.getElementById("password").value;
-  if(password=="")
+  if(password==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο κωδικόυ πρόσβασης.");
   }
 
   var repassword = document.getElementById("repassword").value;
-  if(repassword=="")
+  if(repassword==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο επαλήθευσης κωδικόυ πρόσβασης.");
@@ -75,7 +75,7 @@ function validateSignUp()
   }
 
   input = document.getElementById("afm").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο αριθμόυ φορολογικού μητρώου.");
@@ -90,7 +90,7 @@ function validateSignUp()
   }
 
   input = document.getElementById("amka").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο αριθμού μητρώου κοινωνικής ασφάλισης.");
@@ -104,8 +104,39 @@ function validateSignUp()
     }
   }
 
+  input = document.getElementById("adt").value;
+  if(input==="")
+  {
+    error_flag = true;
+    errorList.push("Παρακαλώ συμπληρώστε το πεδίο αριθμού δελτίου ταυτότητας.");
+  }
+  else
+  {
+    if(input.length != 8)
+    {
+      error_flag = true;
+      errorList.push("Παρακαλώ συμπληρώστε το πεδίο αριθμόυ δελτίου ταυτότητας με 8 ψηφία.");
+    }
+
+  }
+
+  input = document.getElementById("bday").value;
+  if(input==="")
+  {
+    error_flag = true;
+    errorList.push("Παρακαλώ συμπληρώστε το πεδίο ημερομηνίας γέννησης.");
+  }
+  else
+  {
+    if( !/^(?:[0-9]){2}\/(?:[0-9]){2}\/(?:[0-9]){4}$/.test(input) )
+    {
+      error_flag=true;
+      errorList.push("To πεδίο ημερομηνίας γέννησης δεν είναι έγκυρο.");
+    }
+  }
+
   input = document.getElementById("street").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο οδού.");
@@ -126,14 +157,14 @@ function validateSignUp()
   }
 
   input = document.getElementById("streetNum").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο αριθμού οδού.");
   }
 
   input = document.getElementById("postal").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το ταχυδρομικού κώδικα.");
@@ -148,7 +179,7 @@ function validateSignUp()
   }
 
   input = document.getElementById("area").value;
-  if(input=="")
+  if(input==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο περιοχής.");
@@ -162,12 +193,13 @@ function validateSignUp()
     }
   }
   /*ektupwsi tis listas*/
-  if(error_flag == true)
+  if(error_flag === true)
   {
     document.getElementById("displayOnError").innerHTML="";
     for(var i=0; i < errorList.length; i++)
     {
-        document.getElementById("displayOnError").innerHTML += "<li class='errtext'> <span class='glyphicon glyphicon-alert'></span>" + errorList[i] + "</li>";
+        document.getElementById("displayOnError").innerHTML += "<span class='col-md-1 col-md-offset-1 text-center'></span>";
+        document.getElementById("displayOnError").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span> &nbsp;" + errorList[i] + "</li>";
     }
 
     return false;

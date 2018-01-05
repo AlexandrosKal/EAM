@@ -1,10 +1,12 @@
 <?php
 
-function add_document($data, $files) {
+function add_document($data, $file) {
     global $db;
     $rid = $data['rid'];
     $filename = $data['filename'];
-    $path = $data['path'];
+    $path = "uploads/";
+    $file_extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+    $file_name = uniqid().".".$file_extension;
     $sql_query = "INSERT INTO documents
                   SET rid = ?,
                       path = ?";
@@ -15,7 +17,7 @@ function add_document($data, $files) {
     if (mysqli_affected_rows($db) != 1) {
         return false;
     } else {
-        move_uploaded_file( $filename , $path);
+        move_uploaded_file( $file['tmp_name'] ,$path.$file_name);
         return mysqli_insert_id($db);
     }
 }

@@ -7,6 +7,14 @@ function register_user($data) {
     $amka = $data['amka'];
     $email = $data['email'];
     $id_num = $data['id_num'];
+    $street = $data['street'];
+    $street_num = $data['street_num'];
+    $area = $data['area'];
+    $postal = $data['postal'];
+    list($day, $month, $year) = explode('/', $data['date_of_birth']);
+    $dob = implode('-', array($year, $month, $day));
+    $stamps = $data['stamps'];
+    $stamps_this_month = $data['stamps_this_month'];
     $is_employee = intval($data['is_employee']);
     $is_employer = intval($data['is_employer']);
     $is_disabled = intval($data['is_disabled']);
@@ -14,6 +22,10 @@ function register_user($data) {
     $last_name = $data['last_name'];
     $first_name = $data['first_name'];
     $hash = password_hash($data['password'], PASSWORD_DEFAULT);
+    //var_dump($hash);
+    //echo"\n";
+    //var_dump($data);
+    //die();
     $sql_query = "INSERT INTO users
                   SET afm = ?,
                       amka = ?,
@@ -25,12 +37,21 @@ function register_user($data) {
                       is_disabled = ?,
                       is_pensioner = ?,
                       is_employer = ?,
-                      is_employee = ?";
+                      is_employee = ?,
+                      street = ?,
+                      street_num = ?,
+                      area = ?,
+                      postal = ?,
+                      date_of_birth = ?,
+                      stamps = ?,
+                      stamps_this_month = ?";
     $stmt = mysqli_prepare($db, $sql_query);
-    mysqli_stmt_bind_param($stmt, "iisssssiiii", $afm, $amka,
+    mysqli_stmt_bind_param($stmt, "iisssssiiiisisisii", $afm, $amka,
                            $id_num, $hash, $first_name, $last_name,
                            $email, $is_disabled, $is_pensioner,
-                           $is_employer, $is_employee);
+                           $is_employer, $is_employee, $street,
+                           $street_num, $area, $postal, $dob,
+                           $stamps, $stamps_this_month);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_store_result($stmt);
     if (mysqli_affected_rows($db) != 1) {
@@ -73,14 +94,21 @@ function get_user_data($uid) {
     global $db;
     $sql_query = "SELECT afm,
                       amka,
-                      idnum,
-                      firstname,
-                      lastname,
+                      id_num,
+                      first_name,
+                      last_name,
                       email,
                       is_disabled,
                       is_pensioner,
                       is_employer,
-                      is_employee
+                      is_employee,
+                      street,
+                      street_num,
+                      area,
+                      postal,
+                      date_of_birth,
+                      stamps,
+                      stamps_this_month
                   FROM users
                   WHERE uid = ?
                   LIMIT 1";
@@ -88,13 +116,15 @@ function get_user_data($uid) {
     mysqli_stmt_bind_param($stmt, "i", $uid);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_store_result($stmt);
-    mysqli_stmt_bind_result($stmt, $afm, $amka, $id_num, $username,
+    mysqli_stmt_bind_result($stmt, $afm, $amka, $id_num,
                             $first_name, $last_name, $email, $is_disabled,
-                            $is_pensioner, $is_employer, $is_employee);
+                            $is_pensioner, $is_employer, $is_employee, $street,
+                            $street_num, $area, $postal, $dob, $stamps,
+                            $stamps_this_month);
     if (mysqli_stmt_fetch($stmt) == NULL) {
         return false;
     }
-    $retData = ['userid' => $uid,
+    $retData = ['uid' => $uid,
                 'afm' => $afm,
                 'amka' => $amka,
                 'id_num' => $id_num,
@@ -104,18 +134,40 @@ function get_user_data($uid) {
                 'is_disabled' => $is_disabled,
                 'is_pensioner' => $is_pensioner,
                 'is_employer' => $is_employer,
-                'is_employee' => $is_employee, ];
+                'is_employee' => $is_employee,
+                'street' => $street,
+                'street_num' => $street_num,
+                'area' => $area,
+                'postal' => $postal,
+                'dob' => $dob,
+                'stamps' => $stamps,
+                'stamps_this_month' => $stamps_this_month,];
     return $retData;
 }
 
 // function to update user
-function update_user($data, $uid) {
+function update_email($data, $uid) {
     global $db;
     $sql_query = "UPDATE users
                   SET email = ?
                   WHERE uid = ? ";
     $stmt = mysqli_prepare($db , $sql_query);
     mysqli_stmt_bind_param($stmt, "si", $data['email'], $uid);
+    mysqli_stmt_execute ($stmt);
+    if (mysqli_affected_rows($db)) {
+        return true ;
+    }
+    return false ;
+}
+
+function update_password($data, $uid) {
+    global $db;
+    $hash = password_hash($data['new_password'], PASSWORD_DEFAULT);
+    $sql_query = "UPDATE users
+                  SET password = ?
+                  WHERE uid = ? ";
+    $stmt = mysqli_prepare($db , $sql_query);
+    mysqli_stmt_bind_param($stmt, "si", $hash, $uid);
     mysqli_stmt_execute ($stmt);
     if (mysqli_affected_rows($db)) {
         return true ;
