@@ -21,6 +21,10 @@
 		<script src="scripts/validateContact.js"></script>
 		<script src="scripts/onlyNumbers.js"></script>
 		<script src="scripts/backToTopButton.js"></script>
+		<script src="scripts/validateEmail.js"></script>
+		<script src="scripts/validateFName.js"></script>
+		<script src="scripts/validateLName.js"></script>
+		<script src="scripts/validateNumber.js"></script>
 	</head>
 
 	<body class="background-color">
@@ -56,50 +60,62 @@
 						<fieldset>
 							<legend class="text-center header">Επικοινωνήστε μαζί μας!</legend>
 
-							<div class="form-group">
+							<div class="form-group" id="fNameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="fname" name="name" type="text" placeholder="Όνομα" class="form-control">
+									 <input id="fname" name="name" type="text" placeholder="Όνομα" class="form-control" onblur="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
 									</div>
+
+									<div id="displayOnErrorFName"> </div>
+
 								</div>
 							</div>
-							<div class="form-group">
+							<div class="form-group" id="lNameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="lname" name="name" type="text" placeholder="Επίθετο" class="form-control">
+									 <input id="lname" name="name" type="text" placeholder="Επίθετο" class="form-control" onblur="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
 									</div>
+
+									<div id="displayOnErrorLName"> </div>
+
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group" id="emailForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 @
 									 </div>
-									 <input id="email" name="email" type="text" placeholder="Ηλεκτρονική Διεύθυνση E-mail" class="form-control">
+									 <input id="email" name="email" type="text" placeholder="Ηλεκτρονική Διεύθυνση E-mail" class="form-control" onblur="validateEmail('emailForm', 'email', 'displayOnErrorEmail');">
 									</div>
+
+									<div id="displayOnErrorEmail"> </div>
+
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group" id="phoneForm">
 								<span class="col-md-1 col-md-offset-1 text-center"> </span>
 								<div class="col-md-8">
 									<div class="input-group">
 									 <div class="input-group-addon">
 											<span class="glyphicon glyphicon-earphone"></span>
 									 </div>
-									 <input id="phone" name="phone" type="text" placeholder="Τηλέφωνο (Προαιρετικό)" maxlength="10" class="form-control" onkeypress="return onlyNumbers(event)">
+									 <input id="phone" name="phone" type="text" placeholder="Τηλέφωνο (Προαιρετικό)" maxlength="10" class="form-control" onkeypress="return onlyNumbers(event);" onblur="validateNumber('phoneForm', 'phone', 'displayOnErrorPhone', 10);">
 									</div>
+
+									<div id="displayOnErrorPhone"> </div>
+
 								</div>
 							</div>
 

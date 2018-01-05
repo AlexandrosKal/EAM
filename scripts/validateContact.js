@@ -12,10 +12,16 @@ function validateContact()
   }
   else
   {
-    if( !/(^([Α-Ω]|[ΆΈΉΊΌΎΏΪΫ])[α-ω]*([ϊϋ]?[α-ω]*[άέήόίύώ]?|[ΐΰ]?)[α-ω]*\s?$|^[A-Z][a-z]*\s?$)/.test(input) )
+    var inputArray = input.split(" ");
+    var regex = /(^([Α-Ω]|[ΆΈΉΊΌΎΏΪΫ])[α-ω]*([ϊϋ]?[α-ω]*[άέήόίύώ]?|[ΐΰ]?)[α-ω]*\s?$|^[A-Z][a-z]*\s?$)/;
+    for(var i=0; i<inputArray.length; i++)
     {
-      error_flag=true;
-      errorList.push("To πεδίο ονόματος δεν είναι έγκυρο.");
+      if( !regex.test(inputArray[i]) )
+      {
+        error_flag=true;
+        errorList.push("To πεδίο ονόματος δεν είναι έγκυρο.");
+        break;
+      }
     }
   }
 

@@ -19,6 +19,13 @@
 
 		<script src="scripts/backToTopButton.js"></script>
 		<script src="scripts/validateStamps.js"></script>
+		<script src="scripts/onlyNumbers.js"></script>
+
+		<script src="scripts/validateFName.js"></script>
+		<script src="scripts/validateLName.js"></script>
+		<script src="scripts/validateNumber.js"></script>
+		<script src="scripts/validateAdt.js"></script>
+		<script src="scripts/validateBday.js"></script>
 	</head>
 
 	<body class="background-color">
@@ -78,63 +85,78 @@
 								Αναγκαία η χρήση διαλυτικών όπου χρειάζεται.
 							</p>
 
-							<div class="form-group">
+							<div class="form-group" id="fnameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="fname" name="fname" type="text" placeholder="Όνομα" class="form-control">
+									 <input id="fname" name="fname" type="text" placeholder="Όνομα" class="form-control" onblur="validateFName('fnameForm', 'fname', 'displayOnErrorFname')">
 									</div>
+
+									<div id="displayOnErrorFname"> </div>
+
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group" id="lnameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="lname" name="lname" type="text" placeholder="Επίθετο" class="form-control">
+									 <input id="lname" name="lname" type="text" placeholder="Επίθετο" class="form-control" onblur="validateLName('lnameForm', 'lname', 'displayOnErrorLname')">
 									</div>
+
+									<div id="displayOnErrorLname"> </div>
+
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group" id="amkaForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-th-list"></span>
 									 </div>
-									 <input id="amka" name="amka" type="text" placeholder="Αριθμός Μητρώου Κοινωνικής Ασφάλισης" class="form-control" maxlength="11" onkeydown="return onlyNumbers(event);">
+									 <input id="amka" name="amka" type="text" placeholder="Αριθμός Μητρώου Κοινωνικής Ασφάλισης" class="form-control" maxlength="11" onkeydown="return onlyNumbers(event);" onblur="validateNumber('amkaForm', 'amka', 'displayOnErrorAmka', 11)">
 									</div>
+
+									<div id="displayOnErrorAmka"> </div>
+
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group" id="adtForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-th-list"></span>
 									 </div>
-									 <input id="adt" name="adt" type="text" placeholder="Αριθμός Δελτίου Ταυτότητας" class="form-control" maxlength="8" >
+									 <input id="adt" name="adt" type="text" placeholder="Αριθμός Δελτίου Ταυτότητας" class="form-control" maxlength="8" onblur="validateAdt('adtForm', 'adt', 'displayOnErrorAdt')">
 									</div>
+
+									<div id="displayOnErrorAdt"> </div>
+
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group" id="bdayForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-calendar"></span>
 									 </div>
-									 <input id="bday" name="bday" type="text" placeholder="Ημερομηνία Γέννησης - HH/MM/EEEE" class="form-control">
+									 <input id="bday" name="bday" type="text" placeholder="Ημερομηνία Γέννησης - HH/MM/EEEE" maxlength="10 "class="form-control" onblur="validateBday('bdayForm', 'bday', 'displayOnErrorBday')">
 									</div>
+
+									<div id="displayOnErrorBday"> </div>
+
 								</div>
 							</div>
 

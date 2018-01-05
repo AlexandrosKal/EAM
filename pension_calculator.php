@@ -20,6 +20,8 @@
 
 		<script src="scripts/backToTopButton.js"></script>
     <script src="scripts/validatePensionCalculator.js"></script>
+		<script src="scripts/onlyNumbers.js"></script>
+		<script src="scripts/notEmpty.js"></script>
 	</head>
 
 	<body class="background-color">
@@ -42,27 +44,32 @@
       <form class="form-horizontal" method="post" name="loginForm" onsubmit="return validatePensionCalculator()">
         <fieldset>
           <legend class="header text-center"> Υπολογισμός Σύνταξης Γήρατος IKA</legend>
-          <div class="form-group">
+          <div class="form-group" id="totalDaysForm">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-8">
               <div class="input-group">
                <div class="input-group-addon">
                  <span 	class="	glyphicon glyphicon-calendar"> </span>
                </div>
-               <input id="totalDays" name="totalDays" type="text" placeholder="Σύνολο Ημερών Εργασίας Ως Ασφαλισμένος" onkeydown="return onlyNumbers(event);" class="form-control">
+               <input id="totalDays" name="totalDays" type="text" placeholder="Σύνολο Ημερών Εργασίας Ως Ασφαλισμένος" onkeydown="return onlyNumbers(event);" class="form-control" onblur="notEmpty('totalDaysForm', 'totalDays', 'displayOnErrorTotalDays')">
               </div>
+
+							<div id="displayOnErrorTotalDays"> </div>
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id="2k17Form">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-4">
               <div class="input-group">
                <div class="input-group-addon">
                  2017
                </div>
-               <input id="income2k17" name="income2k17" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="income2k17" name="income2k17" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k17Form', 'income2k17', 'displayOnErrorIncome2k17')">
               </div>
+
+							<div id="displayOnErrorIncome2k17"> </div>
+
             </div>
 
             <div class="col-md-4">
@@ -70,20 +77,26 @@
                <div class="input-group-addon">
                  2017
                </div>
-               <input id="days2k17" name="days2k17" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="days2k17" name="days2k17" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k17Form', 'days2k17', 'displayOnErrorDays2k17')">
               </div>
+
+							<div id="displayOnErrorDays2k17"> </div>
+
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id="2k16Form">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-4">
               <div class="input-group">
                <div class="input-group-addon">
                  2016
                </div>
-               <input id="income2k16" name="income2k16" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="income2k16" name="income2k16" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k16Form', 'income2k16', 'displayOnErrorIncome2k16')">
               </div>
+
+							<div id="displayOnErrorIncome2k16"> </div>
+
             </div>
 
             <div class="col-md-4">
@@ -91,20 +104,26 @@
                <div class="input-group-addon">
                  2016
                </div>
-               <input id="days2k16" name="days2k16" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="days2k16" name="days2k16" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k16Form', 'days2k16', 'displayOnErrorDays2k16')">
               </div>
+
+							<div id="displayOnErrorDays2k16"> </div>
+
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id="2k15Form">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-4">
               <div class="input-group">
                <div class="input-group-addon">
                  2015
                </div>
-               <input id="income2k15" name="income2k15" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="income2k15" name="income2k15" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k15Form', 'income2k15', 'displayOnErrorIncome2k15')">
               </div>
+
+							<div id="displayOnErrorIncome2k15"> </div>
+
             </div>
 
             <div class="col-md-4">
@@ -112,20 +131,26 @@
                <div class="input-group-addon">
                  2015
                </div>
-               <input id="days2k15" name="days2k15" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="days2k15" name="days2k15" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k15Form', 'days2k15', 'displayOnErrorDays2k15')">
               </div>
+
+							<div id="displayOnErrorDays2k15"> </div>
+
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id="2k14Form">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-4">
               <div class="input-group">
                <div class="input-group-addon">
                  2014
                </div>
-               <input id="income2k14" name="income2k14" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="income2k14" name="income2k14" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k14Form', 'income2k14', 'displayOnErrorIncome2k14')">
               </div>
+
+							<div id="displayOnErrorIncome2k14"> </div>
+
             </div>
 
             <div class="col-md-4">
@@ -133,20 +158,26 @@
                <div class="input-group-addon">
                  2014
                </div>
-               <input id="days2k14" name="days2k14" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="days2k14" name="days2k14" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k14Form', 'days2k14', 'displayOnErrorDays2k14')">
               </div>
+
+							<div id="displayOnErrorDays2k14"> </div>
+
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id="2k13Form">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-4">
               <div class="input-group">
                <div class="input-group-addon">
                  2013
                </div>
-               <input id="income2k13" name="income2k13" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="income2k13" name="income2k13" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k13Form', 'income2k13', 'displayOnErrorIncome2k13')">
               </div>
+
+							<div id="displayOnErrorIncome2k13"> </div>
+
             </div>
 
             <div class="col-md-4">
@@ -154,20 +185,26 @@
                <div class="input-group-addon">
                  2013
                </div>
-               <input id="days2k13" name="days2k13" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="days2k13" name="days2k13" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k13Form', 'days2k13', 'displayOnErrorDays2k13')">
               </div>
+
+							<div id="displayOnErrorDays2k13"> </div>
+
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id="2k12Form">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-4">
               <div class="input-group">
                <div class="input-group-addon">
                  2012
                </div>
-               <input id="income2k12" name="income2k12" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="income2k12" name="income2k12" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k12Form', 'income2k12', 'displayOnErrorIncome2k12')">
               </div>
+
+							<div id="displayOnErrorIncome2k12"> </div>
+
             </div>
 
             <div class="col-md-4">
@@ -175,20 +212,26 @@
                <div class="input-group-addon">
                  2012
                </div>
-               <input id="days2k12" name="days2k12" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="days2k12" name="days2k12" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k12Form', 'days2k12', 'displayOnErrorDays2k12')">
               </div>
+
+							<div id="displayOnErrorDays2k12"> </div>
+
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id="2k11Form">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-4">
               <div class="input-group">
                <div class="input-group-addon">
                  2011
                </div>
-               <input id="income2k11" name="income2k11" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="income2k11" name="income2k11" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k11Form', 'income2k11', 'displayOnErrorIncome2k11')">
               </div>
+
+							<div id="displayOnErrorIncome2k11"> </div>
+
             </div>
 
             <div class="col-md-4">
@@ -196,20 +239,26 @@
                <div class="input-group-addon">
                  2011
                </div>
-               <input id="days2k11" name="days2k11" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="days2k11" name="days2k11" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k11Form', 'days2k11', 'displayOnErrorDays2k11')">
               </div>
+
+							<div id="displayOnErrorDays2k11"> </div>
+
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id="2k10Form">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-4">
               <div class="input-group">
                <div class="input-group-addon">
                  2010
                </div>
-               <input id="income2k10" name="income2k10" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="income2k10" name="income2k10" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k10Form', 'income2k10', 'displayOnErrorIncome2k10')">
               </div>
+
+							<div id="displayOnErrorIncome2k10"> </div>
+
             </div>
 
             <div class="col-md-4">
@@ -217,20 +266,26 @@
                <div class="input-group-addon">
                  2010
                </div>
-               <input id="days2k10" name="days2k10" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="days2k10" name="days2k10" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k10Form', 'days2k10', 'displayOnErrorDays2k10')">
               </div>
+
+							<div id="displayOnErrorDays2k10"> </div>
+
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id="2k09Form">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-4">
               <div class="input-group">
                <div class="input-group-addon">
                  2009
                </div>
-               <input id="income2k09" name="income2k09" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="income2k09" name="income2k09" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k09Form', 'income2k09', 'displayOnErrorIncome2k09')">
               </div>
+
+							<div id="displayOnErrorIncome2k09"> </div>
+
             </div>
 
             <div class="col-md-4">
@@ -238,20 +293,26 @@
                <div class="input-group-addon">
                  2009
                </div>
-               <input id="days2k09" name="days2k09" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="days2k09" name="days2k09" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k09Form', 'days2k09', 'displayOnErrorDays2k09')">
               </div>
+
+							<div id="displayOnErrorDays2k09"> </div>
+
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id="2k08Form">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-4">
               <div class="input-group">
                <div class="input-group-addon">
                  2008
                </div>
-               <input id="income2k08" name="income2k08" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="income2k08" name="income2k08" type="text" placeholder="Αποδοχές (€)" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k08Form', 'income2k08', 'displayOnErrorIncome2k08')">
               </div>
+
+							<div id="displayOnErrorIncome2k08"> </div>
+
             </div>
 
             <div class="col-md-4">
@@ -259,8 +320,11 @@
                <div class="input-group-addon">
                  2008
                </div>
-               <input id="days2k08" name="days2k08" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);">
+               <input id="days2k08" name="days2k08" type="text" placeholder="Ημέρες Εργασίας" class="form-control" onkeydown="return onlyNumbers(event);" onblur="notEmpty('2k08Form', 'days2k08', 'displayOnErrorDays2k08')">
               </div>
+
+							<div id="displayOnErrorDays2k08"> </div>
+
             </div>
           </div>
 

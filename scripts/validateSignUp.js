@@ -60,12 +60,28 @@ function validateSignUp()
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο κωδικόυ πρόσβασης.");
   }
+  else
+  {
+    if ( (password.length < 8) || (password.length > 24) )
+    {
+      error_flag = true;
+      errorList.push("Ο κωδικός πρόσβασης σας πρέπει να αποτελείται από 8-24 χαρακτήρες.");
+    }
+  }
 
   var repassword = document.getElementById("repassword").value;
   if(repassword==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο επαλήθευσης κωδικόυ πρόσβασης.");
+  }
+  else
+  {
+    if ( (repassword.length < 8) || (repassword.length > 24) )
+    {
+      error_flag = true;
+      errorList.push("Ο κωδικός πρόσβασης επαλήθευσής σας πρέπει να αποτελείται από 8-24 χαρακτήρες.");
+    }
   }
 
   if(password != repassword)
@@ -191,10 +207,16 @@ function validateSignUp()
   }
   else
   {
-    if( !/(^([Α-Ω]|[ΆΈΉΊΌΎΏΪΫ])[α-ω]*([ϊϋ]?[α-ω]*[άέήόίύώ]?|[ΐΰ]?)[α-ω]*\s?$|^[A-Z][a-z]*\s?$)/.test(input) )
+    var inputArray = input.split(" ");
+    var regex = /(^([Α-Ω]|[ΆΈΉΊΌΎΏΪΫ])[α-ω]*([ϊϋ]?[α-ω]*[άέήόίύώ]?|[ΐΰ]?)[α-ω]*\s?$|^[A-Z][a-z]*\s?$)/;
+    for(var i=0; i<inputArray.length; i++)
     {
-      error_flag=true;
-      errorList.push("To πεδίο περιοχής δεν είναι έγκυρο.");
+      if( !regex.test(inputArray[i]) )
+      {
+        error_flag=true;
+        errorList.push("To πεδίο περιοχής δεν είναι έγκυρο.");
+        break;
+      }
     }
   }
   /*ektupwsi tis listas*/
