@@ -21,9 +21,9 @@
 
 	<body class="background-color">
 		<!--- include to navbar-->
-		<?php		require 'navbar.php' ;?>
+		<?php	require 'views/navbar.php' ;?>
 		<!-- include to koubi gia epistrofi stin korufi-->
-		<?php require 'backToTopButton.php' ;?>
+		<?php require 'views/backToTopButton.php' ;?>
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="services.php"> <b> Υπηρεσίες </b> </a> </h5>
     <h2 class="page-header"> Υπηρεσίες </h2>

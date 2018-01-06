@@ -13,6 +13,8 @@
 		<link rel="stylesheet" type="text/css" href="css/navtabs.css">
     <link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
 		<link rel="stylesheet" type="text/css" href="css/faq.css">
+		<link rel="stylesheet" type="text/css" href="css/layout.css">
+		<link rel="stylesheet" type="text/css" href="css/well.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -23,18 +25,15 @@
 	<body class="bckgrnd">
 
 		<!--- include to navbar-->
-		<?php		require 'navbar.php' ;?>
-    <!-- include to koubi gia epistrofi stin korufi-->
-		<?php require 'backToTopButton.php' ;?>
+				<?php	require 'views/navbar.php' ;?>
+		<!-- include to koubi gia epistrofi stin korufi-->
+		<?php require 'views/backToTopButton.php' ;?>
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="faq.php"> <b> Συχνές Ερωτήσεις </b> </a> </h5>
 
-		<div class="page-header">
-			<legend class="text-center header"> Συχνές Ερωτήσεις</legend>
-		</div>
+		<h2 class="text-left page-header"> Συχνές Ερωτήσεις</h2>
 
 		<div class="container-fluid">
-			 <div class="col-md-8 col-md-offset-2">
 				<div class="well text">
 					<div class="panel-group" id="accordion">
 
@@ -99,7 +98,6 @@
         					</div>
 				</div>
 			</div>
-		</div>
 
 
 	</body>
