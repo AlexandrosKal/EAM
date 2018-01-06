@@ -151,4 +151,38 @@ function get_message_errors($data) {
 
 }
 
+function get_stamp_form_errors($data) {
+    $messages = [];
+    foreach ($data as $key => $value) {
+        if (empty($value)) {
+            $messages[] = 'Παρακαλούμε συμπληρώστε όλα τα πεδία';
+            break;
+        }
+    }
+    if (!validate_name($data['first_name'])) {
+        $messages[] = 'Το όνομα σας περιέχει μη επιτρεπτούς χαρακτήρες. Παρακαλούμε εισάγετε μόνο γράμματα της αλφαβήτας';
+    }
+    if (!validate_name($data['last_name'])) {
+        $messages[] = 'Το επώνυμό σας περιέχει μη επιτρεπτούς χαρακτήρες. Παρακαλούμε εισάγετε μόνο γράμματα της αλφαβήτας';
+    }
+    if (!validate_amka($data['amka'])) {
+        $messages[] = 'Το αμκα δεν υπάρχει ή ειναι λαθος';
+    }
+    if (is_duplicate_amka($data['amka'])) {
+        $messages[] = 'Υπάρχει ήδη λογαριασμός με αυτο το άμκα';
+    }
+    if (!validate_afm($data['afm'])) {
+        $messages[] = 'Το αφμ δεν υπάρχει ή ειναι λαθος';
+    }
+    if (is_duplicate_afm($data['afm'])) {
+        $messages[] = 'Υπάρχει ήδη λογαριασμός με αυτο το αφμ';
+    }
+    if (!validate_id_num($data['id_num'])) {
+        $messages[] = 'Ο αριθμος δελτιου ταυτότητας δεν υπάρχει ή ειναι λαθος';
+    }
+    if (is_duplicate_afm($data['id_num'])) {
+        $messages[] = 'Υπάρχει ήδη λογαριασμός με αυτο το αριθμό ταυτότητας';
+    }
+}
+
 ?>

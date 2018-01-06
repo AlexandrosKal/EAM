@@ -8,7 +8,7 @@ if (isset($_SESSION['uid'])) {
     $user = get_user_data($_SESSION['uid']);
 } else {
     if (!empty($_POST)) {
-        $errors = get_register_errors($_POST);
+        $errors = get_stamp_form_errors($_POST);
         if(empty($errors)) {
             $user = get_prestored_data($_POST['amka']);
             if ($user === false) {
