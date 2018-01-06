@@ -33,43 +33,43 @@
 
     <div class="well container">
       <p class="padding paragraph">
-        Ο <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης">ΑΜΚΑ</abbr> <?php echo "$user['amka']"; ?> αντιστοιχεί στο άτομο με στοιχεία:
+        Ο <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης">ΑΜΚΑ</abbr> <?php echo $user['amka']; ?> αντιστοιχεί στο άτομο με στοιχεία:
       </p>
 
         <div class="row">
 	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Όνομα:</span>
 					<span class="col-md-offset-4"> </span>
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo "$user['first_name']"; ?></span>
+	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['first_name']; ?></span>
         </div>
 
 				<div class="row">
 	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Επίθετο:</span>
 					<span class="col-md-offset-4"> </span>
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo "$user['last_name']"; ?></span>
+	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['last_name']; ?></span>
   			</div>
 
 				<div class="row">
 	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Διεύθυνση:</span>
 					<span class="col-md-offset-4"> </span>
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo "$user['street'].' '.$user['street_num'].', '.$user['area']"; ?></span>
+	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['street'].' '.$user['street_num'].', '.$user['area']; ?></span>
   			</div>
 
 				<div class="row">
         	<span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Ταχυδρομικός Κώδικας:</span>
 					<span class="col-md-offset-4"> </span>
-        	<span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo "$user['postal']"; ?></span>
+        	<span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['postal']; ?></span>
         </div>
 
 				<div class="row">
 	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info"> <abbr title="Αριθμός Φορολογικού Μητρώου"> ΑΦΜ:</span>
 					<span class="col-md-offset-4"> </span>
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo "$user['afm']"; ?></span>
+	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['afm']; ?></span>
         </div>
 
 				<div class="row">
 	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info"> <abbr title="Αριθμός Δελτίου Ταυτότητας"> ΑΔΤ:</span>
 					<span class="col-md-offset-4"> </span>
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo "$user['id_num']"; ?></span>
+	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['id_num']; ?></span>
   			</div>
 
 				<!-- include to koubi gia ektupwsi-->

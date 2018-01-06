@@ -70,7 +70,18 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="fname" name="name" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
+									 <?php
+						       if ( isset( $_SESSION['uid'] ) )
+						       { ?>
+									 	<input id="fname" name="name" type="text" value="<?php echo $_SESSION['first_name']; ?>" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
+										<?php
+									 }
+									 else
+									 { ?>
+										 <input id="fname" name="name" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
+										<?php
+									 }
+									 ?>
 									</div>
 
 									<div id="displayOnErrorFName"> </div>
@@ -85,7 +96,18 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="lname" name="name" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
+									 <?php
+									 if ( isset( $_SESSION['uid'] ) )
+									 { ?>
+									 <input id="lname" name="name" type="text" value="<?php echo $_SESSION['last_name']?>" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
+									 <?php
+									}
+									else
+									{ ?>
+										<input id="lname" name="name" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
+										<?php
+									 }
+									 ?>
 									</div>
 
 									<div id="displayOnErrorLName"> </div>
@@ -101,7 +123,18 @@
 									 <div class="input-group-addon">
 										 @
 									 </div>
-									 <input id="email" name="email" type="text" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('emailForm', 'email', 'displayOnErrorEmail');">
+									 <?php
+									 if ( isset( $_SESSION['uid'] ) )
+									 { ?>
+									 <input id="email" name="email" type="text" value="<?php echo $_SESSION['email']?>" class="form-control" onchange="validateEmail('emailForm', 'email', 'displayOnErrorEmail');">
+									 <?php
+									}
+									else
+									{ ?>
+										<input id="email" name="email" type="text" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('emailForm', 'email', 'displayOnErrorEmail');">
+										<?php
+									 }
+									 ?>
 									</div>
 
 									<div id="displayOnErrorEmail"> </div>

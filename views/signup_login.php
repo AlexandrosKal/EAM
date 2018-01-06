@@ -131,6 +131,20 @@
   						</fieldset>
   					</form>
 
+						<?php
+						if( isset($errors) && !empty($errors) )
+						{
+							?>
+							<div class="alert alert-danger text-danger">
+							<span class='glyphicon glyphicon-alert'></span> &nbsp;
+							<?php
+							echo $errors[0];
+							?>
+							</div>
+						<?php
+						}
+						?>
+
 						<div id="displayOnError_l"> </div>
 
 				</div>

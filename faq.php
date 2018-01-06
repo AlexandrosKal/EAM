@@ -22,7 +22,7 @@
     <script src="scripts/backToTopButton.js"></script>
 	</head>
 
-	<body class="bckgrnd">
+	<body class="background-color">
 
 		<!--- include to navbar-->
 				<?php	require 'views/navbar.php' ;?>
