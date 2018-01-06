@@ -39,7 +39,8 @@ if (isset($_SESSION['uid'])) {
         require 'views/profile.php';
     }
     require 'views/profile.php';
+} else {
+    header('Location: signup_login.php' );
 }
-header('Location: signup_login.php' );
 ?>
 

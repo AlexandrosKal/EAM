@@ -12,7 +12,7 @@ if ( mysqli_connect_errno() ) {
 mysqli_query( $db, "SET NAMES 'utf8'");
 mysqli_query( $db, "SET CHARACTER SET 'utf8'");
 session_start();
-if(!isset($_SESSION['uid']))
+if(!isset($_SESSION['uid'])) {
     if(isset($_COOKIE['uid'])) {
         $user = get_user_data($_COOKIE['uid']);
         foreach ( $user as $key => $value ) {
