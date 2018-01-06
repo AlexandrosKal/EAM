@@ -95,7 +95,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="fname" name="fname" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onblur="validateFName('fnameForm', 'fname', 'displayOnErrorFname')">
+									 <input id="fname" name="fname" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fnameForm', 'fname', 'displayOnErrorFname')">
 									</div>
 
 									<div id="displayOnErrorFname"> </div>
@@ -111,7 +111,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="lname" name="lname" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onblur="validateLName('lnameForm', 'lname', 'displayOnErrorLname')">
+									 <input id="lname" name="lname" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lnameForm', 'lname', 'displayOnErrorLname')">
 									</div>
 
 									<div id="displayOnErrorLname"> </div>
@@ -127,7 +127,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-th-list"></span>
 									 </div>
-									 <input id="amka" name="amka" type="text" placeholder="πχ 19129612345" class="form-control" maxlength="11" onkeydown="return onlyNumbers(event);" onblur="validateNumber('amkaForm', 'amka', 'displayOnErrorAmka', 11)">
+									 <input id="amka" name="amka" type="text" placeholder="πχ 19129612345" class="form-control" maxlength="11" onkeydown="return onlyNumbers(event);" onchange="validateNumber('amkaForm', 'amka', 'displayOnErrorAmka', 11)">
 									</div>
 
 									<div id="displayOnErrorAmka"> </div>
@@ -143,7 +143,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-th-list"></span>
 									 </div>
-									 <input id="adt" name="adt" type="text" placeholder="πχ AH542412" class="form-control" maxlength="8" onblur="validateAdt('adtForm', 'adt', 'displayOnErrorAdt')">
+									 <input id="adt" name="adt" type="text" placeholder="πχ AH542412" class="form-control" maxlength="8" onchange="validateAdt('adtForm', 'adt', 'displayOnErrorAdt')">
 									</div>
 
 									<div id="displayOnErrorAdt"> </div>
@@ -159,7 +159,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-calendar"></span>
 									 </div>
-									 <input id="bday" name="bday" type="text" placeholder="πχ 19/12/96" maxlength="10 "class="form-control" onblur="validateBday('bdayForm', 'bday', 'displayOnErrorBday')">
+									 <input id="bday" name="bday" type="text" placeholder="πχ 19/12/96" maxlength="10 "class="form-control" onchange="validateBday('bdayForm', 'bday', 'displayOnErrorBday')">
 									</div>
 
 									<div id="displayOnErrorBday"> </div>

@@ -149,14 +149,14 @@
 					<div id="displayOnError"> </div>
 
 					<?php
-					if($success)
+					if(isset($success) && $success)
 					{ ?>
 						<div class="alert alert-success">
 							<strong>Το μήνυμα στάλθηκε επιτυχώς!</strong> Θα επικοινωνήσουμε μαζί σας όσο το δυνατόν πιο γρήγορα.
 						</div>
 					<?php
 					}
-					else
+					else if(isset($success) && !$success)
 					{ ?>
 						<div class="alert alert-danger">
 							<strong> <?php echo "poutsos"; ?> </strong>

@@ -2,9 +2,7 @@
 require 'models/connect.php';
 require 'models/validators.php';
 require 'models/users.php';
-
 if (isset($_SESSION['uid'])) {
-
     $user = get_user_data($_SESSION['uid']);
     if (!empty($_POST)) {
         $valid_email = false;

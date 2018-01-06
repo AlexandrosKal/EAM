@@ -47,17 +47,17 @@
 
 					<div class="panel-body">
 						<span class="col-md-2 attribute">Όνομα:</span>
-						<span class="col-md-2 attribute_value"> <?php echo "$user['first_name']"; ?> </span>
+						<span class="col-md-2 attribute_value"> <?php echo $user['first_name']; ?> </span>
 					</div>
 
 					<div class="panel-body">
 						<span class="col-md-2 attribute">Επίθετο:</span>
-						<span class="col-md-2 attribute_value"><?php echo "$user['last_name']"; ?></span>
+						<span class="col-md-2 attribute_value"><?php echo $user['last_name']; ?></span>
 				 </div>
 
 					<div class="panel-body">
 						<span class="col-md-2 attribute">Ηλεκτρονική Διεύθυνση: </span>
-						<span class="col-md-2 attribute_value"><?php echo "$user['email']"; ?></span>
+						<span class="col-md-2 attribute_value"><?php echo $user['email']; ?></span>
 					</div>
 				</div>
 
@@ -66,17 +66,17 @@
 
 					<div class="panel-body">
 						<span class="col-md-2 attribute">Διεύθυνση:</span>
-						<span class="col-md-2 attribute_value"><?php echo "$user['street'].' '.$user['street_num']"; ?></span>
+						<span class="col-md-2 attribute_value"><?php echo $user['street'].' '.$user['street_num']; ?></span>
 					</div>
 
 					<div class="panel-body">
 						<span class="col-md-2 attribute">Περιοχή:</span>
-						<span class="col-md-2 attribute_value"><?php echo "$user['area']" ?></span>
+						<span class="col-md-2 attribute_value"><?php echo $user['area'] ?></span>
 					</div>
 
 					<div class="panel-body">
 						<span class="col-md-2 attribute">Ταχυδρομικός κώδικας:</span>
-						<span class="col-md-2 attribute_value"><?php echo "$user['postal']" ?></span>
+						<span class="col-md-2 attribute_value"><?php echo $user['postal'] ?></span>
 					</div>
 
 				</div>
@@ -85,17 +85,17 @@
 
 					<div class="panel-body">
 						<span class="col-md-2 attribute"><abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης"> ΑΜΚΑ: </abbr> </span>
-						<span class="col-md-2 attribute_value"><?php echo "$user['amka']" ?></span>
+						<span class="col-md-2 attribute_value"><?php echo $user['amka'] ?></span>
 					</div>
 
 					<div class="panel-body">
 						<span class="col-md-2 attribute"><abbr title="Αριθμός Φορολογικού Μητρώου"> ΑΦΜ: </abbr></span>
-						<span class="col-md-2 attribute_value"><?php echo "$user['afm']" ?></span>
+						<span class="col-md-2 attribute_value"><?php echo $user['afm'] ?></span>
 					</div>
 
 					<div class="panel-body">
 						<span class="col-md-2 attribute"><abbr title="Αριθμός Δελτίου Ταυτότητας"> ΑΔΤ: </abbr></span>
-						<span class="col-md-2 attribute_value"><?php echo "$user['id_num']" ?></span>
+						<span class="col-md-2 attribute_value"><?php echo $user['id_num'] ?></span>
 					</div>
 
 				</div>
