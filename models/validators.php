@@ -1,4 +1,3 @@
-
 <?php
 
 //Returns true if string contains valid characthers, otheerwise false
@@ -68,14 +67,26 @@ function get_register_errors($data) {
     if (!validate_password($data['password'])) {
         $messages[] = 'Μη επιτρεπτός κωδικός. Ο κωδικός σας πρέπει να περιλαμβάνει τουλάχιστον 8-32 ψηφία.';
     }
+    if (is_duplicate_email($data['email'])) {
+        $messages[] = 'Το e-mail σας υπάρχει ήδη';
+    }
     if (!validate_amka($data['amka'])) {
         $messages[] = 'Το αμκα δεν υπάρχει ή ειναι λαθος';
+    }
+    if (is_duplicate_amka($data['amka'])) {
+        $messages[] = 'Υπάρχει ήδη λογαριασμός με αυτο το άμκα';
     }
     if (!validate_afm($data['afm'])) {
         $messages[] = 'Το αφμ δεν υπάρχει ή ειναι λαθος';
     }
+    if (is_duplicate_afm($data['afm'])) {
+        $messages[] = 'Υπάρχει ήδη λογαριασμός με αυτο το αφμ';
+    }
     if (!validate_id_num($data['id_num'])) {
         $messages[] = 'Ο αριθμος δελτιου ταυτότητας δεν υπάρχει ή ειναι λαθος';
+    }
+    if (is_duplicate_afm($data['id_num'])) {
+        $messages[] = 'Υπάρχει ήδη λογαριασμός με αυτο το αριθμό ταυτότητας';
     }
     if (!validate_name($data['street'])) {
         $messages[] = 'Το όνομα οδού σας περιέχει μη επιτρεπτούς χαρακτήρες. Παρακαλούμε εισάγετε μόνο γράμματα της αλφαβήτας';
@@ -92,6 +103,7 @@ function get_register_errors($data) {
     if (!validate_date($data['date_of_birth'])) {
         $messages[] = 'Λαθος ημερομηνία γέννησης';
     }
+
     return $messages;
 }
 
@@ -138,6 +150,5 @@ function get_message_errors($data) {
     return $messages;
 
 }
-
 
 ?>

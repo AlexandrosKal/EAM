@@ -25,7 +25,7 @@
                     header('Location: index.php');
                 }
                 else {
-                    $errors[] = 'Προέκυψε σοβαρό σφάλμα, παρακαλούμε προσπαθήστε αργότερα.';
+                    //500
                 }
             }
             //require 'views/header.php';
@@ -64,7 +64,7 @@
                 foreach ( $user as $key => $value ) {
                     $_SESSION[ $key ] = $value;
                 }
-                if($_POST['persistent'] == true) {
+                if(isset($_POST['persistent']) && !empty($_POST['persistent'])) {
                     setcookie('uid',
                               $user['uid'],
                               time() + (60 * 60 * 24 * 365));

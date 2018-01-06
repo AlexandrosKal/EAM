@@ -22,10 +22,6 @@ function register_user($data) {
     $last_name = $data['last_name'];
     $first_name = $data['first_name'];
     $hash = password_hash($data['password'], PASSWORD_DEFAULT);
-    //var_dump($hash);
-    //echo"\n";
-    //var_dump($data);
-    //die();
     $sql_query = "INSERT INTO users
                   SET afm = ?,
                       amka = ?,
@@ -173,6 +169,74 @@ function update_password($data, $uid) {
         return true ;
     }
     return false ;
+}
+
+function is_duplicate_amka($amka) {
+    global $db;
+    $sql_query = "SELECT amka
+                  FROM users
+                  WHERE amka = ?
+                  LIMIT 1";
+    $stmt = mysqli_prepare($db, $sql_query);
+    mysqli_stmt_bind_param($stmt, "i", $amka);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_store_result($stmt);
+    mysqli_stmt_bind_result($stmt, $amka);
+    if (mysqli_stmt_fetch($stmt) == NULL) {
+        return false;
+    }
+    return true;
+}
+
+function is_duplicate_email($email) {
+    global $db;
+    $sql_query = "SELECT email
+                  FROM users
+                  WHERE email = ?
+                  LIMIT 1";
+    $stmt = mysqli_prepare($db, $sql_query);
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_store_result($stmt);
+    mysqli_stmt_bind_result($stmt, $email);
+    if (mysqli_stmt_fetch($stmt) == NULL) {
+        return false;
+    }
+    return true;
+}
+
+function is_duplicate_afm($afm) {
+    global $db;
+    $sql_query = "SELECT afm
+                  FROM users
+                  WHERE afm = ?
+                  LIMIT 1";
+    $stmt = mysqli_prepare($db, $sql_query);
+    mysqli_stmt_bind_param($stmt, "i", $afm);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_store_result($stmt);
+    mysqli_stmt_bind_result($stmt, $afm);
+    if (mysqli_stmt_fetch($stmt) == NULL) {
+        return false;
+    }
+    return true;
+}
+
+function is_duplicate_id_num($id_num) {
+    global $db;
+    $sql_query = "SELECT id_num
+                  FROM users
+                  WHERE id_num = ?
+                  LIMIT 1";
+    $stmt = mysqli_prepare($db, $sql_query);
+    mysqli_stmt_bind_param($stmt, "s", $id_num);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_store_result($stmt);
+    mysqli_stmt_bind_result($stmt, $id_num);
+    if (mysqli_stmt_fetch($stmt) == NULL) {
+        return false;
+    }
+    return true;
 }
 
 ?>

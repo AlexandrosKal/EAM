@@ -14,21 +14,26 @@ if (isset($_SESSION['uid'])) {
             if ($valid_email) {
                 $success = update_mail($_POST['email'], $_SESSION['uid']);
                 if(!$success) {
-                    $emailError = 'email error';
+                    //500
                 }
             } else {
-                $email_error = 'email error';
+                $email_error = 'Δωστε ενα legit email';
             }
         }
         if (!empty($_POST['new_password'])) {
             $valid_new_password = validate_password($_POST['new_password']);
-            if ($valid_new_password) {
+            $authenticated = authenticate_user(array_merge($_SESSION['email']), $_POST['password']);
+            if ($valid_new_password && $authenticated) {
                 $success = update_password($_POST['new_password'], $_SESSION['uid']);
                 if(!$success) {
                     $pass_error = 'pass error';
                 }
-            } else {
-                $pass_error = 'pass error';
+            }
+            if (!$authenticated) {
+                $pass_error = 'Λαθος παλιος κωδικος';
+            }
+            if(!$valid_new_password) {
+                $pass_error = 'Λαθος νεος κωδικος';
             }
         }
         require 'views/profile.php';
