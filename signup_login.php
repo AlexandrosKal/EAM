@@ -1,7 +1,7 @@
 <?php
     if (isset($_GET['register'])) {
-        require 'models/connect.php';
         require 'models/users.php';
+        require 'models/connect.php';
         require 'models/validators.php';
         require 'models/prestored_data.php';
         //If user has logged in, redirect to index.php
@@ -25,21 +25,17 @@
                     header('Location: index.php');
                 }
                 else {
-                    //500
+                    require 'views/500.php';
                 }
             }
-            //require 'views/header.php';
             require 'views/signup_login.php';
-            //require 'views/footer.php';
         }
         else {
-            //require 'views/header.php';
             require 'views/signup_login.php';
-            //require 'views/footer.php';
         }
     } else {
-        require 'models/connect.php';
         require 'models/users.php';
+        require 'models/connect.php';
         $title = 'Σύνδεση Χρήστη';
         $login = true;
         if ( isset( $_SESSION[ 'uid' ] ) ) {
@@ -47,17 +43,13 @@
         }
 
         if ( empty( $_POST ) ) {
-            //require 'views/header.php';
             require 'views/signup_login.php';
-            //require 'views/footer.php';
         }
         else {
             $user = authenticate_user( $_POST );
             if ( $user === false ) {
                 $errors[] = 'Τα στοιχεία που δώσατε δεν είναι σωστά';
-                //require 'views/header.php';
                 require 'views/signup_login.php';
-                //require 'views/footer.php';
             }
             else {
                 $user = get_user_data($user);

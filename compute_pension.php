@@ -1,4 +1,5 @@
 <?php
+require 'models/users.php';
 require 'models/connect.php';
 require 'models/validators.php';
 if (!empty($_POST)) {

@@ -1,4 +1,5 @@
 <?php
+    require 'models/users.php';
     require 'models/connect.php';
     require 'models/contact_messages.php';
     require 'models/validators.php';
