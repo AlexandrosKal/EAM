@@ -29,10 +29,12 @@
 		<script src="scripts/validateSignUp.js"></script>
 
 		<script src="scripts/validateEmail.js"></script>
+		<script src="scripts/validateEmailNO.js"></script>
 		<script src="scripts/validateLName.js"></script>
 		<script src="scripts/validateNumber.js"></script>
 		<script src="scripts/validateFName.js"></script>
 		<script src="scripts/validatePassword.js"></script>
+		<script src="scripts/validatePasswordNO.js"></script>
 		<script src="scripts/validateAdt.js"></script>
 		<script src="scripts/validateBday.js"></script>
 		<script src="scripts/validateArea.js"></script>
@@ -81,7 +83,7 @@
   									 <div class="input-group-addon">
   										 @
   									 </div>
-  									 <input id="email_l" name="email" type="text" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('emailForm_l', 'email_l', 'displayOnErrorEmail_l')">
+  									 <input id="email_l" name="email" type="text" placeholder="πχ user@example.com" class="form-control" onchange="validateEmailNO('emailForm_l', 'email_l', 'displayOnErrorEmail_l')">
   									</div>
 
 										<div id="displayOnErrorEmail_l"> </div>
@@ -97,7 +99,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-lock"></span>
                      </div>
-                     <input id="password_l" name="password" type="password" placeholder="*******" class="form-control" maxlength="24" onchange="validatePassword('passwordForm_l', 'password_l', 'displayOnErrorPassword_l', 8, 24)">
+                     <input id="password_l" name="password" type="password" placeholder="*******" class="form-control" maxlength="24" onchange="validatePasswordNO('passwordForm_l', 'password_l', 'displayOnErrorPassword_l', 8, 24)">
                     </div>
 
 										<div id="displayOnErrorPassword_l"> </div>
