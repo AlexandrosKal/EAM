@@ -20,6 +20,7 @@
             $success = false;
             require 'views/contact_us.php';
         }
+    } else {
+        require 'views/contact_us.php';
     }
-    require 'views/contact_us.php';
 ?>

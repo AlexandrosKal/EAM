@@ -3,6 +3,8 @@
     <img src="images/ika_logo_.png" alt="IKA logo" class="img_logo"/>
   </a>
 </div>
+		<?php require 'models/users.php';?>
+		<?php require 'models/connect.php';?>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
