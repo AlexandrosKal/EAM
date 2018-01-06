@@ -155,10 +155,10 @@ function validatePensionCalculator()
   if(error_flag === true)
   {
     document.getElementById("displayOnError").innerHTML="";
+    document.getElementById("displayOnError").innerHTML += "<div id='pcalc-error' class='alert alert-danger error-alert-margin'>"
     for(var i=0; i < errorList.length; i++)
     {
-        document.getElementById("displayOnError").innerHTML += "<span class='col-md-1 col-md-offset-1 text-center'></span>";
-        document.getElementById("displayOnError").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span> &nbsp;" + errorList[i] + "</li>";
+        document.getElementById("pcalc-error").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span> &nbsp;" + errorList[i] + "</li>";
     }
 
     return false;
