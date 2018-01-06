@@ -1,5 +1,4 @@
 <?php
-
 function create_request($data) {
     global $db;
     $uid = data['uid'];
@@ -19,8 +18,7 @@ function create_request($data) {
         return mysqli_insert_id($db);
     }
 }
-
-function get_request($did) {
+function get_request($rid) {
     global $db;
     $sql_query = "SELECT uid,
                       resloved,
@@ -28,7 +26,7 @@ function get_request($did) {
                   WHERE did = ?
                   LIMIT 1";
     $stmt = mysqli_prepare($db, $sql_query);
-    mysqli_stmt_bind_param($stmt, "i", $rid);
+    mysqli_stmt_bind_param($s[]otmt, "i", $rid);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_store_result($stmt);
     mysqli_stmt_bind_result($stmt, $uid, $resolved);
@@ -40,7 +38,6 @@ function get_request($did) {
                 'resolved' => $resolved, ];
     return $retData;
 }
-
 function resolve_request($data) {
     $rid = $data['rid'];
     $sql_query = "UPDATE requests
@@ -54,5 +51,4 @@ function resolve_request($data) {
     }
     return false ;
 }
-
 ?>
