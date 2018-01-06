@@ -1,0 +1,23 @@
+div.well
+{
+  margin-left:15em;
+  margin-right:15em;
+}
+
+.panel-heading
+{
+  font-size:20px;
+  font-weight:bold
+}
+
+.attribute
+{
+  font-size:16px;
+  font-weight:bold;
+  color:gray;
+}
+
+.attribute_value
+{
+  font-size:16px;
+}

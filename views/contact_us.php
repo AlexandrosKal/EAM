@@ -14,6 +14,8 @@
 		<link rel="stylesheet" type="text/css" href="css/error_text.css">
 		<link rel="stylesheet" type="text/css" href="css/contact_us.css">
 		<link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
+		<link rel="stylesheet" type="text/css" href="css/form.css">
+		<link rel="stylesheet" type="text/css" href="css/error_js.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -21,11 +23,15 @@
 		<script src="scripts/validateContact.js"></script>
 		<script src="scripts/onlyNumbers.js"></script>
 		<script src="scripts/backToTopButton.js"></script>
+		<script src="scripts/validateEmail.js"></script>
+		<script src="scripts/validateFName.js"></script>
+		<script src="scripts/validateLName.js"></script>
+		<script src="scripts/validateNumber.js"></script>
 	</head>
 
 	<body class="background-color">
 		<!--- include to navbar-->
-		<?php		require 'navbar.php' ;?>
+		<?php	require 'navbar.php' ;?>
 		<!-- include to koubi gia epistrofi stin korufi-->
 		<?php require 'backToTopButton.php' ;?>
 		<!--- set to path-->
@@ -52,60 +58,77 @@
 
 			<div id="Epikoinwnia" class="tab-pane fade">
 				<div class="well well-sm">
-					<form class="form-horizontal" method="post" name"contactForm" onsubmit="return validateContact() action="contact_us.php"">
+					<form class="form-horizontal" method="post" name"contactForm" onsubmit="return validateContact()">
 						<fieldset>
 							<legend class="text-center header">Επικοινωνήστε μαζί μας!</legend>
 
-							<div class="form-group">
+							<div class="form-group" id="fNameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="fname">Όνομα</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="fname" name="first_name" type="text" placeholder="Όνομα" class="form-control">
+									 <input id="fname" name="name" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
 									</div>
+
+									<div id="displayOnErrorFName"> </div>
+
 								</div>
 							</div>
-							<div class="form-group">
+							<div class="form-group" id="lNameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="lname">Επίθετο</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="lname" name="last_name" type="text" placeholder="Επίθετο" class="form-control">
+									 <input id="lname" name="name" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
 									</div>
+
+									<div id="displayOnErrorLName"> </div>
+
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group" id="emailForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="email">Ηλεκτρονική Διεύθυνση E-mail</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 										 @
 									 </div>
-									 <input id="email" name="email" type="text" placeholder="Ηλεκτρονική Διεύθυνση E-mail" class="form-control">
+									 <input id="email" name="email" type="text" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('emailForm', 'email', 'displayOnErrorEmail');">
 									</div>
+
+									<div id="displayOnErrorEmail"> </div>
+
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group" id="phoneForm">
 								<span class="col-md-1 col-md-offset-1 text-center"> </span>
 								<div class="col-md-8">
+									<label class="form-label" for="phone">Τηλέφωνο (Προαιρετικό)</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 											<span class="glyphicon glyphicon-earphone"></span>
 									 </div>
-									 <input id="phone" name="phone" type="text" placeholder="Τηλέφωνο (Προαιρετικό)" maxlength="10" class="form-control" onkeypress="return onlyNumbers(event)">
+									 <input id="phone" name="phone" type="text" placeholder="πχ 6989088366, 2104613688" maxlength="10" class="form-control" onkeypress="return onlyNumbers(event);" onchange="validateNumber('phoneForm', 'phone', 'displayOnErrorPhone', 10);">
 									</div>
+
+									<div id="displayOnErrorPhone"> </div>
+
 								</div>
 							</div>
 
 							<div class="form-group">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+									<label class="form-label" for="message">Μήνυμα</label>
 									<div class="input-group">
 									 <div class="input-group-addon">
 											<span class="glyphicon glyphicon-pencil"></span>
@@ -124,6 +147,23 @@
 					</form>
 
 					<div id="displayOnError"> </div>
+
+					<?php
+					if($success)
+					{ ?>
+						<div class="alert alert-success">
+							<strong>Το μήνυμα στάλθηκε επιτυχώς!</strong> Θα επικοινωνήσουμε μαζί σας όσο το δυνατόν πιο γρήγορα.
+						</div>
+					<?php
+					}
+					else
+					{ ?>
+						<div class="alert alert-danger">
+							<strong> <?php echo "poutsos"; ?> </strong>
+						</div>
+					<?php
+					}
+					?>
 
 				</div>
 			</div>

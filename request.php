@@ -4,7 +4,6 @@ require 'models/validators.php';
 require 'models/users.php';
 require 'models/requests.php';
 require 'models/documents.php';
-
 if (isset($_SESSION['uid'])) {
     $success = false;
     if (!empty($_GET)) {

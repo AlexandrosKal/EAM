@@ -29,10 +29,10 @@ function validateChangePass()
   if(error_flag === true)
   {
     document.getElementById("displayOnErrorPass").innerHTML="";
+    document.getElementById("displayOnErrorPass").innerHTML += "<div id='chpass-error' class='alert alert-danger error-alert-margin'>"
     for(var i=0; i < errorList.length; i++)
     {
-        document.getElementById("displayOnErrorPass").innerHTML += "<span class='col-md-1 col-md-offset-1 text-center'></span>";
-        document.getElementById("displayOnErrorPass").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span> &nbsp;" + errorList[i] + "</li>";
+        document.getElementById("chpass-error").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span> &nbsp;" + errorList[i] + "</li>";
     }
 
     return false;

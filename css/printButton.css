@@ -1,0 +1,11 @@
+#printButton
+{
+  float:right;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size : 16px;
+}

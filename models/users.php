@@ -240,4 +240,3 @@ function is_duplicate_id_num($id_num) {
 }
 
 ?>
-

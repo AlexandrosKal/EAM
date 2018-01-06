@@ -1,5 +1,4 @@
 <?php
-
 function create_request($data) {
     global $db;
     $uid = data['uid'];
@@ -19,7 +18,6 @@ function create_request($data) {
         return mysqli_insert_id($db);
     }
 }
-
 function get_request($rid) {
     global $db;
     $sql_query = "SELECT uid,
@@ -40,7 +38,6 @@ function get_request($rid) {
                 'resolved' => $resolved, ];
     return $retData;
 }
-
 function resolve_request($data) {
     $rid = $data['rid'];
     $sql_query = "UPDATE requests
@@ -54,5 +51,4 @@ function resolve_request($data) {
     }
     return false ;
 }
-
 ?>

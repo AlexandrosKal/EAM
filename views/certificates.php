@@ -39,7 +39,7 @@
 
       <ul class="dropdown-menu">
         <li class="dropdown-header">Ασφαλισμένοι</li>
-        <li><a href="certificate.php/?type=amka">Πιστοποιητικό <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης"> ΑΜΚΑ </abbr></a></li>
+        <li><a href="AMKA_certificate.php">Πιστοποιητικό <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης"> ΑΜΚΑ </abbr></a></li>
 
         <li class="divider"></li>
 
@@ -49,7 +49,7 @@
         <li class="divider"></li>
 
         <li class="dropdown-header">ΑμΕΑ</li>
-        <li><a href="certificate.php/?type=disabled">Πιστοποιητικό Αναπηρίας</a></li>
+        <li><a href="disabled_certificate.php">Πιστοποιητικό Αναπηρίας</a></li>
 
         <li class="divider"></li>
 

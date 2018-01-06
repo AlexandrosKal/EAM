@@ -17,7 +17,7 @@ if (isset($_SESSION['uid'])) {
                     //500
                 }
             } else {
-                $email_error = 'Δωστε ενα legit email';
+                $email_error = 'Η ηλεκτρονική διεύθυνση email που δώσατε δεν είναι έγκυρη.';
             }
         }
         if (!empty($_POST['new_password'])) {
@@ -37,10 +37,10 @@ if (isset($_SESSION['uid'])) {
             }
         }
         require 'views/profile.php';
+    } else {
+	    require 'views/profile.php';
     }
-    require 'views/profile.php';
 } else {
     header('Location: signup_login.php' );
 }
 ?>
-

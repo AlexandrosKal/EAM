@@ -24,7 +24,7 @@
 
 	<body class="background-color">
     <!--include to navbar-->
-    <?php		require 'navbar.php' ;?>
+    <?php	require 'navbar.php' ;?>
 		<!-- include to koubi gia epistrofi stin korufi-->
 		<?php require 'backToTopButton.php' ;?>
     <!-- set to path-->

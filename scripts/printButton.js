@@ -1,9 +1,8 @@
 function printButton()
 {
   var myWindow=window.open();
-  var jsvar = <?php echo json_encode("alex"); ?>;
 
-  myWindow.document.write(jsvar);
+  myWindow.document.write();
   myWindow.document.close();
 
   myWindow.focus();

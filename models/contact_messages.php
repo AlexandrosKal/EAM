@@ -28,4 +28,3 @@ function add_message($data) {
         return mysqli_insert_id($db);
     }
 };
-

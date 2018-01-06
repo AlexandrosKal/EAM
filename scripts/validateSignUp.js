@@ -60,12 +60,28 @@ function validateSignUp()
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο κωδικόυ πρόσβασης.");
   }
+  else
+  {
+    if ( (password.length < 8) || (password.length > 24) )
+    {
+      error_flag = true;
+      errorList.push("Ο κωδικός πρόσβασης σας πρέπει να αποτελείται από 8-24 χαρακτήρες.");
+    }
+  }
 
   var repassword = document.getElementById("repassword").value;
   if(repassword==="")
   {
     error_flag = true;
     errorList.push("Παρακαλώ συμπληρώστε το πεδίο επαλήθευσης κωδικόυ πρόσβασης.");
+  }
+  else
+  {
+    if ( (repassword.length < 8) || (repassword.length > 24) )
+    {
+      error_flag = true;
+      errorList.push("Ο κωδικός πρόσβασης επαλήθευσής σας πρέπει να αποτελείται από 8-24 χαρακτήρες.");
+    }
   }
 
   if(password != repassword)
@@ -118,6 +134,11 @@ function validateSignUp()
       errorList.push("Παρακαλώ συμπληρώστε το πεδίο αριθμόυ δελτίου ταυτότητας με 8 ψηφία.");
     }
 
+    if( !/^(?:[A-Z]){2}(?:[0-9]){6}$/.test(input) )
+    {
+      error_flag=true;
+      errorList.push("To πεδίο αριθμού δελτίου ταυτότητας δεν είναι έγκυρο. Μην χρησιμοποιείται κενό μεταξύ των αριθμών και των γραμμάτων.");
+    }
   }
 
   input = document.getElementById("bday").value;
@@ -128,7 +149,7 @@ function validateSignUp()
   }
   else
   {
-    if( !/^(?:[0-9]){2}\/(?:[0-9]){2}\/(?:[0-9]){4}$/.test(input) )
+    if( !/^(?:[0-9]){1,2}\/(?:[0-9]){1,2}\/(?:[0-9]){4}$/.test(input) )
     {
       error_flag=true;
       errorList.push("To πεδίο ημερομηνίας γέννησης δεν είναι έγκυρο.");
@@ -186,20 +207,26 @@ function validateSignUp()
   }
   else
   {
-    if( !/(^([Α-Ω]|[ΆΈΉΊΌΎΏΪΫ])[α-ω]*([ϊϋ]?[α-ω]*[άέήόίύώ]?|[ΐΰ]?)[α-ω]*\s?$|^[A-Z][a-z]*\s?$)/.test(input) )
+    var inputArray = input.split(" ");
+    var regex = /(^([Α-Ω]|[ΆΈΉΊΌΎΏΪΫ])[α-ω]*([ϊϋ]?[α-ω]*[άέήόίύώ]?|[ΐΰ]?)[α-ω]*\s?$|^[A-Z][a-z]*\s?$)/;
+    for(var i=0; i<inputArray.length; i++)
     {
-      error_flag=true;
-      errorList.push("To πεδίο περιοχής δεν είναι έγκυρο.");
+      if( !regex.test(inputArray[i]) )
+      {
+        error_flag=true;
+        errorList.push("To πεδίο περιοχής δεν είναι έγκυρο.");
+        break;
+      }
     }
   }
   /*ektupwsi tis listas*/
   if(error_flag === true)
   {
     document.getElementById("displayOnError").innerHTML="";
+    document.getElementById("displayOnError").innerHTML += "<div id='signup-error' class='alert alert-danger error-alert-margin'>"
     for(var i=0; i < errorList.length; i++)
     {
-        document.getElementById("displayOnError").innerHTML += "<span class='col-md-1 col-md-offset-1 text-center'></span>";
-        document.getElementById("displayOnError").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span> &nbsp;" + errorList[i] + "</li>";
+        document.getElementById("signup-error").innerHTML += "<li class='text-danger'> <span class='glyphicon glyphicon-alert'></span> &nbsp;" + errorList[i] + "</li>";
     }
 
     return false;
