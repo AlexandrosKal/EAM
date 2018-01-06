@@ -44,14 +44,30 @@ function validateSignUp()
   if(input==="")
   {
     error_flag = true;
-    errorList.push("Παρακαλώ συμπληρώστε το πεδίο e-mail.");
+    errorList.push("Παρακαλώ συμπληρώστε το πεδίο ηλεκτρονικής διεύθυνσης e-mail.");
+  }
+  else
+  {
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input))
+    {
+      error_flag = true;
+      errorList.push("Το πεδίο ηλεκτρονικής διεύθυνσης e-mail που εισάγατε δεν ειναι έγκυρο.");
+    }
   }
 
   input = document.getElementById("reemail").value;
   if(input==="")
   {
     error_flag = true;
-    errorList.push("Παρακαλώ συμπληρώστε το πεδίο επαλήθευσης e-mail.");
+    errorList.push("Παρακαλώ συμπληρώστε το πεδίο επαλήθευσης ηλεκτρονικής διεύθυνσης e-mail.");
+  }
+  else
+  {
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input))
+    {
+      error_flag = true;
+      errorList.push("Το πεδίο επαλήθευσης ηλεκτρονικής διεύθυνσης e-mail που εισάγατε δεν ειναι έγκυρο.");
+    }
   }
 
   var password = document.getElementById("password").value;

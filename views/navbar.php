@@ -26,7 +26,7 @@
       <li> <a href="#"><b>Ανακοινώσεις</b></a> </li>
       <li> <a href="faq.php"><b>Συχνές Ερωτήσεις</b></a> </li>
       <li> <a href="contact_us.php"><b>Επικοινωνία</b></a> </li> <?php
-      if ( isset( $_SESSION[ 'uid' ] ) )
+      if ( isset( $_SESSION['uid'] ) )
       { ?>
         <li class="active">
             <a href="profile.php">

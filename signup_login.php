@@ -65,7 +65,7 @@
                     $_SESSION[ $key ] = $value;
                 }
                 if(isset($_POST['persistent']) && !empty($_POST['persistent'])) {
-                    setcookie('uid',
+                    setcookie('uid_ika',
                               $user['uid'],
                               time() + (60 * 60 * 24 * 365));
                 }

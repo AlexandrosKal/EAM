@@ -24,7 +24,9 @@
 
 	<body class="background-color">
 		<!--- include to navbar-->
-		<?php	require 'views/navbar.php' ;?>
+		<?php require 'models/users.php';?>
+		<?php require 'models/connect.php';?>
+		<?php require 'views/navbar.php' ;?>
 		<!-- include to koubi gia epistrofi stin korufi-->
 		<?php require 'views/backToTopButton.php' ;?>
 		<!--- set to path-->
