@@ -69,7 +69,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="fname" name="name" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onblur="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
+									 <input id="fname" name="name" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
 									</div>
 
 									<div id="displayOnErrorFName"> </div>
@@ -84,7 +84,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="lname" name="name" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onblur="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
+									 <input id="lname" name="name" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
 									</div>
 
 									<div id="displayOnErrorLName"> </div>
@@ -100,7 +100,7 @@
 									 <div class="input-group-addon">
 										 @
 									 </div>
-									 <input id="email" name="email" type="text" placeholder="πχ user@example.com" class="form-control" onblur="validateEmail('emailForm', 'email', 'displayOnErrorEmail');">
+									 <input id="email" name="email" type="text" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('emailForm', 'email', 'displayOnErrorEmail');">
 									</div>
 
 									<div id="displayOnErrorEmail"> </div>
@@ -116,7 +116,7 @@
 									 <div class="input-group-addon">
 											<span class="glyphicon glyphicon-earphone"></span>
 									 </div>
-									 <input id="phone" name="phone" type="text" placeholder="πχ 6989088366, 2104613688" maxlength="10" class="form-control" onkeypress="return onlyNumbers(event);" onblur="validateNumber('phoneForm', 'phone', 'displayOnErrorPhone', 10);">
+									 <input id="phone" name="phone" type="text" placeholder="πχ 6989088366, 2104613688" maxlength="10" class="form-control" onkeypress="return onlyNumbers(event);" onchange="validateNumber('phoneForm', 'phone', 'displayOnErrorPhone', 10);">
 									</div>
 
 									<div id="displayOnErrorPhone"> </div>

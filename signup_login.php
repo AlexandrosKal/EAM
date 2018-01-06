@@ -36,6 +36,7 @@
 		<script src="scripts/validateBday.js"></script>
 		<script src="scripts/validateArea.js"></script>
 		<script src="scripts/validateStreet.js"></script>
+		<script src="scripts/validateDoubleField.js"></script>
 		<script src="scripts/notEmpty.js"></script>
 
 		<script src="scripts/onlyNumbers.js"></script>
@@ -71,7 +72,7 @@
   									 <div class="input-group-addon">
   										 @
   									 </div>
-  									 <input id="email_l" name="email" type="text" placeholder="πχ user@example.com" class="form-control" onblur="validateEmail('emailForm_l', 'email_l', 'displayOnErrorEmail_l')">
+  									 <input id="email_l" name="email" type="text" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('emailForm_l', 'email_l', 'displayOnErrorEmail_l')">
   									</div>
 
 										<div id="displayOnErrorEmail_l"> </div>
@@ -87,13 +88,29 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-lock"></span>
                      </div>
-                     <input id="password_l" name="password" type="password" placeholder="*******" class="form-control" maxlength="24" onblur="validatePassword('passwordForm_l', 'password_l', 'displayOnErrorPassword_l', 8, 24)">
+                     <input id="password_l" name="password" type="password" placeholder="*******" class="form-control" maxlength="24" onchange="validatePassword('passwordForm_l', 'password_l', 'displayOnErrorPassword_l', 8, 24)">
                     </div>
 
 										<div id="displayOnErrorPassword_l"> </div>
 
                   </div>
                 </div>
+
+								<div class="form-group">
+                  <span class="col-md-1 col-md-offset-1 text-center"></span>
+                  <div class="col-md-8">
+										<div class="checkbox">
+										 <label><input type="checkbox" name="persistent" value="persistent">Να παραμείνω συνδεδεμένος.</label><br>
+									 	</div>
+                  </div>
+                </div>
+
+								<div class="form-group">
+									<span class="col-md-1 col-md-offset-1 text-left"></span>
+									<div class="col-md-8">
+	 									<a href="#">Ξεχάσατε τον κωδικό σας; </a>
+									</div>
+								</div>
 
   							<div class="form-group">
   								<div class="col-md-12 text-center">
@@ -128,7 +145,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-user"></span>
                      </div>
-                     <input id="fname" name="fname" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onblur="validateFName('fNameForm', 'fname', 'displayOnErrorFName')">
+                     <input id="fname" name="fname" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName')">
                     </div>
 
 										<div id="displayOnErrorFName"> </div>
@@ -144,7 +161,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-user"></span>
                      </div>
-                     <input id="lname" name="lname" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onblur="validateLName('lNameForm', 'lname', 'displayOnErrorLName')">
+                     <input id="lname" name="lname" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName')">
                     </div>
 
 										<div id="displayOnErrorLName"> </div>
@@ -160,7 +177,7 @@
                      <div class="input-group-addon">
                        @
                      </div>
-                     <input id="email" name="email" type="email" placeholder="πχ user@example.com" class="form-control" onblur="validateEmail('emailForm', 'email', 'displayOnErrorEmail')">
+                     <input id="email" name="email" type="email" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('emailForm', 'email', 'displayOnErrorEmail')">
                     </div>
 
 										<div id="displayOnErrorEmail"> </div>
@@ -176,10 +193,11 @@
 										 <div class="input-group-addon">
 											 @
 										 </div>
-										 <input id="reemail" name="reemail" type="email" placeholder="πχ user@example.com" class="form-control" onblur="validateEmail('reEmailForm', 'reemail', 'displayOnErrorReEmail')">
+										 <input id="reemail" name="reemail" type="email" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('reEmailForm', 'reemail', 'displayOnErrorReEmail')" onfocusout="validateDoubleField('email', 'reemail', 'emailForm', 'reEmailForm', 'displayOnErrorDoubleFieldEmail', 'Οι ηλεκτρονικές διευθύνσεις email δεν είναι ίδιες.')">
 										</div>
 
 										<div id="displayOnErrorReEmail"> </div>
+										<div id="displayOnErrorDoubleFieldEmail"> </div>
 
 									</div>
 								</div>
@@ -192,7 +210,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-lock"></span>
                      </div>
-                     <input id="password" name="password" type="password" placeholder="******" class="form-control" maxlength="24" onblur="validatePassword('passwordForm', 'password', 'displayOnErrorPassword', 8, 24)">
+                     <input id="password" name="password" type="password" placeholder="******" class="form-control" maxlength="24" onchange="validatePassword('passwordForm', 'password', 'displayOnErrorPassword', 8, 24)">
                     </div>
 
 										<div id="displayOnErrorPassword"> </div>
@@ -208,10 +226,11 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-lock"></span>
                      </div>
-                     <input id="repassword" name="repassword" type="password" placeholder="******" class="form-control" maxlength="24" onblur="validatePassword('rePasswordForm', 'repassword', 'displayOnErrorRePassword', 8, 24)">
+                     <input id="repassword" name="repassword" type="password" placeholder="******" class="form-control" maxlength="24" onchange="validatePassword('rePasswordForm', 'repassword', 'displayOnErrorRePassword', 8, 24)" onfocusout="validateDoubleField('password', 'repassword', 'passwordForm', 'rePasswordForm', 'displayOnErrorDoubleFieldPasword', 'Οι κωδικοί πρόσβασης δεν είναι ίδιοι.')">
                     </div>
 
 										<div id="displayOnErrorRePassword"> </div>
+										<div id="displayOnErrorDoubleFieldPasword"> </div>
 
                   </div>
                 </div>
@@ -224,7 +243,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-list"></span>
                      </div>
-                     <input id="afm" name="afm" type="text" placeholder="πχ 199552722" class="form-control" maxlength="9" onkeydown="return onlyNumbers(event);" onblur="validateNumber('afmForm', 'afm', 'displayOnErrorAfm', 9);">
+                     <input id="afm" name="afm" type="text" placeholder="πχ 199552722" class="form-control" maxlength="9" onkeydown="return onlyNumbers(event);" onchange="validateNumber('afmForm', 'afm', 'displayOnErrorAfm', 9);">
                     </div>
 
 										<div id="displayOnErrorAfm"> </div>
@@ -240,7 +259,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-th-list"></span>
                      </div>
-                     <input id="amka" name="amka" type="text" placeholder="πχ 19129612345" class="form-control" maxlength="11" onkeydown="return onlyNumbers(event);" onblur="validateNumber('amkaForm', 'amka', 'displayOnErrorAmka', 11);">
+                     <input id="amka" name="amka" type="text" placeholder="πχ 19129612345" class="form-control" maxlength="11" onkeydown="return onlyNumbers(event);" onchange="validateNumber('amkaForm', 'amka', 'displayOnErrorAmka', 11);">
                     </div>
 
 										<div id="displayOnErrorAmka"> </div>
@@ -256,7 +275,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-th-list"></span>
                      </div>
-                     <input id="adt" name="adt" type="text" placeholder="πχ AH542412" class="form-control" maxlength="8" onblur="validateAdt('adtForm', 'adt', 'displayOnErrorAdt');">
+                     <input id="adt" name="adt" type="text" placeholder="πχ AH542412" class="form-control" maxlength="8" onchange="validateAdt('adtForm', 'adt', 'displayOnErrorAdt');">
                     </div>
 
 										<div id="displayOnErrorAdt"> </div>
@@ -272,7 +291,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-calendar"></span>
                      </div>
-                     <input id="bday" name="bday" type="text" placeholder="πχ 19/12/96" maxlength="10" class="form-control" onblur="validateBday('bdayForm', 'bday', 'displayOnErrorBday');">
+                     <input id="bday" name="bday" type="text" placeholder="πχ 19/12/96" maxlength="10" class="form-control" onchange="validateBday('bdayForm', 'bday', 'displayOnErrorBday');">
                     </div>
 
 										<div id="displayOnErrorBday"> </div>
@@ -288,7 +307,7 @@
 										 <div class="input-group-addon">
 											 <span class="glyphicon glyphicon-home"></span>
 										 </div>
-										 <input id="street" name="street" type="text" placeholder="πχ Στρατηγού Πλαστήρα, Stratigou Plastira" class="form-control" onblur="validateArea('addressForm', 'street', 'displayOnErrorStreet')">
+										 <input id="street" name="street" type="text" placeholder="πχ Στρατηγού Πλαστήρα, Stratigou Plastira" class="form-control" onchange="validateArea('addressForm', 'street', 'displayOnErrorStreet')">
 										</div>
 
 										<div id="displayOnErrorStreet"> </div>
@@ -301,7 +320,7 @@
 										 <div class="input-group-addon">
 											 <span class="glyphicon glyphicon-home"></span>
 										 </div>
-										 <input id="streetNum" name="streetNum" type="text" placeholder="πχ 4" class="form-control" maxlength="4" onkeydown="return onlyNumbers(event);" onblur="notEmpty('addressForm', 'streetNum', 'displayOnErrorStreetNum');">
+										 <input id="streetNum" name="streetNum" type="text" placeholder="πχ 4" class="form-control" maxlength="4" onkeydown="return onlyNumbers(event);" onchange="notEmpty('addressForm', 'streetNum', 'displayOnErrorStreetNum');">
 										</div>
 
 										<div id="displayOnErrorStreetNum"> </div>
@@ -317,7 +336,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-home"></span>
 									 </div>
-									 <input id="area" name="area" type="text" placeholder="πχ Νέα Σμύρνη, Nea Smurni" class="form-control" onblur="validateArea('areaForm', 'area', 'displayOnErrorArea')">
+									 <input id="area" name="area" type="text" placeholder="πχ Νέα Σμύρνη, Nea Smurni" class="form-control" onchange="validateArea('areaForm', 'area', 'displayOnErrorArea')">
 									</div>
 
 									<div id="displayOnErrorArea"> </div>
@@ -330,7 +349,7 @@
 										 <div class="input-group-addon">
 											 <span class="glyphicon glyphicon-envelope"></span>
 										 </div>
-										 <input id="postal" name="postal" type="text" placeholder="πχ 18756" class="form-control" maxlength="5" onkeydown="return onlyNumbers(event);" onblur="validateNumber('areaForm', 'postal', 'displayOnErrorPostal', 5);">
+										 <input id="postal" name="postal" type="text" placeholder="πχ 18756" class="form-control" maxlength="5" onkeydown="return onlyNumbers(event);" onchange="validateNumber('areaForm', 'postal', 'displayOnErrorPostal', 5);">
 										</div>
 
 										<div id="displayOnErrorPostal"> </div>

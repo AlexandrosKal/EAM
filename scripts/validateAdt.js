@@ -1,7 +1,7 @@
 function validateAdt(adtForm, adt, displayOnErrorAdt)
 {
   var input = document.getElementById(adt).value;
-  var regex = /^(?:[Α-Ω]){2}(?:[0-9]){6}$/;
+  var regex = /^(?:[A-Z]){2}(?:[0-9]){6}$/;
 
   if(input.length < 8)
   {

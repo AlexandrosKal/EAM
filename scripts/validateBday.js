@@ -1,9 +1,9 @@
 function validateBday(bdayForm, bday, displayOnErrorBday)
 {
   var input = document.getElementById(bday).value;
-  var regex = /^(?:[0-9]){2}\/(?:[0-9]){2}\/(?:[0-9]){4}$/;
+  var regex = /^(?:[0-9]){1,2}\/(?:[0-9]){1,2}\/(?:[0-9]){4}$/;
 
-  if ( !regex.test(input) || input.length < 10)
+  if ( !regex.test(input) || input.length < 8)
   {
     document.getElementById(bdayForm).className = "form-group";
     document.getElementById(bdayForm).className += " has-error";
