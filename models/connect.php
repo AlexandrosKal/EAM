@@ -3,7 +3,7 @@ global $db;
 $db = mysqli_connect(
     '127.0.0.1',
     'root',
-    'R-Nrdiqzj',
+    'test',
     'EAM'
 );
 if ( mysqli_connect_errno() ) {
