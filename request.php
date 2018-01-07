@@ -6,6 +6,7 @@ require 'models/requests.php';
 require 'models/documents.php';
 if (isset($_SESSION['uid'])) {
     $rid = false;
+    $user = get_user_data($_SESSION['uid']);
     if (!empty($_GET)) {
         if (validate_type($_GET['type'])) {
             if (!empty($_FILES)) {
