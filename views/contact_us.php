@@ -15,6 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="css/contact_us.css">
 		<link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
 		<link rel="stylesheet" type="text/css" href="css/form.css">
+		<link rel="stylesheet" type="text/css" href="css/footnote.css">
 		<link rel="stylesheet" type="text/css" href="css/error_js.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -54,6 +55,12 @@
 							<div class="form-group" id="fNameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
 								<div class="col-md-8">
+
+									<p class="text-center footnote"> Παρακαλώ συπληρώστε όλα τα πεδία της φόρμας με ελληνικούς ή λατινικούς χαρακτήρες. Μπορείτε να παραλείψετε τους τόνους.
+										Αναγκαία η χρήση διαλυτικών όπου χρειάζεται.
+									</p>
+
+
 									<label class="form-label" for="fname">Όνομα</label>
 									<div class="input-group">
 									 <div class="input-group-addon">

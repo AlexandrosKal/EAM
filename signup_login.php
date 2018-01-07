@@ -41,7 +41,6 @@
         if ( isset( $_SESSION[ 'uid' ] ) ) {
             header('Location: index.php' );
         }
-
         if ( empty( $_POST ) ) {
             require 'views/signup_login.php';
         }
