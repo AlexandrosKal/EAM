@@ -79,7 +79,11 @@
 		<?php
 		}
 		else
-		{ ?>
+		{
+			if( !isset($user) )
+			{
+			?>
+
 			<div class="well">
 				<h1 class="text-center page-header header">Παρουσίαση Ενσήμων </h1>
 					<form class="form-horizontal" method="post" name="stampsForm" onsubmit="return validateStamps();" action="compute_stamps.php">
@@ -197,6 +201,37 @@
 
 			</div>
 			<?php
+			}
+			else
+			{
+			?>
+			<div class="well">
+	      <h2 class="header page-header text-center"> Παρουσίαση Ενσήμων </h2>
+
+	      <div class="panel-group">
+
+	        <div class="panel panel-info">
+	          <div class="panel-heading">Συνολικά Ένσημα</div>
+
+	          <div class="panel-body">
+	            <span class="col-md-2 attribute"><?php echo $user['stamps']; ?></span>
+	          </div>
+	        </div>
+
+					<br>
+	        <div class="panel panel-info">
+	          <div class="panel-heading">Ένσημα προηγούμενου μήνα</div>
+
+	          <div class="panel-body">
+	            <span class="col-md-2 attribute"><?php echo $user['stamps_this_month']; ?></span>
+	          </div>
+
+	        </div>
+	      </div>
+
+	    </div>
+		<?php
+			}
 		}
 		?>
   </body>
