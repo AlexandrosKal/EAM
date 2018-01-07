@@ -58,7 +58,7 @@
 
            <div id="Deltia_tupou" class="tab-pane fade">
                    <div class="well well-sm">
-										 <h2 class="text-center page-header header">Επικοινωνήστε μαζί μας!</h2>
+										 <h2 class="text-center page-header header"> Δελτία τύπου 2017-2018</h2>
 
 										 <ul class="paragraph">
 					 						<li>Ηλεκτρονική υποβολή Αιτήματος για εξέταση από Υγειονομική Επιτροπή ΚΕ.Π.Α.</li>

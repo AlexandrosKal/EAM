@@ -119,7 +119,7 @@
 							 <div class="input-group-addon">
 								 <span class="glyphicon glyphicon-lock"></span>
 							 </div>
-							 <input id="current-password" name="-password" type="password" maxlength="24" placeholder="******" class="form-control" onchange="validatePassword('current-passwordForm', 'current-password', 'displayOnErrorCurrentPassword', 8, 24)">
+							 <input id="current-password" name="password" type="password" maxlength="24" placeholder="******" class="form-control" onchange="validatePassword('current-passwordForm', 'current-password', 'displayOnErrorCurrentPassword', 8, 24)">
 							</div>
 
 							<div id="displayOnErrorCurrentPassword"> </div>

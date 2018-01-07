@@ -130,8 +130,10 @@ function get_message_errors($data) {
     if (!validate_email($data['email'])) {
         $messages[] = 'Το e-mail σας δεν είναι έγκυρο. Παρακούμε εισάγετε ένα έγκυρο e-mail.';
     }
-    if (!is_numeric($data['phone']) || (strlen($data['phone']) != 10)) {
-        $messages[] = "Το τηλέφωνο σας δεν ειναι έγκυρος αριθμός";
+    if(!empty($data['phone'])) {
+        if (!is_numeric($data['phone']) || (strlen($data['phone']) != 10)) {
+            $messages[] = "Το τηλέφωνο σας δεν ειναι έγκυρος αριθμός";
+        }
     }
     return $messages;
 }

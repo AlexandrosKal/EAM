@@ -79,7 +79,7 @@
 									 }
 									 else
 									 { ?>
-										 <input id="fname" name="first_sname" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
+										 <input id="fname" name="first_name" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
 										<?php
 									 }
 									 ?>
