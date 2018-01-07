@@ -29,7 +29,7 @@
 		<?php require 'backToTopButton.php' ;?>
     <!-- set to path-->
     <h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="certificates.php"> <b> Έκδοση Δικαιολογητικών/Πιστοποιητικών </b> </a> > <a href="disabled_certificate.php"> <b> Πιστοποιητικό Αναπηρίας </b> </a></h5>
-    <h2 class="page-header"> <b> Έκδοση Πιστοποιητικού Αναπηρίας </b> </h2>
+    <h2 class="main-page-header page-header"> <b> Έκδοση Πιστοποιητικού Αναπηρίας </b> </h2>
 
     <div class="well container">
       <p class="padding paragraph">

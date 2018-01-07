@@ -16,6 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="css/form.css">
 		<link rel="stylesheet" type="text/css" href="css/error_js.css">
 		<link rel="stylesheet" type="text/css" href="css/footnote.css">
+		<link rel="stylesheet" type="text/css" href="css/well.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -33,7 +34,7 @@
 
 	<body class="background-color">
 		<!--- include to navbar-->
-		<?php		require 'navbar.php' ;?>
+		<?php	require 'navbar.php' ;?>
 		<!-- include to koubi gia epistrofi stin korufi-->
 		<?php require 'backToTopButton.php' ;?>
 		<!--- set to path-->
@@ -51,7 +52,7 @@
 		if ( isset( $_SESSION['uid'] ) )
 		{ ?>
 	    <div class="well">
-	      <h2 class="header text-center"> Παρουσίαση Ενσήμων </h2>
+	      <h2 class="header page-header text-center"> Παρουσίαση Ενσήμων </h2>
 
 	      <div class="panel-group">
 
@@ -63,6 +64,7 @@
 	          </div>
 	        </div>
 
+					<br>
 	        <div class="panel panel-info">
 	          <div class="panel-heading">Ένσημα προηγούμενου μήνα</div>
 
@@ -78,8 +80,8 @@
 		}
 		else
 		{ ?>
-			<div class="well well-sm">
-				<h1 class="text-center header">Παρουσίαση ενσήμων </h1>
+			<div class="well">
+				<h1 class="text-center page-header header">Παρουσίαση Ενσήμων </h1>
 					<form class="form-horizontal" method="post" name="stampsForm" onsubmit="return validateStamps();">
 						<fieldset>
 

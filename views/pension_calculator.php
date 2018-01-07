@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/form.css">
 		<link rel="stylesheet" type="text/css" href="css/error_js.css">
+		<link rel="stylesheet" type="text/css" href="css/well.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -45,7 +46,7 @@
     <div class="well well-sm">
       <form class="form-horizontal" method="post" name="loginForm" onsubmit="return validatePensionCalculator()">
         <fieldset>
-          <legend class="header text-center"> Υπολογισμός Σύνταξης Γήρατος IKA</legend>
+          <h1 class="page-header header text-center"> Υπολογισμός Σύνταξης Γήρατος IKA</h1>
           <div class="form-group" id="totalDaysForm">
             <span class="col-md-1 col-md-offset-1 text-center"></span>
             <div class="col-md-8">

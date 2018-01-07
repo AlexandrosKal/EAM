@@ -31,9 +31,7 @@
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> </h5>
 
 		<div class="well text-left">
-		 <div class="page-header">
-			<h1 class="text-center header"> Λίγα λόγια για εμας</h1>
-		 </div>
+			<h1 class="text-center page-header header"> Λίγα λόγια για εμας</h1>
 
 			<p class="st"> Το Ίδρυμα Κοινωνικών Ασφαλίσεων - Ενιαίο Ταμείο Ασφάλισης Μισθωτών υπήρξε κρατικός φορέας κύριας ασφάλισης στην
 			Ελλάδα που δημιουργήθηκε το 1934. Επί σειρά ετών ήταν και είναι ένας από τους κύριους ασφαλιστικούς φορείς, ενώ για πολλές δεκαετίες διέθετε το δικό του δίκτυο μονάδων παροχής
@@ -50,12 +48,10 @@
 		</div>
 
 		<div class="container-fluid well text-center" >
-			<div class="page-header">
-			 <h1 class="text-center header">Χρήσιμοι Σύνδεσμοι</h1>
-			</div>
+			 <h1 class="text-center page-header header">Χρήσιμοι Σύνδεσμοι</h1>
 
 			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
-				<a href="pension_calculator.php" class="btn btn-primary button_style col" role="button">Υπολογισμός Σύνταξης</a>
+				<a href="compute_pension.php" class="btn btn-primary button_style col" role="button">Υπολογισμός Σύνταξης</a>
 			</div>
 
 			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
@@ -63,7 +59,7 @@
 			</div>
 
 			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
-				<a href="certificates.php" class="btn btn-primary button_style" role="button">Πιστοποιητικά/Δικαιολογητικά</a>
+				<a href="certificate.php" class="btn btn-primary button_style" role="button">Πιστοποιητικά/Δικαιολογητικά</a>
 			</div>
 		</div>
 

@@ -27,7 +27,7 @@
 		<?php require 'backToTopButton.php' ;?>
     <!-- set to path-->
     <h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="certificates.php"> <b> Έκδοση Δικαιολογητικών/Πιστοποιητικών </b> </a></h5>
-    <h2 class="page-header"> <b> Έκδοση Δικαιολογητικών/Πιστοποιητικών </b> </h2>
+    <h2 class="main-page-header page-header"> <b> Έκδοση Δικαιολογητικών/Πιστοποιητικών </b> </h2>
 
     <div class="container-fluid well">
     <h2 class="header">Επιλέξτε δικαιολογητικά/πιστοποιητικά</h2>
@@ -39,7 +39,7 @@
 
       <ul class="dropdown-menu">
         <li class="dropdown-header">Ασφαλισμένοι</li>
-        <li><a href="AMKA_certificate.php">Πιστοποιητικό <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης"> ΑΜΚΑ </abbr></a></li>
+        <li><a href="certificate.php?type=amka">Βεβαίωση <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης"> ΑΜΚΑ </abbr></a></li>
 
         <li class="divider"></li>
 
@@ -49,7 +49,7 @@
         <li class="divider"></li>
 
         <li class="dropdown-header">ΑμΕΑ</li>
-        <li><a href="disabled_certificate.php">Πιστοποιητικό Αναπηρίας</a></li>
+        <li><a href="certificate.php?type=amka">Πιστοποιητικό Αναπηρίας</a></li>
 
         <li class="divider"></li>
 

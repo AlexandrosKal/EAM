@@ -15,6 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
 		<link rel="stylesheet" type="text/css" href="css/form.css">
 		<link rel="stylesheet" type="text/css" href="css/error_js.css">
+		<link rel="stylesheet" type="text/css" href="css/well.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -35,10 +36,10 @@
 		<?php require 'backToTopButton.php' ;?>
     <!-- set to path-->
     <h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="profile.php"> <b> Προφιλ </b> </a></h5>
-    <h2 class="page-header"> <b> Προφιλ </b> </h2>
+    <h2 class="main-page-header page-header"> <b> Προφιλ </b> </h2>
 
     <div class="well">
-			<h2 class="header text-center"> Στοιχεία Χρήστη </h2>
+			<h2 class="header page-header text-center"> Στοιχεία Χρήστη </h2>
 
 			<div class="panel-group">
 
@@ -60,6 +61,7 @@
 						<span class="col-md-2 attribute_value"><?php echo $user['email']; ?></span>
 					</div>
 				</div>
+				<br>
 
 				<div class="panel panel-info">
 					<div class="panel-heading">Διεύθυνση &amp; Περιοχή</div>
@@ -80,6 +82,8 @@
 					</div>
 
 				</div>
+				<br>
+
 				<div class="panel panel-info">
 					<div class="panel-heading"> Μοναδικοί Αριθμοί Επιβεβαίωσης</div>
 
@@ -100,11 +104,10 @@
 
 				</div>
 			</div>
-
 		</div>
 
-		<div class="well">
-			<h2 class="header text-center"> Αλλαγή Κωδικού Πρόσβασης </h2>
+		<div class="well well-sm">
+			<h2 class="page-header header text-center"> Αλλαγή Κωδικού Πρόσβασης </h2>
 			<form class="form-horizontal" method="post" name="changePassForm" onsubmit="return validateChangePass();">
 				<fieldset>
 
@@ -189,7 +192,7 @@
 		</div>
 
 		<div class="well">
-			<h2 class="header text-center"> Αλλαγή Ηλεκτρονικής Διεύθυνσης E-mail</h2>
+			<h2 class="page-header header text-center"> Αλλαγή Ηλεκτρονικής Διεύθυνσης E-mail</h2>
 			<form class="form-horizontal" method="post" name="changeEmailForm" onsubmit="return validateChangeEmail();">
 				<fieldset>
 

@@ -42,7 +42,7 @@
       <a href="application_pension.php"> <b> Αίτηση Συνταξιοδότησης Γήρατος </b></a>
     </h5>
 
-    <h2 class="page-header"> Αίτηση Συνταξιοδότησης Γήρατος</h2>
+    <h2 class="main-page-header page-header"> Αίτηση Συνταξιοδότησης Γήρατος</h2>
 
     <div class="well">
       <h3 class="text-center header"> Παρακαλώ ανεβάστε τα κατάλληλα δικαιολογητικά σε μορφή αρχείων .pdf.</h1>

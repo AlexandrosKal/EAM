@@ -11,13 +11,15 @@
 		<link rel="stylesheet" type="text/css" href="css/navbar.css">
 		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/navtabs.css">
+		<link rel="stylesheet" type="text/css" href="css/layout.css">
+		<link rel="stylesheet" type="text/css" href="css/well.css">
 		<link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 
-	<body class="bckgrnd">
+	<body class="background-color">
 
 		<!--- include to navbar-->
 		<?php	require 'views/navbar.php' ;?>
@@ -26,14 +28,7 @@
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="announcements.php"> <b> Συχνές Ερωτήσεις </b> </a> </h5>
 
-		<div class="page-header">
-			<legend class="text-center header"> Ανακοινώσεις</legend>
-		</div>
-
-		<div class="container-fluid">
-
-			 <div class="col-md-8 col-md-offset-2">
-
+		<h1 class="main-page-header page-header"> Ανακοινώσεις</h1>
 				<div class="well text">
 
 					<ul>
@@ -47,8 +42,6 @@
 					</ul>
 
 				</div>
-			</div>
-		</div>
 
 
 	</body>

@@ -36,23 +36,24 @@
 		<?php require 'backToTopButton.php' ;?>
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="contact_us.php"> <b> Επικοινωνία </b> </a> </h5>
+		<h2 class="text-left main-page-header page-header"> Επικοινωνήστε μαζί μας!</h2>
 
 		<ul class="nav nav-tabs padding nav-justified contact-style">
 		  <li class="active tab_header"><a data-toggle="tab" href="#Grafeia"> <b>Υποκαταστήματά</b></a></li>
 			<li><a data-toggle="tab" href="#Dioikisi" class="tab_header"> <b>Διοίκηση </b></a></li>
-		  <li><a data-toggle="tab" href="#Epikoinwnia" class="tab_header"> <b>Επικοινωνία μέσω αλληλογραφίας </b></a></li>
+		  <li><a data-toggle="tab" href="#Epikoinwnia" class="tab_header"> <b>Επικοινωνία μέσω αλληλογραφίας</b></a></li>
 		</ul>
 
 		<div class="tab-content padding contact-style">
 			<div id="Grafeia" class="tab-pane fade in active">
 				<div class="well well-sm">
-					<legend class="text-center header">Tα υποκαταστήματά μας & τηλέφωνα επικοινωνίας</legend>
+					<h2 class="text-center page-header header">Tα υποκαταστήματά μας & τηλέφωνα επικοινωνίας</h2>
 				</div>
 			</div>
 
 			<div id="Dioikisi" class="tab-pane fade">
 				<div class="well well-sm">
-					<legend class="text-center header">Tηλέφωνα επικοινωνίας</legend>
+					<h2 class="text-center page-header header">Tηλέφωνα επικοινωνίας</h2>
 				</div>
 			</div>
 
@@ -60,7 +61,7 @@
 				<div class="well well-sm">
 					<form class="form-horizontal" method="post" name"contactForm" onsubmit="return validateContact()">
 						<fieldset>
-							<legend class="text-center header">Επικοινωνήστε μαζί μας!</legend>
+							<h2 class="text-center page-header header">Επικοινωνήστε μαζί μας!</h2>
 
 							<div class="form-group" id="fNameForm">
 								<span class="col-md-1 col-md-offset-1 text-center"></span>
