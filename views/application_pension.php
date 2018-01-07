@@ -45,7 +45,7 @@
     <h2 class="main-page-header page-header"> Αίτηση Συνταξιοδότησης Γήρατος</h2>
 
 		<?php
-		if($user['is_pensioner'])
+		if($user['is_pensioner'] && isset($user))
 		{?>
 	    <div class="well">
 	      <h3 class="text-center header"> Παρακαλώ ανεβάστε τα κατάλληλα δικαιολογητικά σε μορφή αρχείων .pdf.</h1>
@@ -129,6 +129,23 @@
 
 	        <div id="displayOnError"> </div>
 
+					<?php
+					if(isset($success) && $success)
+					{ ?>
+						<div class="alert alert-success">
+							<strong>Η αίτηση σας παραδόθηκε επιτυχώς!</strong>
+						</div>
+					<?php
+					}
+					else if(isset($success) && !$success)
+					{ ?>
+						<div class="alert alert-danger">
+							<strong> <?php echo $errors[0]; ?> </strong>
+						</div>
+					<?php
+					}
+					?>
+					
 	      </div>
 	    </div>
 

@@ -87,7 +87,7 @@ function validateStamps()
   }
   else
   {
-    if( !/^(?:[0-9]){2}\/(?:[0-9]){2}\/(?:[0-9]){4}$/.test(input) )
+    if( !/^(?:[0-9]){1,2}\/(?:[0-9]){1,2}\/(?:[0-9]){4}$/.test(input) )
     {
       error_flag=true;
       errorList.push("To πεδίο ημερομηνίας γέννησης δεν είναι έγκυρο.");

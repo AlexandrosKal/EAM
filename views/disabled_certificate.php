@@ -32,7 +32,7 @@
     <h2 class="main-page-header page-header"> <b> Έκδοση Πιστοποιητικού Αναπηρίας </b> </h2>
 
 		<?php
-		if($user['is_disabled'])
+		if($user['is_disabled'] && isset($user))
 		{?>
 	    <div class="well container">
 	      <p class="padding paragraph">
@@ -84,7 +84,7 @@
 				  <?php require 'printButton.php' ;?>
 
 	    </div>
-			
+
 			<?php
 			}
 			else

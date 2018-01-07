@@ -46,7 +46,7 @@
     <h2 class="main-page-header page-header"> Αίτηση Αξιολόγησης Αναπηρίας</h2>
 
 		<?php
-		if($user['is_disabled'])
+		if($user['is_disabled'] && isset($user))
 		{?>
 
 			<div class="well">
@@ -116,6 +116,23 @@
 					</form>
 
 					<div id="displayOnError"> </div>
+
+					<?php
+					if(isset($success) && $success)
+					{ ?>
+						<div class="alert alert-success">
+							<strong>Η αίτηση σας παραδόθηκε επιτυχώς!</strong>
+						</div>
+					<?php
+					}
+					else if(isset($success) && !$success)
+					{ ?>
+						<div class="alert alert-danger">
+							<strong> <?php echo $errors[0]; ?> </strong>
+						</div>
+					<?php
+					}
+					?>
 
 			</div>
 
