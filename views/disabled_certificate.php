@@ -31,56 +31,71 @@
     <h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="certificates.php"> <b> Έκδοση Δικαιολογητικών/Πιστοποιητικών </b> </a> > <a href="disabled_certificate.php"> <b> Πιστοποιητικό Αναπηρίας </b> </a></h5>
     <h2 class="main-page-header page-header"> <b> Έκδοση Πιστοποιητικού Αναπηρίας </b> </h2>
 
-    <div class="well container">
-      <p class="padding paragraph">
-        Το Ίδρυμα Κοινωνικής Ασφάλισης πιστοποιεί ότι το άτομο με <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης">ΑΜΚΑ</abbr> 19129602934 και στοιχεία τα παρακάτω:
-      </p>
+		<?php
+		if($user['is_disabled'])
+		{?>
+	    <div class="well container">
+	      <p class="padding paragraph">
+	        Το Ίδρυμα Κοινωνικής Ασφάλισης πιστοποιεί ότι το άτομο με <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης">ΑΜΚΑ</abbr> 19129602934 και στοιχεία τα παρακάτω:
+	      </p>
 
-        <div class="row">
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Όνομα:</span>
-					<span class="col-md-offset-4"> </span>
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['first_name']; ?></span>
-        </div>
+	        <div class="row">
+		        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Όνομα:</span>
+						<span class="col-md-offset-4"> </span>
+		        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['first_name']; ?></span>
+	        </div>
 
-				<div class="row">
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Επίθετο:</span>
-					<span class="col-md-offset-4"> </span>
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['last_name']; ?></span>
-  			</div>
+					<div class="row">
+		        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Επίθετο:</span>
+						<span class="col-md-offset-4"> </span>
+		        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['last_name']; ?></span>
+	  			</div>
 
-				<div class="row">
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Διεύθυνση:</span>
-					<span class="col-md-offset-4"> </span>
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['street'].' '.$user['street_num'].', '.$user['area']; ?></span>
-  			</div>
+					<div class="row">
+		        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Διεύθυνση:</span>
+						<span class="col-md-offset-4"> </span>
+		        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['street'].' '.$user['street_num'].', '.$user['area']; ?></span>
+	  			</div>
 
-				<div class="row">
-        	<span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Ταχυδρομικός Κώδικας:</span>
-					<span class="col-md-offset-4"> </span>
-        	<span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['postal']; ?></span>
-        </div>
+					<div class="row">
+	        	<span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info">Ταχυδρομικός Κώδικας:</span>
+						<span class="col-md-offset-4"> </span>
+	        	<span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['postal']; ?></span>
+	        </div>
 
-				<div class="row">
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info"> <abbr title="Αριθμός Φορολογικού Μητρώου"> ΑΦΜ:</span>
-					<span class="col-md-offset-4"> </span>
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['afm']; ?></span>
-        </div>
+					<div class="row">
+		        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info"> <abbr title="Αριθμός Φορολογικού Μητρώου"> ΑΦΜ:</span>
+						<span class="col-md-offset-4"> </span>
+		        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['afm']; ?></span>
+	        </div>
 
-				<div class="row">
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info"> <abbr title="Αριθμός Δελτίου Ταυτότητας"> ΑΔΤ:</span>
-					<span class="col-md-offset-4"> </span>
-	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['id_num']; ?></span>
-  			</div>
+					<div class="row">
+		        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute info"> <abbr title="Αριθμός Δελτίου Ταυτότητας"> ΑΔΤ:</span>
+						<span class="col-md-offset-4"> </span>
+		        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['id_num']; ?></span>
+	  			</div>
 
-        <br>
-        <p class="padding paragraph">
-          πάσχει απο ένα ποσοστό αναπηρίας.
-        </p>
+	        <br>
+	        <p class="padding paragraph">
+	          πάσχει απο ένα ποσοστό αναπηρίας.
+	        </p>
 
-				<!-- include to koubi gia ektupwsi-->
-			  <?php require 'printButton.php' ;?>
+					<!-- include to koubi gia ektupwsi-->
+				  <?php require 'printButton.php' ;?>
 
-    </div>
+	    </div>
+			
+			<?php
+			}
+			else
+			{?>
+				<h1 class="text-center error-header"> Δεν ανήκετε στην ακόλουθη κατηγορία! </h1>
+				<p class="text-center text-danger">
+					Αν έχουμε κάνει εμείς κάποιο λάθος, περάστε από τα υποκαταστήματά μας με την ταυτότητά σας.
+				</p>
+
+			<?php
+			}?>
 
   </body>
 </html>

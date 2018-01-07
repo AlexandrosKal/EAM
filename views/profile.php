@@ -173,14 +173,14 @@
 			<div id="displayOnErrorPass"> </div>
 
 			<?php
-			if(isset($success) && $success)
+			if(isset($success_password) && $success_password)
 			{ ?>
 				<div class="alert alert-success">
 					<strong>O κωδικός πρόσβασης άλλαξε επιτυχώς!</strong>
 				</div>
 			<?php
 			}
-			else if(isset($success) && !$success)
+			else if(isset($success_password) && !$success_password)
 			{ ?>
 				<div class="alert alert-danger">
 					<strong> <?php echo $errors[0]; ?> </strong>
@@ -258,17 +258,17 @@
 			<div id="displayOnErrorEmail"> </div>
 
 			<?php
-			if(isset($success) && $success)
+			if(isset($success_email) && $success_email)
 			{ ?>
 				<div class="alert alert-success">
 					<strong>H ηλεκτρονική διεύθυνση email άλλαξε επιτυχώς!</strong>
 				</div>
 			<?php
 			}
-			else if(isset($success) && !$success)
+			else if(isset($success_email) && !$success_email)
 			{ ?>
 				<div class="alert alert-danger">
-					<strong> <?php echo $errors[1]; ?> </strong>
+					<strong> <?php echo $errors[0]; ?> </strong>
 				</div>
 			<?php
 			}

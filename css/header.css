@@ -4,6 +4,11 @@ font-size: 27px;
 padding: 10px;
 }
 
+.error-header
+{
+  color: #a94442;
+}
+
 .tab_header{
   color: #36A0FF;
   font-size: 22px;

@@ -132,13 +132,13 @@
   					</form>
 
 						<?php
-						if( isset($errors) && !empty($errors) )
+						if( isset($login_errors) && !empty($login_errors) )
 						{
 							?>
 							<div class="alert alert-danger text-danger">
 							<span class='glyphicon glyphicon-alert'></span> &nbsp;
 							<?php
-							echo $errors[0];
+							echo $login_errors[0];
 							?>
 							</div>
 						<?php
@@ -160,13 +160,13 @@
             <form class="form-horizontal" method="post" name="signupForm" onsubmit="return validateSignUp()" action="signup_login.php?register">
               <fieldset>
 
-					      <div class="form-group" id="fNameForm">
+								<p class="text-center footnote"> Παρακαλώ συπληρώστε όλα τα πεδία της φόρμας με ελληνικούς ή λατινικούς χαρακτήρες. Μπορείτε να παραλείψετε τους τόνους.
+									Αναγκαία η χρήση διαλυτικών όπου χρειάζεται.
+								</p>
+
+                <div class="form-group" id="fNameForm">
                   <span class="col-md-1 col-md-offset-1 text-center"></span>
                   <div class="col-md-8">
-										<p class="text-center footnote"> Παρακαλώ συπληρώστε όλα τα πεδία της φόρμας με ελληνικούς ή λατινικούς χαρακτήρες. Μπορείτε να παραλείψετε τους τόνους.
-											Αναγκαία η χρήση διαλυτικών όπου χρειάζεται.
-										</p>
-
 										<label class="form-label" for="fname">Όνομα</label>
                     <div class="input-group">
                      <div class="input-group-addon">
@@ -204,7 +204,7 @@
                      <div class="input-group-addon">
                        @
                      </div>
-                     <input id="email" name="email" type="text" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('emailForm', 'email', 'displayOnErrorEmail')">
+                     <input id="email" name="email" type="email" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('emailForm', 'email', 'displayOnErrorEmail')">
                     </div>
 
 										<div id="displayOnErrorEmail"> </div>
@@ -220,7 +220,7 @@
 										 <div class="input-group-addon">
 											 @
 										 </div>
-										 <input id="reemail" name="reemail" type="text" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('reEmailForm', 'reemail', 'displayOnErrorReEmail')" onfocusout="validateDoubleField('email', 'reemail', 'emailForm', 'reEmailForm', 'displayOnErrorDoubleFieldEmail', 'Οι ηλεκτρονικές διευθύνσεις email δεν είναι ίδιες.')">
+										 <input id="reemail" name="reemail" type="email" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('reEmailForm', 'reemail', 'displayOnErrorReEmail')" onfocusout="validateDoubleField('email', 'reemail', 'emailForm', 'reEmailForm', 'displayOnErrorDoubleFieldEmail', 'Οι ηλεκτρονικές διευθύνσεις email δεν είναι ίδιες.')">
 										</div>
 
 										<div id="displayOnErrorReEmail"> </div>
@@ -334,7 +334,7 @@
 										 <div class="input-group-addon">
 											 <span class="glyphicon glyphicon-home"></span>
 										 </div>
-										 <input id="street" name="street" type="text" placeholder="πχ Στρατηγού Πλαστήρα, Stratigou Plastira" class="form-control" onchange="validateStreet('addressForm', 'street', 'displayOnErrorStreet')">
+										 <input id="street" name="street" type="text" placeholder="πχ Στρατηγού Πλαστήρα, Stratigou Plastira" class="form-control" onchange="validateArea('addressForm', 'street', 'displayOnErrorStreet')">
 										</div>
 
 										<div id="displayOnErrorStreet"> </div>
@@ -397,15 +397,14 @@
 
 						<div id="displayOnError"> </div>
 
-
 						<?php
-						if( isset($errors) && !empty($errors) )
+						if( isset($register_errors) && !empty($register_errors) )
 						{
 							?>
 							<div class="alert alert-danger text-danger">
 							<span class='glyphicon glyphicon-alert'></span> &nbsp;
 							<?php
-							echo $errors[0];
+							echo $register_errors[0];
 							?>
 							</div>
 						<?php

@@ -45,75 +45,92 @@
 
     <h2 class="main-page-header page-header"> Αίτηση Αξιολόγησης Αναπηρίας</h2>
 
-    <div class="well">
-      <h3 class="text-center header"> Παρακαλώ ανεβάστε τα κατάλληλα δικαιολογητικά σε μορφή αρχείων .pdf.</h1>
+		<?php
+		if($user['is_disabled'])
+		{?>
 
-        <form class="form-horizontal" method="post" enctype="multipart/form-data" name="loginForm" onsubmit="return validateApplicationPension()" action="request.php?type=disabled">
-          <fieldset>
-            <div class="form-group">
-              <span class="col-md-1 col-md-offset-1 text-center"></span>
-              <div class="col-md-8">
-								<label class="form-label" for="dikaiologitiko1">Αίτηση Aξιολόγησης Αναπηρίας</label>
-                <div class="input-group">
-                 <div class="input-group-addon">
-                   <span class="	glyphicon glyphicon-folder-open"></span>
-                 </div>
-                 <input id="dikaiologitiko1" name="dikaiologitiko1" type="file" class="form-control" accept="application/pdf">
-                </div>
-              </div>
-            </div>
+			<div class="well">
+				<h3 class="text-center header"> Παρακαλώ ανεβάστε τα κατάλληλα δικαιολογητικά σε μορφή αρχείων .pdf.</h3>
 
-            <div class="form-group">
-              <span class="col-md-1 col-md-offset-1 text-center"></span>
-              <div class="col-md-8">
-								<label class="form-label" for="dikaiologitiko2">Φωτοτυπία Ταυτότητας</label>
-                <div class="input-group">
-                 <div class="input-group-addon">
-                   <span class="	glyphicon glyphicon-folder-open"></span>
-                 </div>
-                 <input id="dikaiologitiko2" name="dikaiologitiko2" type="file" class="form-control" accept="application/pdf">
-                </div>
-              </div>
-            </div>
+					<form class="form-horizontal" method="post" enctype="multipart/form-data" name="loginForm" onsubmit="return validateApplicationPension()" action="request.php?type=disabled">
+						<fieldset>
+							<div class="form-group">
+								<span class="col-md-1 col-md-offset-1 text-center"></span>
+								<div class="col-md-8">
+									<label class="form-label" for="dikaiologitiko1">Αίτηση Aξιολόγησης Αναπηρίας</label>
+									<div class="input-group">
+									 <div class="input-group-addon">
+										 <span class="	glyphicon glyphicon-folder-open"></span>
+									 </div>
+									 <input id="dikaiologitiko1" name="dikaiologitiko1" type="file" class="form-control" accept="application/pdf">
+									</div>
+								</div>
+							</div>
 
-						<div class="form-group">
-              <span class="col-md-1 col-md-offset-1 text-center"></span>
-              <div class="col-md-8">
-								<label class="form-label" for="dikaiologitiko3">Φωτοτυπία Βιβλιαρίου Υγίειας</label>
-                <div class="input-group">
-                 <div class="input-group-addon">
-                   <span class="	glyphicon glyphicon-folder-open"></span>
-                 </div>
-                 <input id="dikaiologitiko3" name="dikaiologitiko3" type="file" class="form-control" accept="application/pdf">
-                </div>
-              </div>
-            </div>
+							<div class="form-group">
+								<span class="col-md-1 col-md-offset-1 text-center"></span>
+								<div class="col-md-8">
+									<label class="form-label" for="dikaiologitiko2">Φωτοτυπία Ταυτότητας</label>
+									<div class="input-group">
+									 <div class="input-group-addon">
+										 <span class="	glyphicon glyphicon-folder-open"></span>
+									 </div>
+									 <input id="dikaiologitiko2" name="dikaiologitiko2" type="file" class="form-control" accept="application/pdf">
+									</div>
+								</div>
+							</div>
 
-						<div class="form-group">
-              <span class="col-md-1 col-md-offset-1 text-center"></span>
-              <div class="col-md-8">
-								<label class="form-label" for="dikaiologitiko4">Πιστοποιητικό Ασθένειας</label>
-                <div class="input-group">
-                 <div class="input-group-addon">
-                   <span class="	glyphicon glyphicon-folder-open"></span>
-                 </div>
-                 <input id="dikaiologitiko4" name="dikaiologitiko4" type="file" class="form-control" accept="application/pdf">
-                </div>
-              </div>
-            </div>
+							<div class="form-group">
+								<span class="col-md-1 col-md-offset-1 text-center"></span>
+								<div class="col-md-8">
+									<label class="form-label" for="dikaiologitiko3">Φωτοτυπία Βιβλιαρίου Υγίειας</label>
+									<div class="input-group">
+									 <div class="input-group-addon">
+										 <span class="	glyphicon glyphicon-folder-open"></span>
+									 </div>
+									 <input id="dikaiologitiko3" name="dikaiologitiko3" type="file" class="form-control" accept="application/pdf">
+									</div>
+								</div>
+							</div>
 
-            <div class="form-group">
-              <div class="col-md-12 text-center">
-                <button type="submit" class="btn btn-primary btn-md"><span class="glyphicon glyphicon-log-in"></span> Υποβολή </button>
-                <button type="reset" class="btn btn-danger btn-md"><span class="glyphicon glyphicon-remove"></span> Εκκαθάριση Πεδίων </button>
-              </div>
-            </div>
-          </fieldset>
-        </form>
+							<div class="form-group">
+								<span class="col-md-1 col-md-offset-1 text-center"></span>
+								<div class="col-md-8">
+									<label class="form-label" for="dikaiologitiko4">Πιστοποιητικό Ασθένειας</label>
+									<div class="input-group">
+									 <div class="input-group-addon">
+										 <span class="	glyphicon glyphicon-folder-open"></span>
+									 </div>
+									 <input id="dikaiologitiko4" name="dikaiologitiko4" type="file" class="form-control" accept="application/pdf">
+									</div>
+								</div>
+							</div>
 
-        <div id="displayOnError"> </div>
+							<div class="form-group">
+								<div class="col-md-12 text-center">
+									<button type="submit" class="btn btn-primary btn-md"><span class="glyphicon glyphicon-log-in"></span> Υποβολή </button>
+									<button type="reset" class="btn btn-danger btn-md"><span class="glyphicon glyphicon-remove"></span> Εκκαθάριση Πεδίων </button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
 
-    </div>
+					<div id="displayOnError"> </div>
+
+			</div>
+
+		<?php
+		}
+		else
+		{?>
+			<h1 class="text-center error-header"> Δεν ανήκετε στην ακόλουθη κατηγορία! </h1>
+			<p class="text-center text-danger">
+				Αν έχουμε κάνει εμείς κάποιο λάθος, περάστε από τα υποκαταστήματά μας με την ταυτότητά σας.
+			</p>
+
+		<?php
+		}?>
+
 
   </body>
 </html>

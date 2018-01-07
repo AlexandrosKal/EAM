@@ -44,90 +44,105 @@
 
     <h2 class="main-page-header page-header"> Αίτηση Συνταξιοδότησης Γήρατος</h2>
 
-    <div class="well">
-      <h3 class="text-center header"> Παρακαλώ ανεβάστε τα κατάλληλα δικαιολογητικά σε μορφή αρχείων .pdf.</h1>
+		<?php
+		if($user['is_pensioner'])
+		{?>
+	    <div class="well">
+	      <h3 class="text-center header"> Παρακαλώ ανεβάστε τα κατάλληλα δικαιολογητικά σε μορφή αρχείων .pdf.</h1>
 
-      <div class="well">
-         <form class="form-horizontal" method="post" enctype="multipart/form-data" name="loginForm" onsubmit="return validateApplicationPension()" action="request.php?type=pension">
-          <fieldset>
-            <div class="form-group">
-              <span class="col-md-1 col-md-offset-1 text-center"></span>
-              <div class="col-md-8">
-								<label class="form-label" for="dikaiologitiko1">Αίτηση Σύνταξης Γήρατος</label>
-                <div class="input-group">
-                 <div class="input-group-addon">
-                   <span class="	glyphicon glyphicon-folder-open"></span>
-                 </div>
-                 <input id="dikaiologitiko1" name="dikaiologitiko1" type="file" class="form-control" accept="application/pdf">
-                </div>
-              </div>
-            </div>
+	      <div class="well">
+	         <form class="form-horizontal" method="post" enctype="multipart/form-data" name="loginForm" onsubmit="return validateApplicationPension()" action="request.php?type=pension">
+	          <fieldset>
+	            <div class="form-group">
+	              <span class="col-md-1 col-md-offset-1 text-center"></span>
+	              <div class="col-md-8">
+									<label class="form-label" for="dikaiologitiko1">Αίτηση Σύνταξης Γήρατος</label>
+	                <div class="input-group">
+	                 <div class="input-group-addon">
+	                   <span class="	glyphicon glyphicon-folder-open"></span>
+	                 </div>
+	                 <input id="dikaiologitiko1" name="dikaiologitiko1" type="file" class="form-control" accept="application/pdf">
+	                </div>
+	              </div>
+	            </div>
 
-            <div class="form-group">
-              <span class="col-md-1 col-md-offset-1 text-center"></span>
-              <div class="col-md-8">
-								<label class="form-label" for="dikaiologitiko2">Φωτοτυπία Ταυτότητας</label>
-                <div class="input-group">
-                 <div class="input-group-addon">
-                   <span class="	glyphicon glyphicon-folder-open"></span>
-                 </div>
-                 <input id="dikaiologitiko2" name="dikaiologitiko2" type="file" class="form-control"  accept="application/pdf">
-                </div>
-              </div>
-            </div>
+	            <div class="form-group">
+	              <span class="col-md-1 col-md-offset-1 text-center"></span>
+	              <div class="col-md-8">
+									<label class="form-label" for="dikaiologitiko2">Φωτοτυπία Ταυτότητας</label>
+	                <div class="input-group">
+	                 <div class="input-group-addon">
+	                   <span class="	glyphicon glyphicon-folder-open"></span>
+	                 </div>
+	                 <input id="dikaiologitiko2" name="dikaiologitiko2" type="file" class="form-control"  accept="application/pdf">
+	                </div>
+	              </div>
+	            </div>
 
-						<div class="form-group">
-              <span class="col-md-1 col-md-offset-1 text-center"></span>
-              <div class="col-md-8">
-								<label class="form-label" for="dikaiologitiko3">Φωτοτυπία Ενσήμων</label>
-                <div class="input-group">
-                 <div class="input-group-addon">
-                   <span class="	glyphicon glyphicon-folder-open"></span>
-                 </div>
-                 <input id="dikaiologitiko3" name="dikaiologitiko3" type="file" class="form-control" accept="application/pdf">
-                </div>
-              </div>
-            </div>
+							<div class="form-group">
+	              <span class="col-md-1 col-md-offset-1 text-center"></span>
+	              <div class="col-md-8">
+									<label class="form-label" for="dikaiologitiko3">Φωτοτυπία Ενσήμων</label>
+	                <div class="input-group">
+	                 <div class="input-group-addon">
+	                   <span class="	glyphicon glyphicon-folder-open"></span>
+	                 </div>
+	                 <input id="dikaiologitiko3" name="dikaiologitiko3" type="file" class="form-control" accept="application/pdf">
+	                </div>
+	              </div>
+	            </div>
 
-						<div class="form-group">
-              <span class="col-md-1 col-md-offset-1 text-center"></span>
-              <div class="col-md-8">
-								<label class="form-label" for="dikaiologitiko4">Φωτοτυπία Εκκαθαριστικού Εφορίας</label>
-                <div class="input-group">
-                 <div class="input-group-addon">
-                   <span class="	glyphicon glyphicon-folder-open"></span>
-                 </div>
-                 <input id="dikaiologitiko4" name="dikaiologitiko4" type="file" class="form-control" accept="application/pdf">
-                </div>
-              </div>
-            </div>
+							<div class="form-group">
+	              <span class="col-md-1 col-md-offset-1 text-center"></span>
+	              <div class="col-md-8">
+									<label class="form-label" for="dikaiologitiko4">Φωτοτυπία Εκκαθαριστικού Εφορίας</label>
+	                <div class="input-group">
+	                 <div class="input-group-addon">
+	                   <span class="	glyphicon glyphicon-folder-open"></span>
+	                 </div>
+	                 <input id="dikaiologitiko4" name="dikaiologitiko4" type="file" class="form-control" accept="application/pdf">
+	                </div>
+	              </div>
+	            </div>
 
-						<div class="form-group">
-							<span class="col-md-1 col-md-offset-1 text-center"></span>
-							<div class="col-md-8">
-								<label class="form-label" for="dikaiologitiko5">Βεβαίωση Παραίτησης Εργοδότη</label>
-								<div class="input-group">
-								 <div class="input-group-addon">
-									 <span class="	glyphicon glyphicon-folder-open"></span>
-								 </div>
-								 <input id="dikaiologitiko5" name="dikaiologitiko5" type="file" class="form-control" accept="application/pdf">
+							<div class="form-group">
+								<span class="col-md-1 col-md-offset-1 text-center"></span>
+								<div class="col-md-8">
+									<label class="form-label" for="dikaiologitiko5">Βεβαίωση Παραίτησης Εργοδότη</label>
+									<div class="input-group">
+									 <div class="input-group-addon">
+										 <span class="	glyphicon glyphicon-folder-open"></span>
+									 </div>
+									 <input id="dikaiologitiko5" name="dikaiologitiko5" type="file" class="form-control" accept="application/pdf">
+									</div>
 								</div>
 							</div>
-						</div>
 
-            <div class="form-group">
-              <div class="col-md-12 text-center">
-                <button type="submit" class="btn btn-primary btn-md"><span class="glyphicon glyphicon-log-in"></span> Υποβολή </button>
-                <button type="reset" class="btn btn-danger btn-md"><span class="glyphicon glyphicon-remove"></span> Εκκαθάριση Πεδίων </button>
-              </div>
-            </div>
-          </fieldset>
-        </form>
+	            <div class="form-group">
+	              <div class="col-md-12 text-center">
+	                <button type="submit" class="btn btn-primary btn-md"><span class="glyphicon glyphicon-log-in"></span> Υποβολή </button>
+	                <button type="reset" class="btn btn-danger btn-md"><span class="glyphicon glyphicon-remove"></span> Εκκαθάριση Πεδίων </button>
+	              </div>
+	            </div>
+	          </fieldset>
+	        </form>
 
-        <div id="displayOnError"> </div>
+	        <div id="displayOnError"> </div>
 
-      </div>
-    </div>
+	      </div>
+	    </div>
+
+			<?php
+			}
+			else
+			{?>
+				<h1 class="text-center error-header"> Δεν ανήκετε στην ακόλουθη κατηγορία! </h1>
+				<p class="text-center text-danger">
+					Αν έχουμε κάνει εμείς κάποιο λάθος, περάστε από τα υποκαταστήματά μας με την ταυτότητά σας.
+				</p>
+
+			<?php
+			}?>
 
   </body>
 </html>
