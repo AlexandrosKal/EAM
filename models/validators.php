@@ -30,9 +30,6 @@ function validate_password($password) {
     return (strlen($password) >= 8 && strlen($password <= 32));
 }
 function validate_date($date) {
-    if (false === strtotime($date)) {
-        return false;
-    }
     list($day, $month, $year) = explode('/', $date);
     return checkdate($month, $day, $year);
 }
