@@ -108,7 +108,7 @@
 
 		<div class="well well-sm">
 			<h2 class="page-header header text-center"> Αλλαγή Κωδικού Πρόσβασης </h2>
-			<form class="form-horizontal" method="post" name="changePassForm" onsubmit="return validateChangePass();">
+			<form class="form-horizontal" method="post" name="changePassForm" onsubmit="return validateChangePass();" action="profile.php">
 				<fieldset>
 
 					<div class="form-group" id="current-passwordForm">
@@ -193,7 +193,7 @@
 
 		<div class="well">
 			<h2 class="page-header header text-center"> Αλλαγή Ηλεκτρονικής Διεύθυνσης E-mail</h2>
-			<form class="form-horizontal" method="post" name="changeEmailForm" onsubmit="return validateChangeEmail();">
+			<form class="form-horizontal" method="post" name="changeEmailForm" onsubmit="return validateChangeEmail();" action="profile.php">
 				<fieldset>
 
 					<div class="form-group" id="current-emailForm">

@@ -82,7 +82,7 @@
 		{ ?>
 			<div class="well">
 				<h1 class="text-center page-header header">Παρουσίαση Ενσήμων </h1>
-					<form class="form-horizontal" method="post" name="stampsForm" onsubmit="return validateStamps();">
+					<form class="form-horizontal" method="post" name="stampsForm" onsubmit="return validateStamps();" action="compute_stamps.php">
 						<fieldset>
 
 							<div class="form-group" id="fnameForm">

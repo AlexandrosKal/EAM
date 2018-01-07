@@ -116,6 +116,9 @@ function get_pension_errors($data) {
 function get_message_errors($data) {
     $messages = [];
     foreach ($data as $key => $value) {
+        if ($key == "phone") {
+            continue;
+        }
         if (empty($value)) {
             $messages[] = 'Παρακαλούμε συμπληρώστε όλα τα πεδία';
             break;
@@ -130,7 +133,7 @@ function get_message_errors($data) {
     if (!validate_email($data['email'])) {
         $messages[] = 'Το e-mail σας δεν είναι έγκυρο. Παρακούμε εισάγετε ένα έγκυρο e-mail.';
     }
-    if(!empty($data['phone'])) {
+    if (!empty($data['phone'])) {
         if (!is_numeric($data['phone']) || (strlen($data['phone']) != 10)) {
             $messages[] = "Το τηλέφωνο σας δεν ειναι έγκυρος αριθμός";
         }

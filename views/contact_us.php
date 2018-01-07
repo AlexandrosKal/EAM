@@ -39,27 +39,15 @@
 		<h2 class="text-left main-page-header page-header"> Επικοινωνήστε μαζί μας!</h2>
 
 		<ul class="nav nav-tabs padding nav-justified contact-style">
-		  <li class="active tab_header"><a data-toggle="tab" href="#Grafeia"> <b>Υποκαταστήματά</b></a></li>
+		  <li class="active"><a data-toggle="tab" href="#Epikoinwnia" class="tab_header"> <b>Επικοινωνία μέσω αλληλογραφίας</b></a></li>
 			<li><a data-toggle="tab" href="#Dioikisi" class="tab_header"> <b>Διοίκηση </b></a></li>
-		  <li><a data-toggle="tab" href="#Epikoinwnia" class="tab_header"> <b>Επικοινωνία μέσω αλληλογραφίας</b></a></li>
+		  <li><a data-toggle="tab" href="#Grafeia" class="tab_header"> <b>Υποκαταστήματά</b></a></li>
 		</ul>
 
 		<div class="tab-content padding contact-style">
-			<div id="Grafeia" class="tab-pane fade in active">
+			<div id="Epikoinwnia" class="tab-pane fade  in active">
 				<div class="well well-sm">
-					<h2 class="text-center page-header header">Tα υποκαταστήματά μας & τηλέφωνα επικοινωνίας</h2>
-				</div>
-			</div>
-
-			<div id="Dioikisi" class="tab-pane fade">
-				<div class="well well-sm">
-					<h2 class="text-center page-header header">Tηλέφωνα επικοινωνίας</h2>
-				</div>
-			</div>
-
-			<div id="Epikoinwnia" class="tab-pane fade">
-				<div class="well well-sm">
-					<form class="form-horizontal" method="post" name"contactForm" onsubmit="return validateContact()">
+					<form class="form-horizontal" method="post" name"contactForm" onsubmit="return validateContact()" action="contact_us.php">
 						<fieldset>
 							<h2 class="text-center page-header header">Επικοινωνήστε μαζί μας!</h2>
 
@@ -72,9 +60,9 @@
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
 									 <?php
-						       if ( isset( $_SESSION['uid'] ) )
-						       { ?>
-									 	<input id="fname" name="first_name" type="text" value="<?php echo $_SESSION['first_name']; ?>" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
+									 if ( isset( $_SESSION['uid'] ) )
+									 { ?>
+										<input id="fname" name="first_name" type="text" value="<?php echo $_SESSION['first_name']; ?>" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
 										<?php
 									 }
 									 else
@@ -201,6 +189,19 @@
 
 				</div>
 			</div>
+
+			<div id="Grafeia" class="tab-pane fade">
+				<div class="well well-sm">
+					<h2 class="text-center page-header header">Tα υποκαταστήματά μας & τηλέφωνα επικοινωνίας</h2>
+				</div>
+			</div>
+
+			<div id="Dioikisi" class="tab-pane fade">
+				<div class="well well-sm">
+					<h2 class="text-center page-header header">Tηλέφωνα επικοινωνίας</h2>
+				</div>
+			</div>
+
 		</div>
 
 	</body>

@@ -44,7 +44,7 @@
     </h5>
 
     <div class="well well-sm">
-      <form class="form-horizontal" method="post" name="loginForm" onsubmit="return validatePensionCalculator()">
+      <form class="form-horizontal" method="post" name="loginForm" onsubmit="return validatePensionCalculator()" action="compute_pension.php">
         <fieldset>
           <h1 class="page-header header text-center"> Υπολογισμός Σύνταξης Γήρατος IKA</h1>
           <div class="form-group" id="totalDaysForm">

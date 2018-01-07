@@ -49,7 +49,7 @@
         <li class="divider"></li>
 
         <li class="dropdown-header">ΑμΕΑ</li>
-        <li><a href="certificate.php?type=amka">Πιστοποιητικό Αναπηρίας</a></li>
+        <li><a href="certificate.php?type=disabled">Πιστοποιητικό Αναπηρίας</a></li>
 
         <li class="divider"></li>
 

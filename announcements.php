@@ -23,10 +23,11 @@
 	<body class="background-color">
 		<!--- include to navbar-->
 		<?php	require 'views/navbar.php' ;?>
-		<!-- include to koubi gia epistrofi stin korufi--></p><
+		<!-- include to koubi gia epistrofi stin korufi-->
 		<?php require 'views/backToTopButton.php' ;?>
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="announcements.php"> <b> Συχνές Ερωτήσεις </b> </a> </h5>
+		<h2 class="text-left main-page-header page-header"> Ανακοινώσεις</h2>
 
 		<ul class="nav nav-tabs padding nav-justified contact-style">
      <li class="active tab_header"><a data-toggle="tab" href="#Nea"> <b>Νέα</b></a></li>

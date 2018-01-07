@@ -41,8 +41,12 @@
 		<div class="container-fluid well text-center" >
 			<h2 class="text-center page-header header">Χρήσιμοι Σύνδεσμοι</h2>
 
-			<div class="col-md-12 ">
+			<div class="col-md-6 ">
 				<a href="request.php?type=disabled" class="btn btn-primary button_style col" role="button">Αίτηση Αξιολόγησης <br> Αναπηρίας</a>
+			</div>
+
+			<div class="col-md-6 ">
+				<a href="certificate.php?type=disabled" class="btn btn-primary button_style col" role="button">Πιστοποιητικό Αναπηρίας</a>
 			</div>
 
 		</div>

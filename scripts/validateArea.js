@@ -2,7 +2,7 @@ function validateArea(areaForm, area, displayOnErrorArea)
 {
   var input = document.getElementById(area).value;
   var inputArray = input.split(" ");
-  var regex =/(^([Α-Ω]|[ΆΈΉΊΌΎΏΪΫ])[α-ω]*([ϊϋ]?[α-ω]*[άέήόίύώ]?|[ΐΰ]?)[α-ω]*\s?$|^[A-Z][a-z]*\s?$)/;
+  var regex =/((^([Α-Ω]|[ΆΈΉΊΌΎΏΪΫ])[α-ω]*([ϊϋ]?[α-ω]*[άέήόίύώ]?|[ΐΰ]?)[α-ω]*\s?$|^[A-Z][a-z]*\s?$)|^([Α-Ω]*[ΪΫ]?[Α-Ω]*|[A-Z]*)$)/;
 
   for(var i=0; i<inputArray.length; i++)
   {

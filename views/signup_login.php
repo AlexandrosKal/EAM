@@ -73,7 +73,7 @@
 				<div class="well">
 					<h1 class="text-center header">Είστε χρηστης της πλατφόρμας μας; Παρακαλώ συνδεθείτε. </h1>
 
-            <form class="form-horizontal" method="post" name="loginForm" onsubmit="return validateLogIn()">
+            <form class="form-horizontal" method="post" name="loginForm" onsubmit="return validateLogIn()" action="signup_login.php">
   						<fieldset>
   							<div class="form-group" id="emailForm_l">
   								<span class="col-md-1 col-md-offset-1 text-center"></span>
@@ -157,7 +157,7 @@
       <?php } ?>
 				<div class="well">
 					<h1 class="text-center header">Δεν είστε χρήστης; Εγγραφείτε δωρεάν. </h1>
-            <form class="form-horizontal" method="post" name="signupForm" onsubmit="return validateSignUp()">
+            <form class="form-horizontal" method="post" name="signupForm" onsubmit="return validateSignUp()" action="signup_login.php?register">
               <fieldset>
 
 								<p class="text-center footnote"> Παρακαλώ συπληρώστε όλα τα πεδία της φόρμας με ελληνικούς ή λατινικούς χαρακτήρες. Μπορείτε να παραλείψετε τους τόνους.
