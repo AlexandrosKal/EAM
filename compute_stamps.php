@@ -1,7 +1,7 @@
 <?php
+require 'models/users.php';
 require 'models/connect.php';
 require 'models/validators.php';
-require 'models/users.php';
 require 'models/prestored_data.php';
 
 if (isset($_SESSION['uid'])) {

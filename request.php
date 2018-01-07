@@ -1,11 +1,11 @@
 <?php
+require 'models/users.php';
 require 'models/connect.php';
 require 'models/validators.php';
-require 'models/users.php';
 require 'models/requests.php';
 require 'models/documents.php';
 if (isset($_SESSION['uid'])) {
-    $success = false;
+    $rid = false;
     if (!empty($_GET)) {
         if (validate_type($_GET['type']) {
             if (!empty($_FILES)) {
@@ -15,12 +15,12 @@ if (isset($_SESSION['uid'])) {
                         $doc_added = add_document($_rid, $_file);
                     }
                     if ($doc_added) {
-                        require '';
+                        require 'request.php';
                     } else {
-                        //500
+                        require 'views/500.php';
                     }
                 } else {
-                    //500
+                    require 'views/500.php';
                 }
             } else {
                 $errors[] = "Δέν υποβάλατε αρχεία";
@@ -29,6 +29,7 @@ if (isset($_SESSION['uid'])) {
             $errors[] = "Λάθος τύπος";
         }
     }
+} else {
+    header('Location: signup_login.php' );
 }
-header('Location: signup_login.php' );
 ?>

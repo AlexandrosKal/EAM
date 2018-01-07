@@ -1,5 +1,4 @@
 <?php
-
 //Returns true if string contains valid characthers, otheerwise false
 function validate_name($string) {
     if (preg_match("/^[a-zA-ΖΑ-Ωα-ωάόώήύίέΆΌΏΉΎΊΈ]+$/", $string)) {
@@ -7,37 +6,29 @@ function validate_name($string) {
     }
     return false;
 }
-
 function validate_afm($afm) {
     $afm_length = strlen((string)$afm);
-
     return (is_numeric($afm) && $afm_length == 9 && afm_exists($afm));
 }
-
 function validate_amka($amka) {
     $amka_length = strlen((string)$amka);
     return (is_numeric($amka) && $amka_length == 11 && amka_exists($amka));
 }
-
 function validate_id_num($id_num) {
     return (strlen($id_num) == 8 && id_num_exists($id_num));
 }
-
 function validate_postal($postal) {
     $postal_length = strlen((string)$postal);
     return (is_numeric($postal) && $postal_length == 5);
 }
-
 //Returns true if email is valid, otherwise false
 function validate_email($email) {
     return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
-
 //Return true if password meets the specified security details
 function validate_password($password) {
     return (strlen($password) >= 8 && strlen($password <= 32));
 }
-
 function validate_date($date) {
     if (false === strtotime($date)) {
         return false;
@@ -45,7 +36,6 @@ function validate_date($date) {
     list($day, $month, $year) = explode('/', $date);
     return checkdate($month, $day, $year);
 }
-
 //Returns an empty map if data are valid, otherwise a map with error messages
 function get_register_errors($data) {
     $messages = [];
@@ -103,10 +93,8 @@ function get_register_errors($data) {
     if (!validate_date($data['date_of_birth'])) {
         $messages[] = 'Λαθος ημερομηνία γέννησης';
     }
-
     return $messages;
 }
-
 function get_pension_errors($data) {
     $messages = [];
     foreach ($data as $key => $value) {
@@ -115,17 +103,13 @@ function get_pension_errors($data) {
             break;
         }
     }
-
     foreach ($data as $key => $value) {
         if (is_numeric($value)) {
             $messages[] = "$key δεν ειναι έγκυρος αριθμός";
         }
     }
-
     return $messages;
 }
-
-
 function get_message_errors($data) {
     $messages = [];
     foreach ($data as $key => $value) {
@@ -134,7 +118,6 @@ function get_message_errors($data) {
             break;
         }
     }
-
     if (!validate_name($data['first_name'])) {
         $messages[] = 'Το όνομα σας περιέχει μη επιτρεπτούς χαρακτήρες. Παρακαλούμε εισάγετε μόνο γράμματα της αλφαβήτας';
     }
@@ -148,9 +131,7 @@ function get_message_errors($data) {
         $messages[] = "Το τηλέφωνο σας δεν ειναι έγκυρος αριθμός";
     }
     return $messages;
-
 }
-
 function get_stamp_form_errors($data) {
     $messages = [];
     foreach ($data as $key => $value) {
@@ -184,5 +165,4 @@ function get_stamp_form_errors($data) {
         $messages[] = 'Υπάρχει ήδη λογαριασμός με αυτο το αριθμό ταυτότητας';
     }
 }
-
 ?>

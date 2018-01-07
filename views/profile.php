@@ -30,7 +30,7 @@
 
 	<body class="background-color">
     <!--include to navbar-->
-    <?php		require 'navbar.php' ;?>
+    <?php	require 'navbar.php' ;?>
 		<!-- include to koubi gia epistrofi stin korufi-->
 		<?php require 'backToTopButton.php' ;?>
     <!-- set to path-->
@@ -116,7 +116,7 @@
 							 <div class="input-group-addon">
 								 <span class="glyphicon glyphicon-lock"></span>
 							 </div>
-							 <input id="current-password" name="current-password" type="password" maxlength="10" placeholder="******" class="form-control" onchange="validatePassword('current-passwordForm', 'current-password', 'displayOnErrorCurrentPassword', 8, 10)">
+							 <input id="current-password" name="-password" type="password" maxlength="24" placeholder="******" class="form-control" onchange="validatePassword('current-passwordForm', 'current-password', 'displayOnErrorCurrentPassword', 8, 24)">
 							</div>
 
 							<div id="displayOnErrorCurrentPassword"> </div>
@@ -132,7 +132,7 @@
 							 <div class="input-group-addon">
 								 <span class="glyphicon glyphicon-lock"></span>
 							 </div>
-							 <input id="new-password" name="new-password" type="password" maxlength="24" placeholder="******" class="form-control" onchange="validatePassword('new-passwordForm', 'new-password', 'displayOnErrorNewPassword', 8, 24)">
+							 <input id="new-password" name="new_password" type="password" maxlength="24" placeholder="******" class="form-control" onchange="validatePassword('new-passwordForm', 'new-password', 'displayOnErrorNewPassword', 8, 24)">
 							</div>
 
 							<div id="displayOnErrorNewPassword"> </div>
@@ -169,6 +169,23 @@
 
 			<div id="displayOnErrorPass"> </div>
 
+			<?php
+			if(isset($success) && $success)
+			{ ?>
+				<div class="alert alert-success">
+					<strong>O κωδικός πρόσβασης άλλαξε επιτυχώς!</strong>
+				</div>
+			<?php
+			}
+			else if(isset($success) && !$success)
+			{ ?>
+				<div class="alert alert-danger">
+					<strong> <?php echo $errors[0]; ?> </strong>
+				</div>
+			<?php
+			}
+			?>
+
 		</div>
 
 		<div class="well">
@@ -184,7 +201,7 @@
 							 <div class="input-group-addon">
 								 @
 							 </div>
-							 <input id="current-email" name="current-email" type="text" placeholder="πχ user@example.com" class="form-control" onchange="validateEmail('current-emailForm', 'current-email', 'displayOnErrorCurrentEmail')">
+							 <input id="current-email" name="email" type="text" value="<?php echo $_SESSION['email']; ?>" class="form-control" onchange="validateEmail('current-emailForm', 'current-email', 'displayOnErrorCurrentEmail')">
 							</div>
 
 							<div id="displayOnErrorCurrentEmail"> </div>
@@ -200,7 +217,7 @@
 							 <div class="input-group-addon">
 								 @
 							 </div>
-							 <input id="new-email" name="new-email" type="text" placeholder="πχ new_user@example.com" class="form-control" onchange="validateEmail('new-emailForm', 'new-email', 'displayOnErrorNewEmail')">
+							 <input id="new-email" name="new_email" type="text" placeholder="πχ new_user@example.com" class="form-control" onchange="validateEmail('new-emailForm', 'new-email', 'displayOnErrorNewEmail')">
 							</div>
 
 							<div id="displayOnErrorNewEmail"> </div>
@@ -237,6 +254,22 @@
 
 			<div id="displayOnErrorEmail"> </div>
 
+			<?php
+			if(isset($success) && $success)
+			{ ?>
+				<div class="alert alert-success">
+					<strong>H ηλεκτρονική διεύθυνση email άλλαξε επιτυχώς!</strong>
+				</div>
+			<?php
+			}
+			else if(isset($success) && !$success)
+			{ ?>
+				<div class="alert alert-danger">
+					<strong> <?php echo $errors[0]; ?> </strong>
+				</div>
+			<?php
+			}
+			?>
 		</div>
 
   </body>

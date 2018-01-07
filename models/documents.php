@@ -1,5 +1,4 @@
 <?php
-
 function add_document($data, $file) {
     global $db;
     $rid = $data['rid'];
@@ -21,7 +20,6 @@ function add_document($data, $file) {
         return mysqli_insert_id($db);
     }
 }
-
 function get_document($did) {
     global $db;
     $sql_query = "SELECT rid,
@@ -42,5 +40,4 @@ function get_document($did) {
                 'path' => $path, ];
     return $retData;
 }
-
 ?>

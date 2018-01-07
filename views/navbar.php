@@ -4,6 +4,9 @@
   </a>
 </div>
 
+<?php require_once 'models/users.php';?>
+<?php require_once 'models/connect.php';?>
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">

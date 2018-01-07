@@ -73,12 +73,12 @@
 									 <?php
 						       if ( isset( $_SESSION['uid'] ) )
 						       { ?>
-									 	<input id="fname" name="name" type="text" value="<?php echo $_SESSION['first_name']; ?>" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
+									 	<input id="fname" name="first_name" type="text" value="<?php echo $_SESSION['first_name']; ?>" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
 										<?php
 									 }
 									 else
 									 { ?>
-										 <input id="fname" name="name" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
+										 <input id="fname" name="first_sname" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
 										<?php
 									 }
 									 ?>
@@ -99,12 +99,12 @@
 									 <?php
 									 if ( isset( $_SESSION['uid'] ) )
 									 { ?>
-									 <input id="lname" name="name" type="text" value="<?php echo $_SESSION['last_name']?>" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
+									 <input id="lname" name="last_name" type="text" value="<?php echo $_SESSION['last_name']?>" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
 									 <?php
 									}
 									else
 									{ ?>
-										<input id="lname" name="name" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
+										<input id="lname" name="last_name" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
 										<?php
 									 }
 									 ?>
@@ -192,7 +192,7 @@
 					else if(isset($success) && !$success)
 					{ ?>
 						<div class="alert alert-danger">
-							<strong> <?php echo "poutsos"; ?> </strong>
+							<strong> <?php echo $errors[0]; ?> </strong>
 						</div>
 					<?php
 					}

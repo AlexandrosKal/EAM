@@ -2,29 +2,31 @@
 require 'models/connect.php';
 require 'models/validators.php';
 require 'models/users.php';
+
 if (isset($_SESSION['uid'])) {
+
     $user = get_user_data($_SESSION['uid']);
     if (!empty($_POST)) {
         $valid_email = false;
         $valid_new_password = false;
-        if (!empty($_POST['email'])) {
-            $valid_email = validate_email($_POST['email']);
+        if (!empty($_POST['new_email'])) {
+            $valid_email = validate_email($_POST['new_email']);
             if ($valid_email) {
-                $success = update_mail($_POST['email'], $_SESSION['uid']);
+                $success = update_email($_POST, $_SESSION['uid']);
                 if(!$success) {
-                    //500
+                    require 'views/500.php';
                 }
             } else {
                 $email_error = 'Η ηλεκτρονική διεύθυνση email που δώσατε δεν είναι έγκυρη.';
             }
         }
-        if (!empty($_POST['new_password'])) {
+        if (!empty($_POST['new_password']) && !empty($_POST['password'])) {
             $valid_new_password = validate_password($_POST['new_password']);
-            $authenticated = authenticate_user(array_merge($_SESSION['email']), $_POST['password']);
+            $authenticated = authenticate_user(array_merge($user, $_POST));
             if ($valid_new_password && $authenticated) {
-                $success = update_password($_POST['new_password'], $_SESSION['uid']);
+                $success = update_password($_POST, $_SESSION['uid']);
                 if(!$success) {
-                    $pass_error = 'pass error';
+                    require 'views/500.php';
                 }
             }
             if (!$authenticated) {
@@ -34,8 +36,10 @@ if (isset($_SESSION['uid'])) {
                 $pass_error = 'Λαθος νεος κωδικος';
             }
         }
+        $user = get_user_data($_SESSION['uid']);
         require 'views/profile.php';
     } else {
+        $user = get_user_data($_SESSION['uid']);
 	    require 'views/profile.php';
     }
 } else {
