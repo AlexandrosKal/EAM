@@ -43,6 +43,11 @@
       <a href="pension_calculator"> <b> Υπολογισμός Σύνταξης Γήρατος</b> </a>
     </h5>
 
+		<?php
+		if( !isset($pension) )
+		{
+		?>
+
     <div class="well well-sm">
       <form class="form-horizontal" method="post" name="loginForm" onsubmit="return validatePensionCalculator()" action="compute_pension.php">
         <fieldset>
@@ -347,5 +352,30 @@
 
     </div>
 
+		<?php
+		}
+		else
+		{
+		?>
+			<div class="well">
+				<h2 class="header page-header text-center"> Παρουσίαση Σύνταξης Γήρατος </h2>
+
+				<div class="panel-group">
+
+					<div class="panel panel-info">
+						<div class="panel-heading">Ποσό Σύνταξης Γήρατος</div>
+
+						<div class="panel-body">
+							<span class="col-md-2 attribute"><?php echo $pension; ?></span>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		<?php
+			}
+		}
+		?>
   </body>
 </html>

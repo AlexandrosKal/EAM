@@ -46,7 +46,7 @@
     <h2 class="main-page-header page-header"> Αίτηση Αξιολόγησης Αναπηρίας</h2>
 
 		<?php
-		if($user['is_disabled'] && isset($user))
+		if(isset($user) && $user['is_disabled'])
 		{?>
 
 			<div class="well">
