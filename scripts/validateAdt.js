@@ -13,7 +13,7 @@ function validateAdt(adtForm, adt, displayOnErrorAdt)
   {
     document.getElementById(adtForm).className = "form-group";
     document.getElementById(adtForm).className += " has-error";
-    document.getElementById(displayOnErrorAdt).innerHTML = "<li class='text-danger'> Ο Αριθμός Δελτίου Ταυτότητας δεν ειναι έγκυρος.";
+    document.getElementById(displayOnErrorAdt).innerHTML = "<li class='text-danger'> Ο Αριθμός Δελτίου Ταυτότητας δεν ειναι έγκυρος. Παρακαλώ χρησιμοποιήστε μόνο κεφαλαίους λατινικούς χαρακτήρες.";
   }
   else
   {

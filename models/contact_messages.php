@@ -1,5 +1,4 @@
 <?php
-
 function add_message($data) {
     global $db;
     $email = $data['email'];
@@ -27,4 +26,5 @@ function add_message($data) {
     } else {
         return mysqli_insert_id($db);
     }
-};
+}
+?>

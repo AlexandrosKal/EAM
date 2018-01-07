@@ -12,7 +12,7 @@ function validateChangeEmail()
   }
   else
   {
-    if (!/^[\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})]+$/.test(input))
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input))
     {
       error_flag = true;
       errorList.push("Το e-mail που εισάγατε δεν ειναι έγκυρο.");
@@ -27,7 +27,7 @@ function validateChangeEmail()
   }
   else
   {
-    if (!/^[\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})]+$/.test(input))
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input))
     {
       error_flag = true;
       errorList.push("Το e-mail που εισάγατε δεν ειναι έγκυρο.");

@@ -12,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/full_width.css">
 		<link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
+		<link rel="stylesheet" type="text/css" href="css/well.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -26,8 +27,8 @@
 		<?php require 'views/backToTopButton.php' ;?>
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="services.php"> <b> Υπηρεσίες </b> </a> </h5>
-    <h2 class="page-header"> Υπηρεσίες </h2>
-    <div class="container well">
+    <h2 class="main-page-header page-header"> Υπηρεσίες </h2>
+    <div class="well">
 	      <div class="row">
 
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">

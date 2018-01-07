@@ -27,7 +27,6 @@ function get_prestored_data($amka) {
                 'stamps_this_month' => $stamps_this_month,];
     return $retData;
 }
-
 function amka_exists($amka) {
     global $db;
     $sql_query = "SELECT amka
@@ -44,7 +43,6 @@ function amka_exists($amka) {
     }
     return true;
 }
-
 function afm_exists($afm) {
     global $db;
     $sql_query = "SELECT amka
@@ -61,7 +59,6 @@ function afm_exists($afm) {
     }
     return true;
 }
-
 function id_num_exists($id_num) {
     global $db;
     $sql_query = "SELECT amka
@@ -78,5 +75,4 @@ function id_num_exists($id_num) {
     }
     return true;
 }
-
 ?>

@@ -42,13 +42,13 @@
       <a href="application_pension.php"> <b> Αίτηση Συνταξιοδότησης Γήρατος </b></a>
     </h5>
 
-    <h2 class="page-header"> Αίτηση Συνταξιοδότησης Γήρατος</h2>
+    <h2 class="main-page-header page-header"> Αίτηση Συνταξιοδότησης Γήρατος</h2>
 
     <div class="well">
       <h3 class="text-center header"> Παρακαλώ ανεβάστε τα κατάλληλα δικαιολογητικά σε μορφή αρχείων .pdf.</h1>
 
       <div class="well">
-        <form class="form-horizontal" method="post" enctype="multipart/form-data" name="loginForm" onsubmit="return validateApplicationPension()" action="request.php?type=pension">
+         <form class="form-horizontal" method="post" enctype="multipart/form-data" name="loginForm" onsubmit="return validateApplicationPension()" action="request.php?type=pension">
           <fieldset>
             <div class="form-group">
               <span class="col-md-1 col-md-offset-1 text-center"></span>

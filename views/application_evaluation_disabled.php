@@ -43,13 +43,12 @@
       <a href="application_evaluation_disabled.php"> <b> Αίτηση Aξιολόγησης Αναπηρίας </b></a>
     </h5>
 
-    <h2 class="page-header"> Αίτηση Αξιολόγησης Αναπηρίας</h2>
+    <h2 class="main-page-header page-header"> Αίτηση Αξιολόγησης Αναπηρίας</h2>
 
     <div class="well">
       <h3 class="text-center header"> Παρακαλώ ανεβάστε τα κατάλληλα δικαιολογητικά σε μορφή αρχείων .pdf.</h1>
 
         <form class="form-horizontal" method="post" enctype="multipart/form-data" name="loginForm" onsubmit="return validateApplicationPension()" action="request.php?type=disabled">
-          <fieldset>
           <fieldset>
             <div class="form-group">
               <span class="col-md-1 col-md-offset-1 text-center"></span>

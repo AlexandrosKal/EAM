@@ -1,5 +1,4 @@
 <?php
-
 //function for user creation
 function register_user($data) {
     global $db;
@@ -56,7 +55,6 @@ function register_user($data) {
         return mysqli_insert_id($db);
     }
 };
-
 //function for user authentication
 function authenticate_user($data) {
     global $db;
@@ -84,7 +82,6 @@ function authenticate_user($data) {
         return false ;
     }
 }
-
 // collects user data and returns them in array form
 function get_user_data($uid) {
     global $db;
@@ -140,7 +137,6 @@ function get_user_data($uid) {
                 'stamps_this_month' => $stamps_this_month,];
     return $retData;
 }
-
 // function to update user
 function update_email($data, $uid) {
     global $db;
@@ -156,7 +152,6 @@ function update_email($data, $uid) {
     }
     return false ;
 }
-
 function update_password($data, $uid) {
     global $db;
     $new_password = $data['new_password'];
@@ -172,7 +167,6 @@ function update_password($data, $uid) {
     }
     return false ;
 }
-
 function is_duplicate_amka($amka) {
     global $db;
     $sql_query = "SELECT amka
@@ -189,7 +183,6 @@ function is_duplicate_amka($amka) {
     }
     return true;
 }
-
 function is_duplicate_email($email) {
     global $db;
     $sql_query = "SELECT email
@@ -206,7 +199,6 @@ function is_duplicate_email($email) {
     }
     return true;
 }
-
 function is_duplicate_afm($afm) {
     global $db;
     $sql_query = "SELECT afm
@@ -223,7 +215,6 @@ function is_duplicate_afm($afm) {
     }
     return true;
 }
-
 function is_duplicate_id_num($id_num) {
     global $db;
     $sql_query = "SELECT id_num
@@ -240,5 +231,4 @@ function is_duplicate_id_num($id_num) {
     }
     return true;
 }
-
 ?>

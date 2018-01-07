@@ -1,4 +1,4 @@
-function validateEmail(emailForm, email, displayOnErrorEmail)
+function validateEmailNO(emailForm, email, displayOnErrorEmail)
 {
   var input = document.getElementById(email).value;
   var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -12,7 +12,6 @@ function validateEmail(emailForm, email, displayOnErrorEmail)
   else
   {
     document.getElementById(emailForm).className = "form-group";
-    document.getElementById(emailForm).className += " has-success";
     document.getElementById(displayOnErrorEmail).innerHTML = "";
   }
 }
