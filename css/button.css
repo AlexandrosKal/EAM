@@ -1,9 +1,12 @@
-	.button_style
-	{
-		width: 275px;
-    font-size:16px;
-		padding:30px;
-		margin:10px;
-		border-radius: 15px;
-		font-weight:bold;
-	}
+.button_style
+{
+	width: 275px;
+	height:95px;
+	text-align: center;
+  font-size:16px;
+	padding:30px;
+	margin:10px;
+	border-radius: 15px;
+	font-weight:bold;
+	display: inline-block;
+}
