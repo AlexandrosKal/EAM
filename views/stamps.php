@@ -66,7 +66,7 @@
 	          <div class="panel-heading">Ένσημα προηγούμενου μήνα</div>
 
 	          <div class="panel-body">
-	            <span class="col-md-2 attribute"><?php echo user['stamps_this_month']; ?></span>
+	            <span class="col-md-2 attribute"><?php echo $user['stamps_this_month']; ?></span>
 	          </div>
 
 	        </div>

@@ -144,11 +144,12 @@ function get_user_data($uid) {
 // function to update user
 function update_email($data, $uid) {
     global $db;
+    $new_email = $data['new_email'];
     $sql_query = "UPDATE users
                   SET email = ?
                   WHERE uid = ? ";
     $stmt = mysqli_prepare($db , $sql_query);
-    mysqli_stmt_bind_param($stmt, "si", $data['email'], $uid);
+    mysqli_stmt_bind_param($stmt, "si", $new_email, $uid);
     mysqli_stmt_execute ($stmt);
     if (mysqli_affected_rows($db)) {
         return true ;
@@ -158,7 +159,8 @@ function update_email($data, $uid) {
 
 function update_password($data, $uid) {
     global $db;
-    $hash = password_hash($data['new_password'], PASSWORD_DEFAULT);
+    $new_password = $data['new_password'];
+    $hash = password_hash($new_password, PASSWORD_DEFAULT);
     $sql_query = "UPDATE users
                   SET password = ?
                   WHERE uid = ? ";
