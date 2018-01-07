@@ -108,7 +108,7 @@
 
 		<div class="well well-sm">
 			<h2 class="page-header header text-center"> Αλλαγή Κωδικού Πρόσβασης </h2>
-			<form class="form-horizontal" method="post" name="changePassForm" onsubmit="return validateChangePass();">
+			<form class="form-horizontal" method="post" name="changePassForm" onsubmit="return validateChangePass();" action="profile.php">
 				<fieldset>
 
 					<div class="form-group" id="current-passwordForm">
@@ -119,7 +119,7 @@
 							 <div class="input-group-addon">
 								 <span class="glyphicon glyphicon-lock"></span>
 							 </div>
-							 <input id="current-password" name="-password" type="password" maxlength="24" placeholder="******" class="form-control" onchange="validatePassword('current-passwordForm', 'current-password', 'displayOnErrorCurrentPassword', 8, 24)">
+							 <input id="current-password" name="password" type="password" maxlength="24" placeholder="******" class="form-control" onchange="validatePassword('current-passwordForm', 'current-password', 'displayOnErrorCurrentPassword', 8, 24)">
 							</div>
 
 							<div id="displayOnErrorCurrentPassword"> </div>
@@ -193,7 +193,7 @@
 
 		<div class="well">
 			<h2 class="page-header header text-center"> Αλλαγή Ηλεκτρονικής Διεύθυνσης E-mail</h2>
-			<form class="form-horizontal" method="post" name="changeEmailForm" onsubmit="return validateChangeEmail();">
+			<form class="form-horizontal" method="post" name="changeEmailForm" onsubmit="return validateChangeEmail();" action="profile.php">
 				<fieldset>
 
 					<div class="form-group" id="current-emailForm">

@@ -73,7 +73,7 @@
 				<div class="well">
 					<h1 class="text-center header">Είστε χρηστης της πλατφόρμας μας; Παρακαλώ συνδεθείτε. </h1>
 
-            <form class="form-horizontal" method="post" name="loginForm" onsubmit="return validateLogIn()">
+            <form class="form-horizontal" method="post" name="loginForm" onsubmit="return validateLogIn()" action="signup_login.php">
   						<fieldset>
   							<div class="form-group" id="emailForm_l">
   								<span class="col-md-1 col-md-offset-1 text-center"></span>
@@ -157,7 +157,7 @@
       <?php } ?>
 				<div class="well">
 					<h1 class="text-center header">Δεν είστε χρήστης; Εγγραφείτε δωρεάν. </h1>
-            <form class="form-horizontal" method="post" name="signupForm" onsubmit="return validateSignUp()">
+            <form class="form-horizontal" method="post" name="signupForm" onsubmit="return validateSignUp()" action="signup_login.php?register">
               <fieldset>
 
 								<p class="text-center footnote"> Παρακαλώ συπληρώστε όλα τα πεδία της φόρμας με ελληνικούς ή λατινικούς χαρακτήρες. Μπορείτε να παραλείψετε τους τόνους.
@@ -172,7 +172,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-user"></span>
                      </div>
-                     <input id="fname" name="fname" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName')">
+                     <input id="fname" name="first_name" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName')">
                     </div>
 
 										<div id="displayOnErrorFName"> </div>
@@ -188,7 +188,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-user"></span>
                      </div>
-                     <input id="lname" name="lname" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName')">
+                     <input id="lname" name="last_name" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName')">
                     </div>
 
 										<div id="displayOnErrorLName"> </div>
@@ -302,7 +302,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-th-list"></span>
                      </div>
-                     <input id="adt" name="adt" type="text" placeholder="πχ AH542412" class="form-control" maxlength="8" onchange="validateAdt('adtForm', 'adt', 'displayOnErrorAdt');">
+                     <input id="adt" name="id_num" type="text" placeholder="πχ AH542412" class="form-control" maxlength="8" onchange="validateAdt('adtForm', 'adt', 'displayOnErrorAdt');">
                     </div>
 
 										<div id="displayOnErrorAdt"> </div>
@@ -318,7 +318,7 @@
                      <div class="input-group-addon">
                        <span class="glyphicon glyphicon-calendar"></span>
                      </div>
-                     <input id="bday" name="bday" type="text" placeholder="πχ 19/12/96" maxlength="10" class="form-control" onchange="validateBday('bdayForm', 'bday', 'displayOnErrorBday');">
+                     <input id="bday" name="date_of_birth" type="text" placeholder="πχ 19/12/1996" maxlength="10" class="form-control" onchange="validateBday('bdayForm', 'bday', 'displayOnErrorBday');">
                     </div>
 
 										<div id="displayOnErrorBday"> </div>
@@ -347,7 +347,7 @@
 										 <div class="input-group-addon">
 											 <span class="glyphicon glyphicon-home"></span>
 										 </div>
-										 <input id="streetNum" name="streetNum" type="text" placeholder="πχ 4" class="form-control" maxlength="4" onkeydown="return onlyNumbers(event);" onchange="notEmpty('addressForm', 'streetNum', 'displayOnErrorStreetNum');">
+										 <input id="streetNum" name="street_num" type="text" placeholder="πχ 4" class="form-control" maxlength="4" onkeydown="return onlyNumbers(event);" onchange="notEmpty('addressForm', 'streetNum', 'displayOnErrorStreetNum');">
 										</div>
 
 										<div id="displayOnErrorStreetNum"> </div>

@@ -23,10 +23,11 @@
 	<body class="background-color">
 		<!--- include to navbar-->
 		<?php	require 'views/navbar.php' ;?>
-		<!-- include to koubi gia epistrofi stin korufi--></p><
+		<!-- include to koubi gia epistrofi stin korufi-->
 		<?php require 'views/backToTopButton.php' ;?>
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="announcements.php"> <b> Συχνές Ερωτήσεις </b> </a> </h5>
+		<h2 class="text-left main-page-header page-header"> Ανακοινώσεις</h2>
 
 		<ul class="nav nav-tabs padding nav-justified contact-style">
      <li class="active tab_header"><a data-toggle="tab" href="#Nea"> <b>Νέα</b></a></li>
@@ -58,7 +59,7 @@
 
            <div id="Deltia_tupou" class="tab-pane fade">
                    <div class="well well-sm">
-										 <h2 class="text-center page-header header">Επικοινωνήστε μαζί μας!</h2>
+										 <h2 class="text-center page-header header"> Δελτία τύπου 2017-2018</h2>
 
 										 <ul class="paragraph">
 					 						<li>Ηλεκτρονική υποβολή Αιτήματος για εξέταση από Υγειονομική Επιτροπή ΚΕ.Π.Α.</li>

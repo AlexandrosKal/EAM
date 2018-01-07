@@ -43,11 +43,15 @@
 			 <h2 class="text-center header">Χρήσιμοι Σύνδεσμοι</h2>
 			</div>
 
-			<div class="col-md-6 ">
+			<div class="col-md-4 ">
 				<a href="#" class="btn btn-primary button_style col" role="button">Προσωπική Ασφαλιστική<br> Κατάσταση</a>
 			</div>
 
-			<div class="col-md-6 ">
+			<div class="col-md-4 ">
+				<a href="certificate.php?type=amka" class="btn btn-primary button_style col" role="button">Βεβαίωση <abbr title="Αιρθμός Μητρώου Κοινωνικής Ασφάλισης">ΑΜΚΑ</abbr></a>
+			</div>
+
+			<div class="col-md-4 ">
 				<a href="compute_stamps.php" class="btn btn-primary button_style col" role="button">Παρουσίαση Ενσήμων</a>
 			</div>
 

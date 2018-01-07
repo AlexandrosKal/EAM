@@ -82,7 +82,7 @@
 		{ ?>
 			<div class="well">
 				<h1 class="text-center page-header header">Παρουσίαση Ενσήμων </h1>
-					<form class="form-horizontal" method="post" name="stampsForm" onsubmit="return validateStamps();">
+					<form class="form-horizontal" method="post" name="stampsForm" onsubmit="return validateStamps();" action="compute_stamps.php">
 						<fieldset>
 
 							<div class="form-group" id="fnameForm">
@@ -97,7 +97,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="fname" name="fname" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fnameForm', 'fname', 'displayOnErrorFname')">
+									 <input id="fname" name="first_name" type="text" placeholder="πχ Αλέξανδρος, Χρήστος Χαράλαμπος, Marios" class="form-control" onchange="validateFName('fnameForm', 'fname', 'displayOnErrorFname')">
 									</div>
 
 									<div id="displayOnErrorFname"> </div>
@@ -113,7 +113,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-user"></span>
 									 </div>
-									 <input id="lname" name="lname" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lnameForm', 'lname', 'displayOnErrorLname')">
+									 <input id="lname" name="last_name" type="text" placeholder="πχ Λοΐζος, Douglas" class="form-control" onchange="validateLName('lnameForm', 'lname', 'displayOnErrorLname')">
 									</div>
 
 									<div id="displayOnErrorLname"> </div>
@@ -145,7 +145,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-th-list"></span>
 									 </div>
-									 <input id="adt" name="adt" type="text" placeholder="πχ AH542412" class="form-control" maxlength="8" onchange="validateAdt('adtForm', 'adt', 'displayOnErrorAdt')">
+									 <input id="adt" name="id_num" type="text" placeholder="πχ AH542412" class="form-control" maxlength="8" onchange="validateAdt('adtForm', 'adt', 'displayOnErrorAdt')">
 									</div>
 
 									<div id="displayOnErrorAdt"> </div>
@@ -161,7 +161,7 @@
 									 <div class="input-group-addon">
 										 <span class="glyphicon glyphicon-calendar"></span>
 									 </div>
-									 <input id="bday" name="bday" type="text" placeholder="πχ 19/12/96" maxlength="10 "class="form-control" onchange="validateBday('bdayForm', 'bday', 'displayOnErrorBday')">
+									 <input id="bday" name="date_of_birth" type="text" placeholder="πχ 19/12/1996" maxlength="10 "class="form-control" onchange="validateBday('bdayForm', 'bday', 'displayOnErrorBday')">
 									</div>
 
 									<div id="displayOnErrorBday"> </div>
@@ -179,7 +179,21 @@
 						</fieldset>
 					</form>
 
-						<div id="displayOnError"> </div>
+					<?php
+					if( isset($errors) && !empty($errors) )
+					{
+						?>
+						<div class="alert alert-danger text-danger">
+						<span class='glyphicon glyphicon-alert'></span> &nbsp;
+						<?php
+						echo $errors[0];
+						?>
+						</div>
+					<?php
+					}
+					?>
+
+					<div id="displayOnError"> </div>
 
 			</div>
 			<?php
