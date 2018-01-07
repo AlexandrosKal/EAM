@@ -268,7 +268,7 @@
 			else if(isset($success) && !$success)
 			{ ?>
 				<div class="alert alert-danger">
-					<strong> <?php echo $errors[0]; ?> </strong>
+					<strong> <?php echo $errors[1]; ?> </strong>
 				</div>
 			<?php
 			}
