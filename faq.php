@@ -34,7 +34,7 @@
 
 		<div class="well">
 			<div class="panel-group" id="accordion">
-				<div class="panel panel-default">
+				<div class="panel panel-info">
  						 <div class="panel-heading">
      							 <h4 class="panel-title">
      	    							 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i> Τι σημαίνει «θεμελίωση συνταξιοδοτικού δικαιώματος»; </i></a>
@@ -50,8 +50,9 @@
       						</div>
   						</div>
 				</div>
+				<br>
 
-				<div class="panel panel-default">
+				<div class="panel panel-info">
        						 <div class="panel-heading">
            							 <h4 class="panel-title">
            	    							 <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i> Πώς μπορώ να βρω το κοντινότερο μου υποκατάστημα ; </i></a>
@@ -64,8 +65,9 @@
             						</div>
         						</div>
     					</div>
+							<br>
 
-						<div class="panel panel-default">
+						<div class="panel panel-info">
  						 <div class="panel-heading">
      							 <h4 class="panel-title">
      	    							 <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><i> Ποιες είναι οι προϋποθέσεις για τη χορήγηση των επιδομάτων μητρότητας;</i></a>
@@ -79,8 +81,9 @@
       						</div>
   						</div>
 				</div>
+				<br>
 
-				<div class="panel panel-default">
+				<div class="panel panel-info">
 						 <div class="panel-heading">
    							 <h4 class="panel-title">
    	    							 <a class="accordion-toggle collapsed " data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><i>Πώς μπορώ να πληροφορηθώ σχετικά με τις οφειλές μου και τη ρύθμιση τους ;</i></a>
@@ -93,6 +96,7 @@
     						</div>
 						</div>
 			</div>
+			<br>
 		</div>
 	</div>
 

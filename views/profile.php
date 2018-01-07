@@ -63,10 +63,10 @@
 				</div>
 				<br>
 
-				<div class="panel panel-info">
+				<div class="panel panel-info ">
 					<div class="panel-heading">Διεύθυνση &amp; Περιοχή</div>
 
-					<div class="panel-body">
+					<div class="panel-body" >
 						<span class="col-md-2 attribute">Διεύθυνση:</span>
 						<span class="col-md-2 attribute_value"><?php echo $user['street'].' '.$user['street_num']; ?></span>
 					</div>
