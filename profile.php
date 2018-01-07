@@ -12,8 +12,8 @@ if (isset($_SESSION['uid'])) {
         if (!empty($_POST['new_email'])) {
             $valid_email = validate_email($_POST['new_email']);
             if ($valid_email) {
-                $success = update_email($_POST, $_SESSION['uid']);
-                if(!$success) {
+                $success_email = update_email($_POST, $_SESSION['uid']);
+                if(!$success_email) {
                     require 'views/500.php';
                 }
             } else {
@@ -24,8 +24,8 @@ if (isset($_SESSION['uid'])) {
             $valid_new_password = validate_password($_POST['new_password']);
             $authenticated = authenticate_user(array_merge($user, $_POST));
             if ($valid_new_password && $authenticated) {
-                $success = update_password($_POST, $_SESSION['uid']);
-                if(!$success) {
+                $success_password = update_password($_POST, $_SESSION['uid']);
+                if(!$success_password) {
                     require 'views/500.php';
                 }
             }

@@ -11,8 +11,8 @@
         $title = 'Εγγραφή Χρήστη';
         //User has not logged in, dhow register form
         if (!empty($_POST)) {
-            $errors = get_register_errors($_POST);
-            if (empty ($errors)) {
+            $register_errors = get_register_errors($_POST);
+            if (empty ($register_errors)) {
                 //insert user info to database
                 $pre = get_prestored_data($_POST['amka']);
                 $_POST = array_merge($_POST, $pre);
@@ -27,8 +27,9 @@
                 else {
                     require 'views/500.php';
                 }
+            } else {
+                require 'views/signup_login.php';
             }
-            require 'views/signup_login.php';
         }
         else {
             require 'views/signup_login.php';
@@ -47,7 +48,7 @@
         else {
             $user = authenticate_user( $_POST );
             if ( $user === false ) {
-                $errors[] = 'Τα στοιχεία που δώσατε δεν είναι σωστά';
+                $login_errors[] = 'Τα στοιχεία που δώσατε δεν είναι σωστά';
                 require 'views/signup_login.php';
             }
             else {
