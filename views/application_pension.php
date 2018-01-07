@@ -45,7 +45,7 @@
     <h2 class="main-page-header page-header"> Αίτηση Συνταξιοδότησης Γήρατος</h2>
 
 		<?php
-		if($user['is_pensioner'] && isset($user))
+		if(isset($user) && $user['is_pensioner'])
 		{?>
 	    <div class="well">
 	      <h3 class="text-center header"> Παρακαλώ ανεβάστε τα κατάλληλα δικαιολογητικά σε μορφή αρχείων .pdf.</h1>
@@ -145,7 +145,7 @@
 					<?php
 					}
 					?>
-					
+
 	      </div>
 	    </div>
 
