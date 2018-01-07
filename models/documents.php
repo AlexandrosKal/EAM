@@ -1,9 +1,7 @@
 <?php
 
-function add_document($data, $file) {
+function add_document($rid, $file) {
     global $db;
-    $rid = $data['rid'];
-    $filename = $data['filename'];
     $path = "uploads/";
     $file_extension = pathinfo($file['name'], PATHINFO_EXTENSION);
     $file_name = uniqid().".".$file_extension;
@@ -11,7 +9,8 @@ function add_document($data, $file) {
                   SET rid = ?,
                       path = ?";
     $stmt = mysqli_prepare($db, $sql_query);
-    mysqli_stmt_bind_param($stmt, "is", $rid, $path);
+    $full_path = $path.$file_name;
+    mysqli_stmt_bind_param($stmt, "is", $rid, $full_path);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_store_result($stmt);
     if (mysqli_affected_rows($db) != 1) {

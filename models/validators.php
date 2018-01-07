@@ -46,6 +46,10 @@ function validate_date($date) {
     return checkdate($month, $day, $year);
 }
 
+function validate_type($type) {
+    return ($type == "disabled" || $type == "pension");
+}
+
 //Returns an empty map if data are valid, otherwise a map with error messages
 function get_register_errors($data) {
     $messages = [];

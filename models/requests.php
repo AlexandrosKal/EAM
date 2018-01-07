@@ -1,15 +1,15 @@
 <?php
 function create_request($data) {
     global $db;
-    $uid = data['uid'];
-    $type = data['type'];
+    $uid = $data['uid'];
+    $type = $data['type'];
     $resolved = intval(false);
     $sql_query = "INSERT INTO requests
                   SET uid = ?,
                       type = ?,
                       resolved = ?";
     $stmt = mysqli_prepare($db, $sql_query);
-    mysqli_stmt_bind_param($stmt, "is", $uid, $type, $resolved);
+    mysqli_stmt_bind_param($stmt, "isi", $uid, $type, $resolved);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_store_result($stmt);
     if (mysqli_affected_rows($db) != 1) {
@@ -26,7 +26,7 @@ function get_request($rid) {
                   WHERE did = ?
                   LIMIT 1";
     $stmt = mysqli_prepare($db, $sql_query);
-    mysqli_stmt_bind_param($s[]otmt, "i", $rid);
+    mysqli_stmt_bind_param($stmt, "i", $rid);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_store_result($stmt);
     mysqli_stmt_bind_result($stmt, $uid, $resolved);

@@ -48,7 +48,8 @@
     <div class="well">
       <h3 class="text-center header"> Παρακαλώ ανεβάστε τα κατάλληλα δικαιολογητικά σε μορφή αρχείων .pdf.</h1>
 
-        <form class="form-horizontal" method="post" name="loginForm" onsubmit="return validateApplicationEvaluationDisabled()">
+        <form class="form-horizontal" method="post" enctype="multipart/form-data" name="loginForm" onsubmit="return validateApplicationPension()" action="request.php?type=disabled">
+          <fieldset>
           <fieldset>
             <div class="form-group">
               <span class="col-md-1 col-md-offset-1 text-center"></span>
