@@ -6,15 +6,15 @@ if (isset($_SESSION['uid']) && isset($_GET['type'])) {
     if ($user === false) {
         require 'views/500.php';
     } else {
-        if($_GET['type'] == "amka") {
-            require 'views/AMKA_certificate.php';
+        if($_GET['type'] == "pension") {
+            require 'views/pension_certificate.php';
         } else if ($_GET['type'] == "disabled") {
             require 'views/disabled_certificate.php';
         }
     }
-} else if (isset($_SESSION['uid']) && !isset($_GET['type'])) {
+} else if (!isset($_SESSION['uid']) && !isset($_GET['type'])) {
     require 'views/certificates.php';
-} else {
+} else if (!isset($_SESSION['uid']) && isset($_GET['type'])) {
     require 'views/signup_login.php';
 }
 ?>
