@@ -27,7 +27,7 @@
 		<!-- include to koubi gia epistrofi stin korufi-->
 		<?php require 'views/backToTopButton.php' ;?>
 		<!--- set to path-->
-		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="services.php"> <b> Υπηρεσίες </b> </a> > <a href="amea.php"> <b>  ΑμΕΑ </b> </a></h5>
+		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="amea.php"> <b>  ΑμΕΑ </b> </a></h5>
 
 		<div class="well text">
 			<h2 class="header page-header text-center"> ΑμΕΑ </h2>

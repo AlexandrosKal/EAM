@@ -18,4 +18,3 @@ if (isset($_SESSION['uid']) && isset($_GET['type'])) {
     require 'views/signup_login.php';
 }
 ?>
-

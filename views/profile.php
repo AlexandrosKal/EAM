@@ -204,7 +204,7 @@
 							 <div class="input-group-addon">
 								 @
 							 </div>
-							 <input id="current-email" name="email" type="text" value="<?php echo $_SESSION['email']; ?>" class="form-control" onchange="validateEmail('current-emailForm', 'current-email', 'displayOnErrorCurrentEmail')">
+							 <input id="current-email" name="email" type="text" value="<?php echo $user['email']; ?>" class="form-control" onchange="validateEmail('current-emailForm', 'current-email', 'displayOnErrorCurrentEmail')">
 							</div>
 
 							<div id="displayOnErrorCurrentEmail"> </div>

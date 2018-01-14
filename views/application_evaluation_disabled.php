@@ -36,8 +36,6 @@
 		<!--- set to path-->
 		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b></a>
       >
-      <a href="services.php"> <b> Υπηρεσίες </b></a>
-      >
       <a href="amea.php"> <b> ΑμΕΑ </b></a>
       >
       <a href="application_evaluation_disabled.php"> <b> Αίτηση Aξιολόγησης Αναπηρίας </b></a>

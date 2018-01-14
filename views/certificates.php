@@ -39,12 +39,12 @@
 
       <ul class="dropdown-menu">
         <li class="dropdown-header">Ασφαλισμένοι</li>
-        <li><a href="certificate.php?type=amka">Βεβαίωση <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης"> ΑΜΚΑ </abbr></a></li>
+        <li><a href="#">Βεβαίωση <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης"> ΑΜΚΑ </abbr></a></li>
 
         <li class="divider"></li>
 
         <li class="dropdown-header">Συνταξιούχοι</li>
-        <li><a href="#">Βεβαίωση Απόφασης Πληρωμής</a></li>
+        <li><a href="certificate.php?type=pensions">Πιστοποιητικό Συνταξιοδοτικής Κατάστασης</a></li>
 
         <li class="divider"></li>
 
@@ -56,10 +56,6 @@
         <li class="dropdown-header">Εργοδότες</li>
         <li><a href="#">Πιστοποιητικό Ασφαλιστικής Ενημερότητας</a></li>
 
-        <li class="divider"></li>
-
-        <li class="dropdown-header">Οφειλέτες</li>
-        <li><a href="#">Βεβαίωση Ρύθμισης Οφειλών</a></li>
       </ul>
     </div>
     </div>
@@ -67,3 +63,4 @@
 
   </body>
 </html>
+

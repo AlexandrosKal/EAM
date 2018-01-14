@@ -41,8 +41,6 @@
 		<h5>
       <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a>
       >
-      <a href="services.php"> <b> Υπηρεσίες </b> </a>
-      >
       <a href="insuranced.php"> <b> Ασφαλισμένοι </b> </a>
       >
       <a href="stamps.php"> <b> Ένσημα </b> </a>
