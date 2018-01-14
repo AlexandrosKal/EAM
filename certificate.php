@@ -12,7 +12,7 @@ if (isset($_SESSION['uid']) && isset($_GET['type'])) {
             require 'views/disabled_certificate.php';
         }
     }
-} else if (!isset($_SESSION['uid']) && !isset($_GET['type'])) {
+} else if (!isset($_GET['type'])) {
     require 'views/certificates.php';
 } else if (!isset($_SESSION['uid']) && isset($_GET['type'])) {
     require 'views/signup_login.php';

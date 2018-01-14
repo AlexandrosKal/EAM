@@ -44,7 +44,7 @@
         <li class="divider"></li>
 
         <li class="dropdown-header">Συνταξιούχοι</li>
-        <li><a href="certificate.php?type=pensions">Πιστοποιητικό Συνταξιοδοτικής Κατάστασης</a></li>
+        <li><a href="certificate.php?type=pension">Πιστοποιητικό Συνταξιοδοτικής Κατάστασης</a></li>
 
         <li class="divider"></li>
 
@@ -63,4 +63,3 @@
 
   </body>
 </html>
-

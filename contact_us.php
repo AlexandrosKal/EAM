@@ -4,6 +4,9 @@
     require 'models/contact_messages.php';
     require 'models/validators.php';
 
+    if (isset($_SESSION['uid'])) {
+        $user = get_user_data($_SESSION['uid']);
+    }
     if (!empty($_POST)) {
         $errors = get_message_errors($_POST);
         if(empty($errors)) {
