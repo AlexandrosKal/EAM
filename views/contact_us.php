@@ -62,7 +62,7 @@
 									 <?php
 									 if ( isset( $_SESSION['uid'] ) )
 									 { ?>
-										<input id="fname" name="first_name" type="text" value="<?php echo $_SESSION['first_name']; ?>" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
+										<input id="fname" name="first_name" type="text" value="<?php echo $user['first_name']; ?>" class="form-control" onchange="validateFName('fNameForm', 'fname', 'displayOnErrorFName');">
 										<?php
 									 }
 									 else
@@ -88,7 +88,7 @@
 									 <?php
 									 if ( isset( $_SESSION['uid'] ) )
 									 { ?>
-									 <input id="lname" name="last_name" type="text" value="<?php echo $_SESSION['last_name']?>" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
+									 <input id="lname" name="last_name" type="text" value="<?php echo $user['last_name']?>" class="form-control" onchange="validateLName('lNameForm', 'lname', 'displayOnErrorLName');">
 									 <?php
 									}
 									else
@@ -115,7 +115,7 @@
 									 <?php
 									 if ( isset( $_SESSION['uid'] ) )
 									 { ?>
-									 <input id="email" name="email" type="text" value="<?php echo $_SESSION['email']?>" class="form-control" onchange="validateEmail('emailForm', 'email', 'displayOnErrorEmail');">
+									 <input id="email" name="email" type="text" value="<?php echo $user['email']?>" class="form-control" onchange="validateEmail('emailForm', 'email', 'displayOnErrorEmail');">
 									 <?php
 									}
 									else
