@@ -28,12 +28,12 @@
 		<!-- include to koubi gia epistrofi stin korufi-->
 		<?php require 'backToTopButton.php' ;?>
     <!-- set to path-->
-    <h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="certificates.php"> <b> Έκδοση Δικαιολογητικών/Πιστοποιητικών </b> </a> > <a href="AMKA_certificate.php"> <b> Βεβαίωση ΑΜΚΑ </b> </a></h5>
-    <h2 class="main-page-header page-header"> <b> Έκδοση Βεβαίωσης ΑΜΚΑ </b> </h2>
+    <h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="certificates.php"> <b> Έκδοση Δικαιολογητικών/Πιστοποιητικών </b> </a> > <a href="AMKA_certificate.php"> <b> Πιστοποιητικό Συνταξιοδοτικής Κατάστασης </b> </a></h5>
+    <h2 class="main-page-header page-header"> <b> Έκδοση Πιστοποιητικού Συνταξιοδοτικής Κατάστασης </b> </h2>
 
     <div class="well container">
       <p class="padding paragraph">
-        Ο <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης">ΑΜΚΑ</abbr> <?php echo $user['amka']; ?> αντιστοιχεί στο άτομο με στοιχεία:
+        Το Ίδρυμα Κοινωνικής Ασφάλισης πιστοποιεί ότι ο κάτοχος του <abbr title="Αριθμός Μητρώου Κοινωνικής Ασφάλισης">ΑΜΚΑ</abbr> <?php echo $user['amka']; ?> που αντιστοιχεί στο άτομο με στοιχεία:
       </p>
 
         <div class="row">
@@ -72,6 +72,9 @@
 	        <span class="col-md-3 col-lg-3 col-sm-3 col-xs-3 attribute_value"><?php echo $user['id_num']; ?></span>
   			</div>
 
+				<p>
+					είναι συνταξιούχος.
+				</p>
 				<!-- include to koubi gia ektupwsi-->
 				<?php require 'printButton.php' ;?>
 

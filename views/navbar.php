@@ -25,7 +25,7 @@
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <li> <a href="services.php"><b>Υπηρεσίες</b></a> </li>
+      <li> <a href="index.php"><b> Αρχική</b></a> </li>
       <li> <a href="announcements.php"><b>Ανακοινώσεις</b></a> </li>
       <li> <a href="faq.php"><b>Συχνές Ερωτήσεις</b></a> </li>
       <li> <a href="contact_us.php"><b>Επικοινωνία</b></a> </li> <?php

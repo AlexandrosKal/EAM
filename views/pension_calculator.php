@@ -36,8 +36,6 @@
 		<h5>
       <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a>
       >
-      <a href="services.php"> <b> Υπηρεσίες </b> </a>
-      >
       <a href="seniors.php"> <b> Συνταξιούχοι </b> </a>
       >
       <a href="pension_calculator"> <b> Υπολογισμός Σύνταξης Γήρατος</b> </a>

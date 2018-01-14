@@ -27,7 +27,7 @@
 		<!-- include to koubi gia epistrofi stin korufi-->
 		<?php require 'views/backToTopButton.php' ;?>
 		<!--- set to path-->
-		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="services.php"> <b> Υπηρεσίες </b> </a> > <a href="seniors.php"> <b>  Συνταξιούχοι </b> </a></h5>
+		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="seniors.php"> <b>  Συνταξιούχοι </b> </a></h5>
 		<div class="well text">
     	<h2 class="header page-header text-center"> Συνταξιούχοι </h2>
 
@@ -48,7 +48,7 @@
 			</div>
 
 			<div class="col-md-4 col-lg-4 col-sm-4 col-sm-4">
-				<a href="#" class="btn btn-primary button_style" role="button">Παροχές για Συνταξιούχους</a>
+				<a href="certificate.php?type=pension" class="btn btn-primary button_style" role="button">Πιστοποιητικό Συνταξιοδοτικής <br> Κατάστασης</a>
 			</div>
 
 		</div>

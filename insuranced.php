@@ -8,14 +8,14 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<!-- NavBar css -->
 		<link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="css/paragraph.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    		<link rel="stylesheet" type="text/css" href="css/paragraph.css">
+    		<link rel="stylesheet" type="text/css" href="css/header.css">
+    		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/well.css">
-    <link rel="stylesheet" type="text/css" href="css/button.css">
+    		<link rel="stylesheet" type="text/css" href="css/button.css">
 		<link rel="stylesheet" type="text/css" href="css/backToTopButton.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 		<script src="scripts/backToTopButton.js"></script>
@@ -27,7 +27,7 @@
 		<!-- include to koubi gia epistrofi stin korufi-->
 		<?php require 'views/backToTopButton.php' ;?>
 		<!--- set to path-->
-		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="services.php"> <b> Υπηρεσίες </b> </a> > <a href="insuranced.php"> <b> Ασφαλισμένοι </b> </a></h5>
+		<h5> <a href="index.php" class="padding"> <b> Αρχική Σελίδα </b> </a> > <a href="insuranced.php"> <b> Ασφαλισμένοι </b> </a></h5>
 
 		<div class="well text">
 			<h2 class="header page-header text-center">Ασφαλισμένοι </h2>
@@ -48,7 +48,7 @@
 			</div>
 
 			<div class="col-md-4 ">
-				<a href="certificate.php?type=amka" class="btn btn-primary button_style col" role="button">Βεβαίωση <abbr title="Αιρθμός Μητρώου Κοινωνικής Ασφάλισης">ΑΜΚΑ</abbr></a>
+				<a href="#" class="btn btn-primary button_style col" role="button">Βεβαίωση <abbr title="Αιρθμός Μητρώου Κοινωνικής Ασφάλισης">ΑΜΚΑ</abbr></a>
 			</div>
 
 			<div class="col-md-4 ">
