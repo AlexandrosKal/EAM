@@ -1,0 +1,8 @@
+php_value upload_max_filesize 32M
+
+RedirectMatch 403 ^/EAM/models/?$
+RedirectMatch 403 ^/EAM/models/.*$
+
+ErrorDocument 403 /EAM/views/403.php
+ErrorDocument 404 /EAM/views/404.php
+ErrorDocument 500 /EAM/views/500.php
