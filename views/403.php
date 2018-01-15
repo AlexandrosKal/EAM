@@ -1,4 +1,4 @@
-!doctype html>
+<!doctype html>
 <html lang="el">
 	<head>
 		<title>Σφάλμα 403</title>
@@ -17,7 +17,7 @@
 	<body class="background-color">
 	<br>
 
-		<h1 class="page-header main-page-header">Σφάλμα 404</h1>
+		<h1 class="page-header main-page-header">Σφάλμα 403</h1>
 
 		<h2 class="error-padding">Ωπ! Κάποιος θέλει να εισέλθει κάπου που δεν έχει πρόσβαση!</h2>
 
